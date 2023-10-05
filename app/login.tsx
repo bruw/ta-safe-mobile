@@ -1,6 +1,6 @@
 import { View, Text, Button } from "react-native";
 import React from "react";
-import { useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import useToken from "../states/useToken";
 
 export default function _Screen() {
@@ -8,12 +8,13 @@ export default function _Screen() {
   const { setToken } = useToken();
 
   const handleLogin = async () => {
-    setToken('ABC');
+    setToken("ABC");
     router.push("/(auth)/home");
   };
 
   return (
     <View>
+      <Stack.Screen options={{ headerShown: false }} />
       <Text>login</Text>
       <Button title="login" onPress={handleLogin} />
     </View>

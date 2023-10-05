@@ -1,6 +1,6 @@
 import { View, Text, Button } from "react-native";
 import React from "react";
-import { useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import useToken from "../../states/useToken";
 
 export default function _Screen() {
@@ -14,6 +14,7 @@ export default function _Screen() {
 
   return (
     <View>
+      <Stack.Screen options={{title: "Home"}}/>
       <Text>home</Text>
       <Button title="logout" onPress={handleLogout} />
     </View>
