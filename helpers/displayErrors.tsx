@@ -5,7 +5,7 @@ const displayErrors = (errors: any) => {
 
   const messages: string = fieldKeys
     .map((key: string) => {
-      return errors[key];
+      return "* " + errors[key];
     })
     .join("\n");
 

@@ -9,6 +9,7 @@ import { UserAfterRegister } from "../types/ApiTypes";
 import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TextInput, Text, Button } from "react-native-paper";
+import { hideMessage } from "react-native-flash-message";
 
 export default function _Screen() {
   const router = useRouter();
@@ -16,6 +17,11 @@ export default function _Screen() {
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [hidePassword, setHidePassword] = useState<boolean>(true);
+
+  const togglePasswordVisibility = () => {
+    setHidePassword(!hidePassword);
+  };
 
   const handleLogin = async () => {
     try {
@@ -24,6 +30,7 @@ export default function _Screen() {
         password: password,
       });
 
+      hideMessage();
       setToken(response.data.token);
 
       router.push("/(auth)/home");
@@ -55,17 +62,19 @@ export default function _Screen() {
             <TextInput
               label="Email"
               value={email}
-              onChangeText={(email: string) => setEmail(email)}
-              right={<TextInput.Icon icon="email" />}
               keyboardType="email-address"
+              right={<TextInput.Icon icon="email" />}
+              onChangeText={(email: string) => setEmail(email)}
               style={styles.defaultSpacing}
             />
 
             <TextInput
               label="Senha"
               value={password}
-              secureTextEntry
-              right={<TextInput.Icon icon="eye" />}
+              secureTextEntry={hidePassword}
+              right={
+                <TextInput.Icon icon="eye" onPress={togglePasswordVisibility} />
+              }
               onChangeText={(password: string) => setPassword(password)}
               style={styles.defaultSpacing}
             />
