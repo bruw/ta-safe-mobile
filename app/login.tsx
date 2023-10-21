@@ -1,15 +1,14 @@
-import React, { useState } from "react";
 import { Stack, useRouter } from "expo-router";
+import React, { useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { hideMessage } from "react-native-flash-message";
+import { TextInput, Text, Button } from "react-native-paper";
+import { SafeAreaView } from "react-native-safe-area-context";
 
+import displayErrorsHelper from "../helpers/displayErrors";
 import api from "../services/api";
 import useToken from "../states/useToken";
-import displayErrorsHelper from "../helpers/displayErrors";
 import { UserAfterRegister } from "../types/ApiTypes";
-
-import { StyleSheet, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { TextInput, Text, Button } from "react-native-paper";
-import { hideMessage } from "react-native-flash-message";
 
 export default function _Screen() {
   const router = useRouter();
@@ -26,8 +25,8 @@ export default function _Screen() {
   const handleLogin = async () => {
     try {
       const response = await api.post<UserAfterRegister>("/api/login", {
-        email: email,
-        password: password,
+        email,
+        password,
       });
 
       hideMessage();
