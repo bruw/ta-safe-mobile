@@ -1,0 +1,22 @@
+{
+  "buttons": {
+    "login": "Entrar"
+  },
+  "forms": {
+    "login": {
+      "email": "Email",
+      "password": "Senha"
+    }
+  },
+  "components": {
+    "login": {
+      "title": "Bem vindo!",
+      "subtitle": "Acesse sua conta para continuar."
+    }
+  },
+  "flashMessages": {
+    "errors": {
+      "title": "Atenção!"
+    }
+  }
+}

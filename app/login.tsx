@@ -6,7 +6,7 @@ import { TextInput, Text, Button } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import displayErrorsHelper from "../helpers/displayErrors";
-import api from "../services/api";
+import api from "../services/api/api";
 import useToken from "../states/useToken";
 import { UserAfterRegister } from "../types/ApiTypes";
 
