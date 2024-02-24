@@ -1,4 +1,5 @@
 import { Stack, useRouter } from "expo-router";
+import { t } from "i18next";
 import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { hideMessage } from "react-native-flash-message";
@@ -9,7 +10,6 @@ import displayErrorsHelper from "../helpers/displayErrors";
 import api from "../services/api/api";
 import useToken from "../states/useToken";
 import { UserAfterRegister } from "../types/ApiTypes";
-import { t } from "i18next";
 
 export default function _Screen() {
   const router = useRouter();
