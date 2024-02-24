@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import { showMessage } from "react-native-flash-message";
 
 const displayErrors = (errors: any) => {
@@ -10,12 +11,12 @@ const displayErrors = (errors: any) => {
     .join("\n");
 
   showMessage({
-    message: "Atenção!",
+    message: t("flashMessages.errors.title"),
     description: messages,
     type: "danger",
-    icon: "warning",
     autoHide: false,
-    textStyle: { lineHeight: 22 },
+    textStyle: { lineHeight: 27, fontSize: 16 },
+    floating: true,
   });
 };
 
