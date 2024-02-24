@@ -9,6 +9,7 @@ import displayErrorsHelper from "../helpers/displayErrors";
 import api from "../services/api/api";
 import useToken from "../states/useToken";
 import { UserAfterRegister } from "../types/ApiTypes";
+import { t } from "i18next";
 
 export default function _Screen() {
   const router = useRouter();
@@ -50,16 +51,16 @@ export default function _Screen() {
               variant="headlineMedium"
               style={[styles.loginTitle, styles.text]}
             >
-              Bem Vindo!
+              {t("components.login.title")}
             </Text>
             <Text variant="titleMedium" style={styles.text}>
-              Acesse sua conta para continuar.
+              {t("components.login.subtitle")}
             </Text>
           </View>
 
           <View>
             <TextInput
-              label="Email"
+              label={t("forms.login.email")}
               value={email}
               keyboardType="email-address"
               right={<TextInput.Icon icon="email" />}
@@ -68,7 +69,7 @@ export default function _Screen() {
             />
 
             <TextInput
-              label="Senha"
+              label={t("forms.login.password")}
               value={password}
               secureTextEntry={hidePassword}
               right={
@@ -84,7 +85,7 @@ export default function _Screen() {
               onPress={handleLogin}
               style={styles.loginButton}
             >
-              Entrar
+              {t("buttons.login")}
             </Button>
           </View>
         </View>
