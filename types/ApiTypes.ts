@@ -12,3 +12,8 @@ export type UserAfterRegister = {
   user: User;
   token: string;
 };
+
+export type UserLogin = {
+  email: string;
+  password: string;
+}
