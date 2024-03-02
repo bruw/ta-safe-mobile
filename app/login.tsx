@@ -1,93 +1,135 @@
 import { Stack, useRouter } from "expo-router";
 import { t } from "i18next";
 import React, { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
 import { StyleSheet, View } from "react-native";
-import { hideMessage } from "react-native-flash-message";
-import { TextInput, Text, Button } from "react-native-paper";
+import { TextInput, Text, Button, useTheme } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import displayErrorsHelper from "../helpers/displayErrors";
 import api from "../services/api/api";
 import useToken from "../states/useToken";
-import { UserAfterRegister } from "../types/ApiTypes";
+import { UserAfterRegister, UserLogin } from "../types/ApiTypes";
 
 export default function _Screen() {
   const router = useRouter();
+  const theme = useTheme();
   const { setToken } = useToken();
-
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
   const [hidePassword, setHidePassword] = useState<boolean>(true);
 
   const togglePasswordVisibility = () => {
     setHidePassword(!hidePassword);
   };
 
-  const handleLogin = async () => {
+  const {
+    control,
+    handleSubmit,
+    setError,
+    formState: { errors },
+  } = useForm<UserLogin>();
+
+  const onSubmit = async ({ email, password }: UserLogin) => {
     try {
       const response = await api.post<UserAfterRegister>("/api/login", {
         email,
         password,
       });
 
-      hideMessage();
       setToken(response.data.token);
-
       router.push("/(auth)/home");
     } catch (error: any) {
       const dataErrors = error.response?.data.errors;
-      displayErrorsHelper(dataErrors);
+
+      for (const [fieldName, value] of Object.entries(dataErrors)) {
+        setError(fieldName as keyof UserLogin, { message: value as string });
+      }
     }
   };
 
   return (
     <SafeAreaView>
       <Stack.Screen options={{ headerShown: false }} />
-
       <View style={styles.container}>
         <View style={styles.loginContainer}>
-          <View style={styles.defaultSpacing}>
-            <Text
-              variant="headlineMedium"
-              style={[styles.loginTitle, styles.text]}
-            >
+          <View style={styles.textInput}>
+            <Text variant="headlineLarge" style={styles.loginTitle}>
               {t("components.login.title")}
             </Text>
-            <Text variant="titleMedium" style={styles.text}>
-              {t("components.login.subtitle")}
-            </Text>
+            <Text variant="titleLarge">{t("components.login.subtitle")}</Text>
           </View>
 
-          <View>
-            <TextInput
-              label={t("forms.login.email")}
-              value={email}
-              keyboardType="email-address"
-              right={<TextInput.Icon icon="email" />}
-              onChangeText={(email: string) => setEmail(email)}
-              style={styles.defaultSpacing}
+          <View style={styles.textInput}>
+            <Controller
+              name="email"
+              control={control}
+              render={({ field: { value, onChange } }) => (
+                <>
+                  <TextInput
+                    label={t("forms.login.email")}
+                    value={value}
+                    onChangeText={onChange}
+                    error={!!errors.email}
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    right={
+                      <TextInput.Icon
+                        icon="email"
+                        color={theme.colors.primary}
+                      />
+                    }
+                  />
+                  {errors.email && (
+                    <Text style={{ color: theme.colors.error }}>
+                      {errors.email.message}
+                    </Text>
+                  )}
+                </>
+              )}
             />
-
-            <TextInput
-              label={t("forms.login.password")}
-              value={password}
-              secureTextEntry={hidePassword}
-              right={
-                <TextInput.Icon icon="eye" onPress={togglePasswordVisibility} />
-              }
-              onChangeText={(password: string) => setPassword(password)}
-              style={styles.defaultSpacing}
-            />
-
-            <Button
-              icon="login"
-              mode="contained"
-              onPress={handleLogin}
-              style={styles.loginButton}
-            >
-              {t("buttons.login")}
-            </Button>
           </View>
+
+          <View style={styles.textInput}>
+            <Controller
+              name="password"
+              control={control}
+              render={({ field: { value, onChange } }) => (
+                <>
+                  <TextInput
+                    label={t("forms.login.password")}
+                    value={value}
+                    onChangeText={onChange}
+                    error={!!errors.password}
+                    secureTextEntry={hidePassword}
+                    autoCapitalize="none"
+                    right={
+                      <TextInput.Icon
+                        icon={hidePassword ? "eye" : "eye-off-outline"}
+                        color={theme.colors.primary}
+                        onPress={togglePasswordVisibility}
+                      />
+                    }
+                  />
+
+                  {errors.password && (
+                    <Text style={{ color: theme.colors.error }}>
+                      {errors.password.message}
+                    </Text>
+                  )}
+                </>
+              )}
+            />
+          </View>
+
+          <Button
+            icon="login"
+            mode="contained"
+            onPress={handleSubmit(onSubmit)}
+            style={{
+              borderRadius: 6,
+              backgroundColor: theme.colors.primary,
+            }}
+          >
+            {t("buttons.login")}
+          </Button>
         </View>
       </View>
     </SafeAreaView>
@@ -97,24 +139,16 @@ export default function _Screen() {
 const styles = StyleSheet.create({
   container: {
     height: "100%",
-    backgroundColor: "rgba(25, 0, 70, 1)",
     alignItems: "center",
     justifyContent: "center",
   },
   loginContainer: {
     width: "90%",
   },
-  defaultSpacing: {
-    marginBottom: 30,
-  },
   loginTitle: {
     fontWeight: "900",
   },
-  text: {
-    color: "#fff",
-  },
-  loginButton: {
-    borderRadius: 6,
-    backgroundColor: "#D35400",
+  textInput: {
+    height: 95,
   },
 });
