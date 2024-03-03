@@ -1,9 +1,9 @@
+import { Button, Input, Text, makeStyles, useTheme } from "@rneui/themed";
 import { Stack, useRouter } from "expo-router";
 import { t } from "i18next";
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import { StyleSheet, View } from "react-native";
-import { TextInput, Text, Button, useTheme } from "react-native-paper";
+import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import api from "../services/api/api";
@@ -12,7 +12,8 @@ import { UserAfterRegister, UserLogin } from "../types/ApiTypes";
 
 export default function _Screen() {
   const router = useRouter();
-  const theme = useTheme();
+  const { theme } = useTheme();
+  const styles = useStyles();
   const { setToken } = useToken();
   const [hidePassword, setHidePassword] = useState<boolean>(true);
 
@@ -50,93 +51,81 @@ export default function _Screen() {
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.container}>
         <View style={styles.loginContainer}>
-          <View style={styles.textInput}>
-            <Text variant="headlineLarge" style={styles.loginTitle}>
-              {t("components.login.title")}
+          <View style={styles.defaultSpacing}>
+            <Text h2>{t("components.login.title")}</Text>
+            <Text h4 h4Style={{ fontWeight: "500" }}>
+              {t("components.login.subtitle")}
             </Text>
-            <Text variant="titleLarge">{t("components.login.subtitle")}</Text>
           </View>
 
-          <View style={styles.textInput}>
-            <Controller
-              name="email"
-              control={control}
-              render={({ field: { value, onChange } }) => (
-                <>
-                  <TextInput
-                    label={t("forms.login.email")}
+          <View style={styles.defaultSpacing}>
+            <View style={styles.defaultSpacing}>
+              <Controller
+                name="email"
+                control={control}
+                render={({ field: { value, onChange } }) => (
+                  <Input
+                    placeholder={t("forms.login.email")}
                     value={value}
                     onChangeText={onChange}
-                    error={!!errors.email}
+                    errorMessage={errors.email?.message}
                     keyboardType="email-address"
                     autoCapitalize="none"
-                    right={
-                      <TextInput.Icon
-                        icon="email"
-                        color={theme.colors.primary}
-                      />
-                    }
+                    rightIcon={{
+                      type: "material-community",
+                      name: "email",
+                      color: theme.colors.primary,
+                    }}
                   />
-                  {errors.email && (
-                    <Text style={{ color: theme.colors.error }}>
-                      {errors.email.message}
-                    </Text>
-                  )}
-                </>
-              )}
-            />
-          </View>
+                )}
+              />
+            </View>
 
-          <View style={styles.textInput}>
-            <Controller
-              name="password"
-              control={control}
-              render={({ field: { value, onChange } }) => (
-                <>
-                  <TextInput
-                    label={t("forms.login.password")}
+            <View style={styles.defaultSpacing}>
+              <Controller
+                name="password"
+                control={control}
+                render={({ field: { value, onChange } }) => (
+                  <Input
+                    placeholder={t("forms.login.password")}
                     value={value}
                     onChangeText={onChange}
-                    error={!!errors.password}
+                    errorMessage={errors.password?.message}
                     secureTextEntry={hidePassword}
                     autoCapitalize="none"
-                    right={
-                      <TextInput.Icon
-                        icon={hidePassword ? "eye" : "eye-off-outline"}
-                        color={theme.colors.primary}
-                        onPress={togglePasswordVisibility}
-                      />
-                    }
+                    rightIcon={{
+                      type: "material-community",
+                      name: hidePassword ? "eye" : "eye-off-outline",
+                      color: theme.colors.primary,
+                      onPress() {
+                        togglePasswordVisibility();
+                      },
+                    }}
                   />
-
-                  {errors.password && (
-                    <Text style={{ color: theme.colors.error }}>
-                      {errors.password.message}
-                    </Text>
-                  )}
-                </>
-              )}
-            />
+                )}
+              />
+            </View>
           </View>
 
-          <Button
-            icon="login"
-            mode="contained"
-            onPress={handleSubmit(onSubmit)}
-            style={{
-              borderRadius: 6,
-              backgroundColor: theme.colors.primary,
-            }}
-          >
-            {t("buttons.login")}
-          </Button>
+          <View>
+            <Button
+              title={t("buttons.login")}
+              onPress={handleSubmit(onSubmit)}
+              color={theme.colors.primary}
+              icon={{
+                type: "material-community",
+                name: "login",
+                color: "#fff",
+              }}
+            />
+          </View>
         </View>
       </View>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((theme) => ({
   container: {
     height: "100%",
     alignItems: "center",
@@ -145,10 +134,7 @@ const styles = StyleSheet.create({
   loginContainer: {
     width: "90%",
   },
-  loginTitle: {
-    fontWeight: "900",
+  defaultSpacing: {
+    marginBottom: theme.spacing.lg,
   },
-  textInput: {
-    height: 95,
-  },
-});
+}));
