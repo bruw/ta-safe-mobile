@@ -1,22 +1,30 @@
 {
   "buttons": {
-    "login": "Entrar"
+    "login": "Entrar",
+    "register": "Registrar",
+    "signUp": "Novo por aqui? Cadastre-se."
   },
   "forms": {
     "login": {
       "email": "Email",
       "password": "Senha"
+    },
+    "userRegistration": {
+      "name": "Nome",
+      "email": "Email",
+      "cpf": "CPF",
+      "phone": "Celular",
+      "password": "Senha",
+      "passwordConfirmation": "Confirmação de Senha"
     }
   },
   "components": {
     "login": {
       "title": "Bem vindo!",
       "subtitle": "Acesse sua conta para continuar."
-    }
-  },
-  "flashMessages": {
-    "errors": {
-      "title": "Atenção! alguns erros foram encontrados:"
+    },
+    "userRegistration": {
+      "title": "Cadastro de Usuário"
     }
   }
 }
