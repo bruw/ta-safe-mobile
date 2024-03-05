@@ -16,4 +16,13 @@ export type UserAfterRegister = {
 export type UserLogin = {
   email: string;
   password: string;
-}
+};
+
+export type UserRegistration = {
+  name: string;
+  email: string;
+  cpf: string;
+  phone: string;
+  password: string;
+  password_confirmation: string;
+};

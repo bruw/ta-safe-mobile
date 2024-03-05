@@ -1,5 +1,5 @@
 import { Button, Input, Text, makeStyles, useTheme } from "@rneui/themed";
-import { Stack, useRouter } from "expo-router";
+import { Link, Stack, useRouter } from "expo-router";
 import { t } from "i18next";
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
@@ -36,7 +36,7 @@ export default function _Screen() {
       });
 
       setToken(response.data.token);
-      router.push("/(auth)/home");
+      router.replace("/(auth)/home");
     } catch (error: any) {
       const dataErrors = error.response?.data.errors;
 
@@ -120,6 +120,11 @@ export default function _Screen() {
             />
           </View>
         </View>
+        <View style={{ marginTop: 30 }}>
+          <Link href="/user-registration/" style={styles.link}>
+            {t("buttons.signUp")}
+          </Link>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -136,5 +141,10 @@ const useStyles = makeStyles((theme) => ({
   },
   defaultSpacing: {
     marginBottom: theme.spacing.lg,
+  },
+  link: {
+    color: theme.colors.primary,
+    fontWeight: "500",
+    textDecorationLine: "underline",
   },
 }));
