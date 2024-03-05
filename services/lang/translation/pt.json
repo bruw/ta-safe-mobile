@@ -26,10 +26,5 @@
     "userRegistration": {
       "title": "Cadastro de Usuário"
     }
-  },
-  "flashMessages": {
-    "errors": {
-      "title": "Atenção! alguns erros foram encontrados:"
-    }
   }
 }
