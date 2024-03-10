@@ -1,6 +1,7 @@
 {
   "buttons": {
     "login": "Entrar",
+    "logout": "Sair",
     "register": "Registrar",
     "signUp": "Novo por aqui? Cadastre-se."
   },
@@ -25,6 +26,9 @@
     },
     "userRegistration": {
       "title": "Cadastro de Usuário"
+    },
+    "home": {
+      "title": "Início"
     }
   }
 }

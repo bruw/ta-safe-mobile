@@ -10,5 +10,5 @@ export default function _Screen() {
     return <Redirect href="/(auth)/home" />;
   }
 
-  return <Redirect href="/login" />;
+  return <Redirect href="/(public)/login" />;
 }
