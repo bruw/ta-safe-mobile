@@ -1,7 +1,6 @@
 import { Redirect } from "expo-router";
 import React from "react";
-
-import useToken from "../states/useToken";
+import useToken from "states/useToken";
 
 export default function _Screen() {
   const { token } = useToken();
@@ -10,5 +9,5 @@ export default function _Screen() {
     return <Redirect href="/(auth)/home" />;
   }
 
-  return <Redirect href="/login" />;
+  return <Redirect href="/(public)/login" />;
 }
