@@ -6,9 +6,9 @@ import { useForm, Controller } from "react-hook-form";
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import api from "../services/api/api";
-import useToken from "../states/useToken";
-import { UserAfterRegister, UserLogin } from "../types/ApiTypes";
+import api from "../../services/api/api";
+import useToken from "../../states/useToken";
+import { UserAfterRegister, UserLogin } from "../../types/ApiTypes";
 
 export default function _Screen() {
   const router = useRouter();

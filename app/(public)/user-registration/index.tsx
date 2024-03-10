@@ -6,11 +6,11 @@ import { useForm, Controller } from "react-hook-form";
 import { View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
-import { maskCpf } from "../../helpers/maskCpf";
-import { maskPhone } from "../../helpers/maskPhone";
-import api from "../../services/api/api";
-import useToken from "../../states/useToken";
-import { UserAfterRegister, UserRegistration } from "../../types/ApiTypes";
+import { maskCpf } from "../../../helpers/maskCpf";
+import { maskPhone } from "../../../helpers/maskPhone";
+import api from "../../../services/api/api";
+import useToken from "../../../states/useToken";
+import { UserAfterRegister, UserRegistration } from "../../../types/ApiTypes";
 
 export default function _Screen() {
   const router = useRouter();
