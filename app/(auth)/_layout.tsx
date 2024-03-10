@@ -1,11 +1,11 @@
 import { Icon } from "@rneui/base";
 import { ThemeProvider, createTheme } from "@rneui/themed";
+import CustomDrawerContent from "components/CustomDrawerContent";
 import { Drawer } from "expo-router/drawer";
 import { t } from "i18next";
 import React from "react";
 import { StatusBar } from "react-native";
 
-import CustomDrawerContent from "../../components/CustomDrawerContent";
 import "../../services/lang/translation/i18n";
 
 const theme = createTheme({

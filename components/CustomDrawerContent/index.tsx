@@ -1,6 +1,7 @@
-import { DrawerContentComponentProps, DrawerContentScrollView, DrawerItem, DrawerItemList } from "@react-navigation/drawer";
+import { DrawerContentComponentProps, DrawerContentScrollView } from "@react-navigation/drawer";
+import { DrawerItem, DrawerItemList } from "@react-navigation/drawer";
 import { useRouter } from "expo-router";
-import useToken from "../../states/useToken";
+import useToken from "states/useToken";
 import { Icon } from "@rneui/base";
 import { t } from "i18next";
 

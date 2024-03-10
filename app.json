@@ -29,10 +29,11 @@
     },
     "plugins": [
       "expo-router"
-    ],  
+    ],
     "scheme": "your-app-scheme",
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "tsconfigPaths": true
     }
   }
 }
