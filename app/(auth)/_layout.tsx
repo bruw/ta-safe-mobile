@@ -33,7 +33,7 @@ export default function _Layout() {
         }}
       >
         <Drawer.Screen
-          name="home"
+          name="home/index"
           options={{
             drawerLabel: t("components.home.title"),
             title: t("components.home.title"),
