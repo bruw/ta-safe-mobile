@@ -35,7 +35,7 @@ export default function _Screen() {
         password,
       });
 
-      setToken(response.data.token, response.data.user);
+      setToken(response.data.user.token, response.data.user);
       router.replace("/(auth)/home");
     } catch (error: any) {
       const data = error.response.data;

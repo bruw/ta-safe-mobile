@@ -11,11 +11,11 @@ export type User = {
   phone: string;
   created_at: string;
   updated_at: string;
+  token: string;
 };
 
 export type UserAuth = {
   user: User;
-  token: string;
   message: FlashMessage;
 };
 
