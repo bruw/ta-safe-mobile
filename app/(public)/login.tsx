@@ -1,5 +1,6 @@
 import { Button, Input, Text, makeStyles, useTheme } from "@rneui/themed";
 import { Link, Stack, useRouter } from "expo-router";
+import notify from "helpers/notify";
 import { t } from "i18next";
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
@@ -7,7 +8,7 @@ import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import api from "services/api/api";
 import useToken from "states/useToken";
-import { UserAfterRegister, UserLogin } from "types/ApiTypes";
+import { UserAuth, UserLogin } from "types/ApiTypes";
 
 export default function _Screen() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function _Screen() {
 
   const onSubmit = async ({ email, password }: UserLogin) => {
     try {
-      const response = await api.post<UserAfterRegister>("/api/login", {
+      const response = await api.post<UserAuth>("/api/login", {
         email,
         password,
       });
@@ -37,9 +38,11 @@ export default function _Screen() {
       setToken(response.data.token, response.data.user);
       router.replace("/(auth)/home");
     } catch (error: any) {
-      const dataErrors = error.response?.data.errors;
+      const data = error.response.data;
 
-      for (const [fieldName, value] of Object.entries(dataErrors)) {
+      notify({ type: data.message.type, message: data.message.text });
+
+      for (const [fieldName, value] of Object.entries(data.errors)) {
         setError(fieldName as keyof UserLogin, { message: value as string });
       }
     }
