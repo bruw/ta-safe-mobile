@@ -42,8 +42,10 @@ export default function _Screen() {
 
       notify({ type: data.message.type, message: data.message.text });
 
-      for (const [fieldName, value] of Object.entries(data.errors)) {
-        setError(fieldName as keyof UserLogin, { message: value as string });
+      if (data.errors) {
+        for (const [fieldName, value] of Object.entries(data.errors)) {
+          setError(fieldName as keyof UserLogin, { message: value as string });
+        }
       }
     }
   };
