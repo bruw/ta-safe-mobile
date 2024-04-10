@@ -24,7 +24,7 @@ export default function _Layout() {
   return (
     <ThemeProvider theme={theme}>
       <Stack />
-      <FlashMessage position="top" statusBarHeight={30} />
+      <FlashMessage position="top" statusBarHeight={40} />
     </ThemeProvider>
   );
 }

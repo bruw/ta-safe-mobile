@@ -32,3 +32,10 @@ export type UserRegistration = {
   password: string;
   password_confirmation: string;
 };
+
+export type UserUpdate = {
+  name: string;
+  email: string;
+  phone: string;
+  message: FlashMessage;
+}

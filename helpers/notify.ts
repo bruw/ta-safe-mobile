@@ -20,7 +20,10 @@ const notify = ({ type, message, autoHide = true }: NotifyProps) => {
         autoHide: autoHide,
         duration: 6000,
         floating: true,
-        backgroundColor: colorByType[type]
+        backgroundColor: colorByType[type],
+        titleStyle: {
+            fontWeight: '500'
+        }
     });
 };
 
