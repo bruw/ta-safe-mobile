@@ -2,6 +2,7 @@ import { Button, Input, makeStyles, useTheme } from "@rneui/themed";
 import { Stack, useRouter } from "expo-router";
 import { maskCpf } from "helpers/maskCpf";
 import { maskPhone } from "helpers/maskPhone";
+import notify from "helpers/notify";
 import { t } from "i18next";
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
@@ -9,7 +10,7 @@ import { View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import api from "services/api/api";
 import useToken from "states/useToken";
-import { UserAfterRegister, UserRegistration } from "types/ApiTypes";
+import { UserAuth, UserRegistration } from "types/ApiTypes";
 
 export default function _Screen() {
   const router = useRouter();
@@ -38,7 +39,7 @@ export default function _Screen() {
     password_confirmation,
   }: UserRegistration) => {
     try {
-      const response = await api.post<UserAfterRegister>("/api/register", {
+      const response = await api.post<UserAuth>("/api/register", {
         name,
         email,
         cpf,
@@ -47,12 +48,14 @@ export default function _Screen() {
         password_confirmation,
       });
 
-      setToken(response.data.token);
+      setToken(response.data.user.token, response.data.user);
       router.replace("/(auth)/home");
     } catch (error: any) {
-      const dataErrors = error.response?.data.errors;
+      const data = error.response.data;
 
-      for (const [fieldName, value] of Object.entries(dataErrors)) {
+      notify({ type: data.message.type, message: data.message.text });
+
+      for (const [fieldName, value] of Object.entries(data.errors)) {
         setError(fieldName as keyof UserRegistration, {
           message: value as string,
         });

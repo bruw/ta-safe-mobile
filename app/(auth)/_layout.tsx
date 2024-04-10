@@ -5,8 +5,7 @@ import { Drawer } from "expo-router/drawer";
 import { t } from "i18next";
 import React from "react";
 import { StatusBar } from "react-native";
-
-import "../../services/lang/translation/i18n";
+import FlashMessage from "react-native-flash-message";
 
 const theme = createTheme({
   lightColors: {
@@ -21,6 +20,9 @@ export default function _Layout() {
         backgroundColor={theme.lightColors?.primary}
         barStyle="light-content"
       />
+
+      <FlashMessage position="top" statusBarHeight={40} />
+
       <Drawer
         drawerContent={CustomDrawerContent}
         screenOptions={{
@@ -33,13 +35,32 @@ export default function _Layout() {
         }}
       >
         <Drawer.Screen
-          name="home"
+          name="home/index"
           options={{
             drawerLabel: t("components.home.title"),
             title: t("components.home.title"),
             drawerIcon: (item) => (
               <Icon
                 name="view-dashboard-outline"
+                type="material-community"
+                color={
+                  item.focused
+                    ? theme.lightColors?.primary
+                    : theme.lightColors?.grey2
+                }
+              />
+            ),
+          }}
+        />
+
+        <Drawer.Screen
+          name="profile/index"
+          options={{
+            drawerLabel: t("components.profile.title"),
+            title: t("components.profile.title"),
+            drawerIcon: (item) => (
+              <Icon
+                name="account"
                 type="material-community"
                 color={
                   item.focused

@@ -1,3 +1,8 @@
+export type FlashMessage = {
+  type: 'success' | 'error' | 'info' | 'warning';
+  text: string;
+}
+
 export type User = {
   id: number;
   name: string;
@@ -6,11 +11,12 @@ export type User = {
   phone: string;
   created_at: string;
   updated_at: string;
+  token: string;
 };
 
-export type UserAfterRegister = {
+export type UserAuth = {
   user: User;
-  token: string;
+  message: FlashMessage;
 };
 
 export type UserLogin = {
@@ -26,3 +32,10 @@ export type UserRegistration = {
   password: string;
   password_confirmation: string;
 };
+
+export type UserUpdate = {
+  name: string;
+  email: string;
+  phone: string;
+  message: FlashMessage;
+}

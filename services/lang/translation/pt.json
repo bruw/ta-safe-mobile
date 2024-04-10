@@ -3,6 +3,7 @@
     "login": "Entrar",
     "logout": "Sair",
     "register": "Registrar",
+    "save": "Salvar",
     "signUp": "Novo por aqui? Cadastre-se."
   },
   "forms": {
@@ -29,6 +30,9 @@
     },
     "home": {
       "title": "Início"
+    },
+    "profile": {
+      "title": "Perfil"
     }
   }
 }
