@@ -25,6 +25,7 @@ export type UserLogin = {
 };
 
 export type UserRegistration = {
+  id: number,
   name: string;
   email: string;
   cpf: string;
@@ -38,4 +39,9 @@ export type UserUpdate = {
   email: string;
   phone: string;
   message: FlashMessage;
+}
+
+export type Brand = {
+  id: number,
+  name: string;
 }

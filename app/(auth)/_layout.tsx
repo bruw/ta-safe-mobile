@@ -71,6 +71,26 @@ export default function _Layout() {
             ),
           }}
         />
+
+        <Drawer.Screen
+          name="device-registration/index"
+          options={{
+            drawerLabel: "Registrar dispositivo",
+            title: "Registrar dispositivo",
+            drawerIcon: (item) => (
+              <Icon
+                name="devices"
+                type="material-community"
+                color={
+                  item.focused
+                    ? theme.lightColors?.primary
+                    : theme.lightColors?.grey2
+                }
+              />
+            ),
+          }}
+        />
+
       </Drawer>
     </ThemeProvider>
   );
