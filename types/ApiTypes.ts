@@ -42,6 +42,14 @@ export type UserUpdate = {
 }
 
 export type Brand = {
-  id: number,
+  id: number;
   name: string;
+}
+
+export type DeviceModel = {
+  id: number;
+  name: string;
+  ram: string;
+  storage: string;
+  brand: Brand;
 }

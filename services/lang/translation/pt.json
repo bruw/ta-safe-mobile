@@ -5,7 +5,8 @@
     "register": "Registrar",
     "save": "Salvar",
     "signUp": "Novo por aqui? Cadastre-se.",
-    "nextStep": "Próxima etapa"
+    "nextStep": "Próxima etapa",
+    "previousStep": "Etapa anterior"
   },
   "forms": {
     "login": {
@@ -25,6 +26,11 @@
         "titleSpan": "Passo 1",
         "titleContent": "Selecione a marca do dispositivo que deseja registrar.",
         "selectBrand": "Selecione uma marca"
+      },
+      "modelStep": {
+        "titleSpan": "Passo 2",
+        "titleContent": "Selecione o modelo do dispositivo.",
+        "selectModel": "Selecione um modelo"
       }
     }
   },
