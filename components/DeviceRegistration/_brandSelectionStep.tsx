@@ -1,55 +1,84 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View } from 'react-native';
+import { makeStyles } from "@rneui/themed";
 import { Picker } from '@react-native-picker/picker';
 import { useFormContext } from 'react-hook-form';
 import api from 'services/api/api';
 import { Brand } from 'types/ApiTypes';
+import { t } from 'i18next';
+import ButtonNextStep from './_buttonNextStep';
+import StepTitle from './_stepTitle';
 
-export default function BrandSelectionStep({ onNext }: any) {
-  const { handleSubmit, setValue, watch } = useFormContext();
-  const [brands, setBrands] = useState<Brand[]>([]);
+interface BrandSelectionStepProps {
+    onNext: () => void;
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await api.get<Brand[]>('api/brands');
-        setBrands(response.data);
-        console.log(response.data);
+export default function BrandSelectionStep({ onNext }: BrandSelectionStepProps) {
+    const styles = useStyles();
+    const { setValue, watch } = useFormContext();
 
-      } catch (error: any) {
-        console.error('Ocorreu um erro:', error);
-      }
-    };
+    const [brands, setBrands] = useState<Brand[]>([]);
+    const [disabledNextStep, setDisabledNextStep] = useState(true);
 
-    fetchData();
-  }, []);
+    useEffect(() => {
+        const fetchBrands = async () => {
+            try {
+                const response = await api.get<Brand[]>('api/brands');
+                setBrands(response.data);
 
-  const onSubmit = (data: any) => {
-    console.log(data);
-    onNext();
-  };
+            } catch (error: any) {
+                // talvez exibir uma tela de erro...
+                console.error('Ocorreu um erro:', error);
+            }
+        };
 
-  return (
-    <View>
-      <Text>Passo 1: Selecione a marca do dispositivo</Text>
-      <Picker
-        selectedValue={watch('brand_id')}
-        onValueChange={(itemId) => {
-          setValue('brand_id', itemId);
-        }}
-      >
+        fetchBrands();
+    }, []);
 
-        <Picker.Item label="Selecione a marca" value="" />
-        {
-          brands.map((brand) => (
-            <Picker.Item key={brand.id} label={brand.name} value={brand.id} />
-          ))
-        }
+    return (
+        <View style={styles.container}>
+            <StepTitle
+                span={t("forms.deviceRegistration.brandStep.titleSpan")}
+                content={t("forms.deviceRegistration.brandStep.titleContent")}
+            />
 
-      </Picker>
+            <View style={[styles.selectBrand]}>
+                <Picker
+                    selectedValue={watch('brand_id')}
+                    onValueChange={(itemValue) => {
+                        setValue('brand_id', itemValue);
+                        setDisabledNextStep(itemValue == "");
+                    }}
+                >
+                    <Picker.Item
+                        label={t("forms.deviceRegistration.brandStep.selectBrand")}
+                        value=""
+                    />
 
-      <Button title="Próximo" onPress={handleSubmit(onSubmit)} />
+                    {brands.map((brand) => (
+                        <Picker.Item key={brand.id} label={brand.name} value={brand.id} />
+                    ))}
+                </Picker>
+            </View>
 
-    </View>
-  );
+            <ButtonNextStep
+                onNext={onNext}
+                disabledNextStep={disabledNextStep}
+            />
+        </View>
+    );
 };
+
+const useStyles = makeStyles(() => ({
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    selectBrand: {
+        width: "90%",
+        borderBottomWidth: 1,
+        borderColor: "#86939E",
+        marginBottom: 40,
+    },
+}));

@@ -4,7 +4,8 @@
     "logout": "Sair",
     "register": "Registrar",
     "save": "Salvar",
-    "signUp": "Novo por aqui? Cadastre-se."
+    "signUp": "Novo por aqui? Cadastre-se.",
+    "nextStep": "Próxima etapa"
   },
   "forms": {
     "login": {
@@ -18,6 +19,13 @@
       "phone": "Celular",
       "password": "Senha",
       "passwordConfirmation": "Confirmação de Senha"
+    },
+    "deviceRegistration": {
+      "brandStep": {
+        "titleSpan": "Passo 1",
+        "titleContent": "Selecione a marca do dispositivo que deseja registrar.",
+        "selectBrand": "Selecione uma marca"
+      }
     }
   },
   "components": {
@@ -33,6 +41,9 @@
     },
     "profile": {
       "title": "Perfil"
+    },
+    "deviceRegistration": {
+      "title": "Registrar Celular"
     }
   }
 }

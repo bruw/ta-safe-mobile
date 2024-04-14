@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
+import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import RenderSteps from './_renderSteps';
 
 export default function DeviceRegistration() {
-  const formControls = useForm();
+    const formControls = useForm();
 
-  return (
-    <FormProvider {...formControls}>
-      <RenderSteps />
-    </FormProvider>
-  );
+    return (
+        <FormProvider {...formControls}>
+            <RenderSteps />
+        </FormProvider>
+    );
 };
