@@ -4,23 +4,23 @@ import { t } from "i18next";
 
 interface ButtonNextStepProps {
     onNext: () => void;
-    disabledNextStep: boolean;
+    disabled: boolean;
 }
 
-export default function ButtonNextStep({ onNext, disabledNextStep }: ButtonNextStepProps) {
+export default function ButtonNextStep({ onNext, disabled }: ButtonNextStepProps) {
     const { theme } = useTheme();
 
     return (
         <Button
             title={t("buttons.nextStep")}
             onPress={onNext}
-            disabled={disabledNextStep}
+            disabled={disabled}
             color={theme.colors.primary}
             iconPosition='right'
             icon={{
                 type: "material-community",
                 name: "arrow-right-thin",
-                color: disabledNextStep ? theme.colors.grey3 : "#fff",
+                color: disabled ? theme.colors.grey3 : "#fff",
             }}
         />
     );

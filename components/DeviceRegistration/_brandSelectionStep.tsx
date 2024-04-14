@@ -32,6 +32,10 @@ export default function BrandSelectionStep({ onNext }: BrandSelectionStepProps) 
             }
         };
 
+        setDisabledNextStep(
+            watch('brand_id') ? false : true
+        );
+
         fetchBrands();
     }, []);
 
@@ -63,7 +67,7 @@ export default function BrandSelectionStep({ onNext }: BrandSelectionStepProps) 
 
             <ButtonNextStep
                 onNext={onNext}
-                disabledNextStep={disabledNextStep}
+                disabled={disabledNextStep}
             />
         </View>
     );

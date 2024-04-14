@@ -35,6 +35,10 @@ export default function DeviceModelSelectionStep({ onNext, onPrevious }: DeviceM
             }
         };
 
+        setDisabledNextStep(
+            watch('model_id') ? false : true
+        );
+
         fetchBrands();
     }, []);
 
@@ -78,7 +82,7 @@ export default function DeviceModelSelectionStep({ onNext, onPrevious }: DeviceM
 
                 <ButtonNextStep
                     onNext={onNext}
-                    disabledNextStep={disabledNextStep}
+                    disabled={disabledNextStep}
                 />
 
             </View>
