@@ -31,6 +31,10 @@
         "titleSpan": "Passo 2",
         "titleContent": "Selecione o modelo do dispositivo.",
         "selectModel": "Selecione um modelo"
+      },
+      "deviceInfoStep": {
+        "titleSpan": "Passo 3",
+        "titleContent": "Informe os dados básicos do aparelho."
       }
     }
   },

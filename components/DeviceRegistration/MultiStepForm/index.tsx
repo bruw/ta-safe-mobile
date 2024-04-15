@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import BrandSelectionStep from './_brandSelectionStep';
-import DeviceModelSelectionStep from './_deviceModelSelectionStep';
+import BrandSelectionStep from './BrandSelectionStep';
+import DeviceModelSelectionStep from './DeviceModelSelectionStep';
 
-export default function RenderSteps() {
+export default function FormSteps() {
     const [step, setStep] = useState(1);
 
     const nextStep = () => setStep(step + 1);
@@ -12,7 +12,7 @@ export default function RenderSteps() {
         case 1:
             return <BrandSelectionStep onNext={nextStep} />;
         case 2:
-            return <DeviceModelSelectionStep onNext={nextStep} onPrevious={previousStep} />;
+            return <DeviceModelSelectionStep onPrevious={previousStep} onNext={nextStep} />;
         default:
             return <></>;
     }

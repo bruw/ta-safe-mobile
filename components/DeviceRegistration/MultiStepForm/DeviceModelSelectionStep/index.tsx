@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
-import { makeStyles } from "@rneui/themed";
 import { Picker } from '@react-native-picker/picker';
 import { useFormContext } from 'react-hook-form';
 import api from 'services/api/api';
 import { DeviceModel } from 'types/ApiTypes';
 import { t } from 'i18next';
-import ButtonNextStep from './_buttonNextStep';
-import StepTitle from './_stepTitle';
-import ButtonPreviousStep from './_buttonPreviousStep';
+import ButtonNextStep from '../ButtonNextStep';
+import StepTitle from '../StepTitle';
+import ButtonPreviousStep from '../ButtonPreviousStep';
+import { stylesDeviceModelSelection } from "./_styles";
 
 interface DeviceModelSelectionStepProps {
-    onNext: () => void;
     onPrevious: () => void;
+    onNext: () => void;
 }
 
-export default function DeviceModelSelectionStep({ onNext, onPrevious }: DeviceModelSelectionStepProps) {
-    const styles = useStyles();
+export default function DeviceModelSelectionStep({ onPrevious, onNext }: DeviceModelSelectionStepProps) {
+    const styles = stylesDeviceModelSelection();
     const { setValue, watch } = useFormContext();
     const selectedBrandId = watch('brand_id');
 
@@ -74,7 +74,6 @@ export default function DeviceModelSelectionStep({ onNext, onPrevious }: DeviceM
             </View>
 
             <View style={styles.stepButtons}>
-
                 <ButtonPreviousStep
                     fieldName='model_id'
                     onPrevious={onPrevious}
@@ -84,27 +83,7 @@ export default function DeviceModelSelectionStep({ onNext, onPrevious }: DeviceM
                     onNext={onNext}
                     disabled={disabledNextStep}
                 />
-
             </View>
         </View>
     );
 };
-
-const useStyles = makeStyles(() => ({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    selectBrand: {
-        width: "90%",
-        borderBottomWidth: 1,
-        borderColor: "#86939E",
-        marginBottom: 40,
-    },
-    stepButtons: {
-        width: "90%",
-        flexDirection: "row",
-        justifyContent: "space-between",
-    }
-}));
