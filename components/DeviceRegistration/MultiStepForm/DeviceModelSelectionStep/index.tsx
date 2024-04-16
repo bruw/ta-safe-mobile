@@ -36,7 +36,7 @@ export default function DeviceModelSelectionStep({ onPrevious, onNext }: DeviceM
         };
 
         setDisabledNextStep(
-            watch('model_id') ? false : true
+            watch('device_model_id') ? false : true
         );
 
         fetchBrands();
@@ -47,13 +47,19 @@ export default function DeviceModelSelectionStep({ onPrevious, onNext }: DeviceM
             <StepTitle
                 span={t("forms.deviceRegistration.modelStep.titleSpan")}
                 content={t("forms.deviceRegistration.modelStep.titleContent")}
+                style={{
+                    width: "90%",
+                    fontSize: 18,
+                    textAlign: "center",
+                    marginBottom: 40
+                }}
             />
 
             <View style={[styles.selectBrand]}>
                 <Picker
-                    selectedValue={watch('model_id')}
+                    selectedValue={watch('device_model_id')}
                     onValueChange={(itemValue) => {
-                        setValue('model_id', itemValue);
+                        setValue('device_model_id', itemValue);
                         setDisabledNextStep(itemValue == "");
                     }}
                     numberOfLines={4}
@@ -75,7 +81,7 @@ export default function DeviceModelSelectionStep({ onPrevious, onNext }: DeviceM
 
             <View style={styles.stepButtons}>
                 <ButtonPreviousStep
-                    fieldName='model_id'
+                    fieldName='device_model_id'
                     onPrevious={onPrevious}
                 />
 

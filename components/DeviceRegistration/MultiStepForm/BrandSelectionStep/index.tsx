@@ -44,6 +44,12 @@ export default function BrandSelectionStep({ onNext }: BrandSelectionStepProps) 
             <StepTitle
                 span={t("forms.deviceRegistration.brandStep.titleSpan")}
                 content={t("forms.deviceRegistration.brandStep.titleContent")}
+                style={{
+                    width: "90%",
+                    fontSize: 18,
+                    textAlign: "center",
+                    marginBottom: 40
+                }}
             />
 
             <View style={[styles.selectBrand]}>
