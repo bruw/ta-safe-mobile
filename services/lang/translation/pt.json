@@ -4,7 +4,9 @@
     "logout": "Sair",
     "register": "Registrar",
     "save": "Salvar",
-    "signUp": "Novo por aqui? Cadastre-se."
+    "signUp": "Novo por aqui? Cadastre-se.",
+    "nextStep": "Próxima etapa",
+    "previousStep": "Etapa anterior"
   },
   "forms": {
     "login": {
@@ -18,6 +20,26 @@
       "phone": "Celular",
       "password": "Senha",
       "passwordConfirmation": "Confirmação de Senha"
+    },
+    "deviceRegistration": {
+      "brandStep": {
+        "titleSpan": "Passo 1",
+        "titleContent": "Selecione a marca do dispositivo que deseja registrar.",
+        "selectBrand": "Selecione uma marca"
+      },
+      "modelStep": {
+        "titleSpan": "Passo 2",
+        "titleContent": "Selecione o modelo do dispositivo.",
+        "selectModel": "Selecione um modelo"
+      },
+      "deviceInfoStep": {
+        "titleSpan": "Passo 3",
+        "titleContent": "Informe os dados básicos do aparelho.",
+        "color": "Cor",
+        "access_key": "Chave de acesso (NF-e)",
+        "imei_1": "IMEI 1",
+        "imei_2": "IMEI 2"
+      }
     }
   },
   "components": {
@@ -33,6 +55,9 @@
     },
     "profile": {
       "title": "Perfil"
+    },
+    "deviceRegistration": {
+      "title": "Registrar Celular"
     }
   }
 }

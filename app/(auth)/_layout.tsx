@@ -11,6 +11,16 @@ const theme = createTheme({
   lightColors: {
     primary: "#6100DD",
   },
+  components: {
+    Input: {
+      cursorColor: "#6100DD",
+    },
+    Button: {
+      containerStyle: {
+        borderRadius: 6,
+      },
+    },
+  },
 });
 
 export default function _Layout() {
@@ -42,6 +52,25 @@ export default function _Layout() {
             drawerIcon: (item) => (
               <Icon
                 name="view-dashboard-outline"
+                type="material-community"
+                color={
+                  item.focused
+                    ? theme.lightColors?.primary
+                    : theme.lightColors?.grey2
+                }
+              />
+            ),
+          }}
+        />
+
+        <Drawer.Screen
+          name="device-registration/index"
+          options={{
+            drawerLabel: t("components.deviceRegistration.title"),
+            title: t("components.deviceRegistration.title"),
+            drawerIcon: (item) => (
+              <Icon
+                name="cellphone"
                 type="material-community"
                 color={
                   item.focused
