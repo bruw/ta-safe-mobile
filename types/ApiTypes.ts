@@ -53,3 +53,11 @@ export type DeviceModel = {
   storage: string;
   brand: Brand;
 }
+
+export type DeviceRegistration = {
+  device_model_id: number;
+  color: string;
+  access_key: string;
+  imei_1: string;
+  imei_2: string
+}

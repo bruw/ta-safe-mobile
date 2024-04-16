@@ -34,7 +34,11 @@
       },
       "deviceInfoStep": {
         "titleSpan": "Passo 3",
-        "titleContent": "Informe os dados básicos do aparelho."
+        "titleContent": "Informe os dados básicos do aparelho.",
+        "color": "Cor",
+        "access_key": "Chave de acesso (NF-e)",
+        "imei_1": "IMEI 1",
+        "imei_2": "IMEI 2"
       }
     }
   },
