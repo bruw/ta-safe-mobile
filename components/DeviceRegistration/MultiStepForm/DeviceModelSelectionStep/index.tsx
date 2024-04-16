@@ -47,12 +47,7 @@ export default function DeviceModelSelectionStep({ onPrevious, onNext }: DeviceM
             <StepTitle
                 span={t("forms.deviceRegistration.modelStep.titleSpan")}
                 content={t("forms.deviceRegistration.modelStep.titleContent")}
-                style={{
-                    width: "90%",
-                    fontSize: 18,
-                    textAlign: "center",
-                    marginBottom: 40
-                }}
+                style={styles.stepTitle}
             />
 
             <View style={[styles.selectBrand]}>
