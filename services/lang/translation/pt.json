@@ -50,6 +50,9 @@
     "userRegistration": {
       "title": "Cadastro de Usuário"
     },
+    "myDevices": {
+      "title": "Meus Celulares"
+    },
     "profile": {
       "title": "Perfil"
     },
