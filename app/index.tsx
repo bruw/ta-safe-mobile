@@ -6,7 +6,7 @@ export default function _Screen() {
   const { token } = useToken();
 
   if (token) {
-    return <Redirect href="/(auth)/home" />;
+    return <Redirect href="/(auth)/device-registration" />;
   }
 
   return <Redirect href="/(public)/login" />;

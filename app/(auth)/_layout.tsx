@@ -45,25 +45,6 @@ export default function _Layout() {
         }}
       >
         <Drawer.Screen
-          name="home/index"
-          options={{
-            drawerLabel: t("components.home.title"),
-            title: t("components.home.title"),
-            drawerIcon: (item) => (
-              <Icon
-                name="view-dashboard-outline"
-                type="material-community"
-                color={
-                  item.focused
-                    ? theme.lightColors?.primary
-                    : theme.lightColors?.grey2
-                }
-              />
-            ),
-          }}
-        />
-
-        <Drawer.Screen
           name="device-registration/index"
           options={{
             drawerLabel: t("components.deviceRegistration.title"),
