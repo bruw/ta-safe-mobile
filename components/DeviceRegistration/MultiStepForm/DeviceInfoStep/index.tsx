@@ -12,6 +12,7 @@ import api from "services/api/api";
 import notify from "helpers/notify";
 import { useRouter } from "expo-router";
 import { hideMessage } from "react-native-flash-message";
+import { maskOnlyNumbers } from "helpers/maskOnlyNumbers";
 
 interface DeviceInfoProps {
     resetStep: () => void;
@@ -108,7 +109,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                                 <Input
                                     label={t("forms.deviceRegistration.deviceInfoStep.access_key")}
                                     value={value}
-                                    onChangeText={onChange}
+                                    onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.access_key?.message}
                                     maxLength={44}
                                     keyboardType="numeric"
@@ -130,7 +131,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                                 <Input
                                     label={t("forms.deviceRegistration.deviceInfoStep.imei_1")}
                                     value={value}
-                                    onChangeText={onChange}
+                                    onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.imei_1?.message}
                                     maxLength={15}
                                     keyboardType="numeric"
@@ -152,7 +153,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                                 <Input
                                     label={t("forms.deviceRegistration.deviceInfoStep.imei_2")}
                                     value={value}
-                                    onChangeText={onChange}
+                                    onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.imei_2?.message}
                                     maxLength={15}
                                     keyboardType="numeric"
