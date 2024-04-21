@@ -61,3 +61,20 @@ export type DeviceRegistration = {
   imei_1: string;
   imei_2: string
 }
+
+export type DeviceValidationStatus = {
+  validation_status: 'pending' | 'validated' | 'rejected';
+}
+
+export type Device = {
+  id: number;
+  color: string;
+  imei_1: string;
+  imei_2: string;
+  validation_status: DeviceValidationStatus['validation_status'];
+  sharing_token?: string;
+  created_at: string;
+  updated_at: string;
+  user: User;
+  device_model: DeviceModel
+}
