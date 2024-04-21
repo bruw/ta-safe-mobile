@@ -63,7 +63,9 @@
       "brand": "Marca",
       "color": "Cor",
       "imei_1": "IMEI 1",
-      "imei_2": "IMEI 2"
+      "imei_2": "IMEI 2",
+      "created_at": "Data de registro",
+      "updated_at": "Última atualização"
     } 
   },
   "status": {
