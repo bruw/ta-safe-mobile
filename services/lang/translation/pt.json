@@ -66,6 +66,9 @@
       "imei_2": "IMEI 2",
       "created_at": "Data de registro",
       "updated_at": "Última atualização"
+    },
+    "customActivityIndicator": {
+      "message": "Aguarde..."
     } 
   },
   "status": {
