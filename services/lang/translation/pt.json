@@ -58,6 +58,17 @@
     },
     "deviceRegistration": {
       "title": "Registrar Celular"
-    }
+    },
+    "deviceCard": {
+      "brand": "Marca",
+      "color": "Cor",
+      "imei_1": "IMEI 1",
+      "imei_2": "IMEI 2"
+    } 
+  },
+  "status": {
+    "pending": "Pendente",
+    "rejected": "Rejeitado",
+    "validated": "Validado"
   }
 }

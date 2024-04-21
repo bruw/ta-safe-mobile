@@ -54,7 +54,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
             reset();
             resetStep();
 
-            router.push("/(auth)/home")
+            router.push("/(auth)/my-devices")
 
         } catch (error: any) {
             const data = error.response.data;
