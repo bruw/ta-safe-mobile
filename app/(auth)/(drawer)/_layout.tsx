@@ -2,6 +2,7 @@ import { Icon } from "@rneui/base";
 import { ThemeProvider, createTheme } from "@rneui/themed";
 import CustomDrawerContent from "components/CustomDrawerContent";
 import { Drawer } from "expo-router/drawer";
+import { StatusBar } from "expo-status-bar";
 import { t } from "i18next";
 import React from "react";
 import FlashMessage from "react-native-flash-message";
@@ -25,6 +26,8 @@ const theme = createTheme({
 export default function _Layout() {
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar style="light" backgroundColor={theme.lightColors?.primary} />
+
       <FlashMessage position="top" statusBarHeight={40} />
 
       <Drawer
