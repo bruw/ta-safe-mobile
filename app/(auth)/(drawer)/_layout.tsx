@@ -4,7 +4,6 @@ import CustomDrawerContent from "components/CustomDrawerContent";
 import { Drawer } from "expo-router/drawer";
 import { t } from "i18next";
 import React from "react";
-import { StatusBar } from "react-native";
 import FlashMessage from "react-native-flash-message";
 
 const theme = createTheme({
@@ -26,11 +25,6 @@ const theme = createTheme({
 export default function _Layout() {
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar
-        backgroundColor={theme.lightColors?.primary}
-        barStyle="light-content"
-      />
-
       <FlashMessage position="top" statusBarHeight={40} />
 
       <Drawer
@@ -39,6 +33,7 @@ export default function _Layout() {
           drawerActiveTintColor: theme.lightColors?.primary,
           drawerInactiveTintColor: theme.lightColors?.grey2,
           headerTintColor: "#fff",
+          headerTitleAlign: "center",
           headerStyle: {
             backgroundColor: theme.lightColors?.primary,
           },
