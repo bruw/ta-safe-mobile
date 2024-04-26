@@ -10,7 +10,7 @@ interface DeviceCardProps {
     device: Device;
 }
 
-export default function DeviceCard({ device }: DeviceCardProps) {
+export default function DeviceCardInfo({ device }: DeviceCardProps) {
     const styles = stylesDeviceCard();
 
     return (
