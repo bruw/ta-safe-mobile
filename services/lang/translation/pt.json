@@ -83,10 +83,20 @@
   },
   "cards": {
     "deviceRegistrationStatusCard": {
-      "title": "Visão Geral",
-      "status": "Status",
+      "title": "Registro",
+      "status": "Validação",
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
+    },
+    "deviceResourcesCard": {
+      "title": "Características",
+      "brand": "Marca",
+      "model": "Modelo",
+      "color": "Cor",
+      "ram": "Ram",
+      "storage": "Armazenamento",
+      "imei_1": "IMEI 1",
+      "imei_2": "IMEI 2"
     }
   }
 }

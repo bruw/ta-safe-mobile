@@ -11,7 +11,7 @@ export default function DeviceRegistrationStatusCard() {
 
     return (
         <Card>
-            <Card.Title>
+            <Card.Title style={{ fontSize: 16 }}>
                 {t("cards.deviceRegistrationStatusCard.title")}
             </Card.Title>
 
@@ -20,6 +20,7 @@ export default function DeviceRegistrationStatusCard() {
             <TextWithSpan
                 span={t("cards.deviceRegistrationStatusCard.status")}
                 text={t(`status.${device.validation_status}`)}
+                textColor={"orange"}
             />
 
             <TextWithSpan

@@ -22,8 +22,8 @@ const theme = createTheme({
     },
     Text: {
       style: {
-        fontSize: 16
-      }
+        fontSize: 16,
+      },
     },
   },
 });

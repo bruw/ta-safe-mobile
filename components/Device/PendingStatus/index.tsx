@@ -1,3 +1,4 @@
+import DeviceInfoCard from "components/DeviceCards/DeviceInfoCardCard";
 import DeviceRegistrationStatusCard from "components/DeviceCards/DeviceRegistrationStatusCard";
 import DeviceProvider from "contexts/DeviceProvider";
 import { Device } from "types/ApiTypes";
@@ -10,6 +11,7 @@ export default function DeviceWithPendingValidation({ device }: DeviceWithPendin
     return (
         <DeviceProvider device={device} >
             <DeviceRegistrationStatusCard />
+            <DeviceInfoCard />
         </DeviceProvider>
     );
 }
