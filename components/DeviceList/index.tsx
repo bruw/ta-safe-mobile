@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import { Device } from 'types/ApiTypes';
 import { stylesDeviceList } from './_styles';
-import DeviceBasicInfoCard from 'components/DeviceCard/DeviceBasicInfoCard';
+import DeviceBasicInfoCard from 'components/DeviceCards/DeviceBasicInfoCard';
 
 interface DeviceListProps {
     devices: Device[];

@@ -7,7 +7,8 @@
     "signUp": "Novo por aqui? Cadastre-se.",
     "nextStep": "Próxima etapa",
     "previousStep": "Etapa anterior",
-    "details": "Visualizar Detalhes"
+    "details": "Visualizar Detalhes",
+    "validation": "Validar"
   },
   "forms": {
     "login": {
@@ -70,11 +71,22 @@
     },
     "customActivityIndicator": {
       "message": "Aguarde..."
+    },
+    "device": {
+      "title": "Informações do dispositivo"
     }
   },
   "status": {
     "pending": "Pendente",
     "rejected": "Rejeitado",
     "validated": "Validado"
+  },
+  "cards": {
+    "deviceRegistrationStatusCard": {
+      "title": "Visão Geral",
+      "status": "Status",
+      "created_at": "Registrado em",
+      "updated_at": "Última alteração"
+    }
   }
 }
