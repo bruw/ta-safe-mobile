@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceRegistrationStatusCard = makeStyles((theme) => ({
+export const stylesTextWithSpan = makeStyles((theme) => ({
     textContainer: {
         marginBottom: theme.spacing.sm,
     },

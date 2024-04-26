@@ -6,6 +6,7 @@ import { t } from 'i18next';
 import { DeviceContext } from 'contexts/DeviceProvider';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useRouter } from 'expo-router';
+import TextWithSpan from 'components/UI/TextWithSpan';
 
 export default function CardContent() {
     const styles = stylesDeviceCardContent();
@@ -14,19 +15,15 @@ export default function CardContent() {
 
     return (
         <View>
-            <Text style={styles.textContainer}>
-                <Text style={styles.span}>
-                    {t("components.deviceCard.brand")}:{' '}
-                </Text>
-                {device.device_model.brand.name}
-            </Text>
+            <TextWithSpan
+                span={t("components.deviceCard.brand")}
+                text={device.device_model.brand.name}
+            />
 
-            <Text style={styles.textContainer}>
-                <Text style={styles.span}>
-                    {t("components.deviceCard.color")}:{' '}
-                </Text>
-                {device.color}
-            </Text>
+            <TextWithSpan
+                span={t("components.deviceCard.color")}
+                text={device.color}
+            />
 
             <TouchableOpacity
                 style={styles.button}
