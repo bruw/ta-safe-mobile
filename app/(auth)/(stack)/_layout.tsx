@@ -18,6 +18,11 @@ const theme = createTheme({
         borderRadius: 6,
       },
     },
+    Text: {
+      style: {
+        fontSize: 16
+      }
+    },
   },
 });
 
