@@ -6,7 +6,7 @@ export const stylesDeviceList = makeStyles((theme) => ({
         alignItems: "center",
     },
     flatListContainer: {
-        width: "90%",
+        width: "100%",
         margin: theme.spacing.xl
     },
 }));

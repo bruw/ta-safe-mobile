@@ -1,11 +1,11 @@
 import { Divider } from '@rneui/themed';
 import React from 'react';
-import { View } from 'react-native';
 import { Device } from 'types/ApiTypes';
 import DeviceCardHeader from './DeviceCardHeader';
 import DeviceCardContent from './DeviceCardContent';
 import { stylesDeviceCard } from './_styles';
 import DeviceProvider from 'contexts/DeviceProvider';
+import { Card } from '@rneui/base';
 
 interface DeviceCardProps {
     device: Device;
@@ -16,11 +16,11 @@ export default function DeviceCardInfo({ device }: DeviceCardProps) {
 
     return (
         <DeviceProvider device={device}>
-            <View style={styles.container}>
+            <Card>
                 <DeviceCardHeader />
                 <Divider style={styles.divider} />
                 <DeviceCardContent />
-            </View>
+            </Card>
         </DeviceProvider>
     );
 }
