@@ -1,17 +1,17 @@
 import { Divider } from '@rneui/themed';
 import React from 'react';
 import { Device } from 'types/ApiTypes';
-import DeviceCardHeader from './DeviceCardHeader';
-import DeviceCardContent from './DeviceCardContent';
-import { stylesDeviceCard } from './_styles';
+import DeviceCardHeader from './CardHeader';
+import DeviceCardContent from './CardContent';
 import DeviceProvider from 'contexts/DeviceProvider';
 import { Card } from '@rneui/base';
+import { stylesDeviceCard } from './_styles';
 
 interface DeviceCardProps {
     device: Device;
 }
 
-export default function DeviceCardInfo({ device }: DeviceCardProps) {
+export default function DeviceBasicInfoCard({ device }: DeviceCardProps) {
     const styles = stylesDeviceCard();
 
     return (
