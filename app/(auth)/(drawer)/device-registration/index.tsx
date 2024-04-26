@@ -1,4 +1,3 @@
-
 import DeviceRegistration from "components/Forms/DeviceRegistration";
 import React from "react";
 
