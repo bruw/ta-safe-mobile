@@ -5,6 +5,7 @@ import { Device } from 'types/ApiTypes';
 import DeviceCardHeader from './DeviceCardHeader';
 import DeviceCardContent from './DeviceCardContent';
 import { stylesDeviceCard } from './_styles';
+import DeviceProvider from 'contexts/DeviceProvider';
 
 interface DeviceCardProps {
     device: Device;
@@ -14,13 +15,12 @@ export default function DeviceCardInfo({ device }: DeviceCardProps) {
     const styles = stylesDeviceCard();
 
     return (
-        <View style={styles.container}>
-            <DeviceCardHeader
-                title={device.device_model.name}
-                status={device.validation_status}
-            />
-            <Divider style={styles.divider} />
-            <DeviceCardContent device={device} />
-        </View>
+        <DeviceProvider device={device}>
+            <View style={styles.container}>
+                <DeviceCardHeader />
+                <Divider style={styles.divider} />
+                <DeviceCardContent />
+            </View>
+        </DeviceProvider>
     );
 }

@@ -1,15 +1,12 @@
-import { Badge, useTheme } from '@rneui/themed';
+import { Badge } from '@rneui/themed';
 import { t } from 'i18next';
-import React from 'react';
-import { DeviceValidationStatus } from 'types/ApiTypes';
+import React, { useContext } from 'react';
 import { stylesBadgeStatus } from './_styles';
+import { DeviceContext } from 'contexts/DeviceProvider';
 
-interface BadgeStatusProps {
-    status: DeviceValidationStatus['validation_status'];
-}
-
-export default function BadgeStatus({ status }: BadgeStatusProps) {
+export default function BadgeStatus() {
     const styles = stylesBadgeStatus();
+    const device = useContext(DeviceContext);
 
     const statusStyle = {
         pending: styles.pending,
@@ -18,7 +15,7 @@ export default function BadgeStatus({ status }: BadgeStatusProps) {
     };
 
     return <Badge
-        value={t(`status.${status}` as any)}
-        badgeStyle={statusStyle[status]}
+        value={t(`status.${device.validation_status}`)}
+        badgeStyle={statusStyle[device.validation_status]}
     />
 }

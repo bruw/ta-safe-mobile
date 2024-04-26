@@ -1,17 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View } from 'react-native';
-import { Device } from 'types/ApiTypes';
 import { Text } from '@rneui/themed';
 import { stylesDeviceCardContent } from './_styles';
 import { t } from 'i18next';
-import moment from 'moment';
+import { DeviceContext } from 'contexts/DeviceProvider';
 
-interface DeviceCardContentProps {
-    device: Device;
-}
-
-export default function DeviceCardContent({ device }: DeviceCardContentProps) {
+export default function DeviceCardContent() {
     const styles = stylesDeviceCardContent();
+    const device = useContext(DeviceContext);
 
     return (
         <View>
@@ -27,34 +23,6 @@ export default function DeviceCardContent({ device }: DeviceCardContentProps) {
                     {t("components.deviceCard.color")}:{' '}
                 </Text>
                 {device.color}
-            </Text>
-
-            <Text style={styles.textContainer}>
-                <Text style={styles.span}>
-                    {t("components.deviceCard.imei_1")}:{' '}
-                </Text>
-                {device.imei_1}
-            </Text>
-
-            <Text style={styles.textContainer}>
-                <Text style={styles.span}>
-                    {t("components.deviceCard.imei_2")}:{' '}
-                </Text>
-                {device.imei_2}
-            </Text>
-
-            <Text style={styles.textContainer}>
-                <Text style={styles.span}>
-                    {t("components.deviceCard.created_at")}:{' '}
-                </Text>
-                {moment(device.created_at).format('DD/MM/YYYY HH:mm')}
-            </Text>
-
-            <Text style={styles.textContainer}>
-                <Text style={styles.span}>
-                    {t("components.deviceCard.updated_at")}:{' '}
-                </Text>
-                {moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
             </Text>
         </View>
     );

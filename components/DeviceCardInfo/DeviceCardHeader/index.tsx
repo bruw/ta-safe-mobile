@@ -1,24 +1,23 @@
 import { Text } from "@rneui/themed";
 import { View } from "react-native";
 import BadgeStatus from "./BadgeStatus";
-import { DeviceValidationStatus } from "types/ApiTypes";
 import { stylesDeviceCardHeader } from "./_styles";
+import { useContext } from "react";
+import { DeviceContext } from "contexts/DeviceProvider";
 
-interface DeviceCardHeaderProps {
-    title: string;
-    status: DeviceValidationStatus['validation_status'];
-}
-
-export default function DeviceCardHeader({ title, status }: DeviceCardHeaderProps) {
+export default function DeviceCardHeader() {
     const styles = stylesDeviceCardHeader();
+    const device = useContext(DeviceContext);
 
     return (
         <View style={styles.container}>
             <View style={styles.title}>
-                <Text style={styles.textTitle}>{title}</Text>
+                <Text style={styles.textTitle}>
+                    {device.device_model.name}
+                </Text>
             </View>
             <View style={styles.status}>
-                <BadgeStatus status={status} />
+                <BadgeStatus />
             </View>
         </View>
     );
