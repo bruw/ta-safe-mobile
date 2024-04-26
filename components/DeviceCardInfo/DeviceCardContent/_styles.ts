@@ -5,6 +5,15 @@ export const stylesDeviceCardContent = makeStyles((theme) => ({
         marginBottom: theme.spacing.sm,
     },
     span: {
-        fontWeight: '900'
+        fontWeight: '900',
+    },
+    button: {
+        alignItems: "center",
+        marginTop: theme.spacing.xl,
+        marginBottom: theme.spacing.md
+    },
+    buttonTitle: {
+        color: theme.colors.primary,
+        fontWeight: '700'
     }
 }));

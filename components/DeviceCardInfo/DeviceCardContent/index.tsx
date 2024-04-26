@@ -4,6 +4,7 @@ import { Text } from '@rneui/themed';
 import { stylesDeviceCardContent } from './_styles';
 import { t } from 'i18next';
 import { DeviceContext } from 'contexts/DeviceProvider';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function DeviceCardContent() {
     const styles = stylesDeviceCardContent();
@@ -24,6 +25,13 @@ export default function DeviceCardContent() {
                 </Text>
                 {device.color}
             </Text>
+
+            <TouchableOpacity style={styles.button} >
+                <Text style={styles.buttonTitle}>
+                    {t("buttons.details")}
+                </Text>
+            </TouchableOpacity>
+
         </View>
     );
 }

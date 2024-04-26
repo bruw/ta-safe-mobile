@@ -6,7 +6,8 @@
     "save": "Salvar",
     "signUp": "Novo por aqui? Cadastre-se.",
     "nextStep": "Próxima etapa",
-    "previousStep": "Etapa anterior"
+    "previousStep": "Etapa anterior",
+    "details": "Visualizar Detalhes"
   },
   "forms": {
     "login": {
@@ -69,7 +70,7 @@
     },
     "customActivityIndicator": {
       "message": "Aguarde..."
-    } 
+    }
   },
   "status": {
     "pending": "Pendente",
