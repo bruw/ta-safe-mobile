@@ -1,10 +1,10 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceCardContent = makeStyles((theme) => ({
+export const stylesTextWithSpan = makeStyles((theme) => ({
     textContainer: {
         marginBottom: theme.spacing.sm,
     },
     span: {
-        fontWeight: '900'
-    }
+        fontWeight: '900',
+    },
 }));

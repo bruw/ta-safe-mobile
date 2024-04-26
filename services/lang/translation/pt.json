@@ -6,7 +6,9 @@
     "save": "Salvar",
     "signUp": "Novo por aqui? Cadastre-se.",
     "nextStep": "Próxima etapa",
-    "previousStep": "Etapa anterior"
+    "previousStep": "Etapa anterior",
+    "details": "Visualizar Detalhes",
+    "validation": "Validar"
   },
   "forms": {
     "login": {
@@ -69,11 +71,32 @@
     },
     "customActivityIndicator": {
       "message": "Aguarde..."
-    } 
+    },
+    "device": {
+      "title": "Informações do dispositivo"
+    }
   },
   "status": {
     "pending": "Pendente",
     "rejected": "Rejeitado",
     "validated": "Validado"
+  },
+  "cards": {
+    "deviceRegistrationStatusCard": {
+      "title": "Registro",
+      "status": "Validação",
+      "created_at": "Registrado em",
+      "updated_at": "Última alteração"
+    },
+    "deviceResourcesCard": {
+      "title": "Características",
+      "brand": "Marca",
+      "model": "Modelo",
+      "color": "Cor",
+      "ram": "Ram",
+      "storage": "Armazenamento",
+      "imei_1": "IMEI 1",
+      "imei_2": "IMEI 2"
+    }
   }
 }

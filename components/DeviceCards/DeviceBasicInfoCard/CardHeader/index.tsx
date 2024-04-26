@@ -5,7 +5,7 @@ import { stylesDeviceCardHeader } from "./_styles";
 import { useContext } from "react";
 import { DeviceContext } from "contexts/DeviceProvider";
 
-export default function DeviceCardHeader() {
+export default function CardHeader() {
     const styles = stylesDeviceCardHeader();
     const device = useContext(DeviceContext);
 
