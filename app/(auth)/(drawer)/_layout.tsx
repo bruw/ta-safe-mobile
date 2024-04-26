@@ -1,6 +1,6 @@
 import { Icon } from "@rneui/base";
 import { ThemeProvider, createTheme } from "@rneui/themed";
-import CustomDrawerContent from "components/CustomDrawerContent";
+import CustomDrawerContent from "components/UI/CustomDrawerContent";
 import { Drawer } from "expo-router/drawer";
 import { StatusBar } from "expo-status-bar";
 import { t } from "i18next";
