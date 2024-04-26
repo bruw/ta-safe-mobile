@@ -1,5 +1,5 @@
-import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import DeviceList from "components/DeviceList";
+import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { useFocusEffect } from "expo-router/src/useFocusEffect";
 import React, { useCallback, useState } from "react";
 import api from "services/api/api";

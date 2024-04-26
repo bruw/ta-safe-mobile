@@ -1,10 +1,10 @@
 import { Card } from "@rneui/base";
-import ValidationButton from "./ValidationButton";
 import { useContext } from "react";
 import { DeviceContext } from "contexts/DeviceProvider";
 import moment from "moment";
 import { t } from "i18next";
 import TextWithSpan from "components/UI/TextWithSpan";
+import MainButton from "components/UI/MainButton";
 
 export default function DeviceRegistrationStatusCard() {
     const device = useContext(DeviceContext);
@@ -33,7 +33,7 @@ export default function DeviceRegistrationStatusCard() {
             />
 
             {device.validation_status == 'pending' && (
-                <ValidationButton />
+                <MainButton title={t("buttons.validation")} />
             )}
 
         </Card >

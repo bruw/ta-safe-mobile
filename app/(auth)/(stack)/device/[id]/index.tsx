@@ -1,5 +1,5 @@
-import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import DeviceWithPendingValidation from "components/Device/PendingStatus";
+import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { Stack, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { t } from "i18next";
 import { useCallback, useState } from "react";
