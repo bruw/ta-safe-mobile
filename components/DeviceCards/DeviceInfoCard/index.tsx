@@ -3,13 +3,15 @@ import TextWithSpan from "components/UI/TextWithSpan";
 import { DeviceContext } from "contexts/DeviceProvider";
 import { t } from "i18next";
 import { useContext } from "react";
+import { stylesDeviceInfoCard } from "./_styles";
 
 export default function DeviceInfoCard() {
+    const styles = stylesDeviceInfoCard();
     const device = useContext(DeviceContext);
 
     return (
-        <Card>
-            <Card.Title style={{ fontSize: 16 }}>
+        <Card containerStyle={styles.container}>
+            <Card.Title style={styles.title}>
                 {t('cards.deviceResourcesCard.title')}
             </Card.Title>
 
