@@ -1,4 +1,5 @@
-import DeviceInfoCard from "components/DeviceCards/DeviceInfoCardCard";
+
+import DeviceInfoCard from "components/DeviceCards/DeviceInfoCard";
 import DeviceRegistrationStatusCard from "components/DeviceCards/DeviceRegistrationStatusCard";
 import DeviceProvider from "contexts/DeviceProvider";
 import { Device } from "types/ApiTypes";
