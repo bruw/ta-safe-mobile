@@ -4,7 +4,7 @@ import { DeviceContext } from "contexts/DeviceProvider";
 import moment from "moment";
 import { t } from "i18next";
 import TextWithSpan from "components/UI/TextWithSpan";
-import MainButton from "components/UI/MainButton";
+import DeviceValidation from "components/DeviceValidation";
 
 export default function DeviceRegistrationStatusCard() {
     const device = useContext(DeviceContext);
@@ -34,9 +34,8 @@ export default function DeviceRegistrationStatusCard() {
             />
 
             {device.validation_status == 'pending' && (
-                <MainButton title={t("buttons.validation")} />
+                <DeviceValidation />
             )}
-
         </Card >
     )
 }
