@@ -29,7 +29,10 @@ const manipulateDomForNfeDataExtract = (): string => `
  * Get consumer information from NFe.
  */
 const extractConsumerInfoFromNfe = (): string => `
-    const consumerData = document.querySelectorAll("#NFe fieldset tr")[2].innerText;
+    const consumerTable = document.querySelector('#NFe fieldset:nth-child(3)');
+
+    const consumer_cpf = consumerTable.querySelector('.col-5 span').innerText;
+    const consumer_name = consumerTable.querySelector('.col-2 span').innerText;
 `;
 
 /**
@@ -50,7 +53,8 @@ const extractProductsInfoFromNfe = (): string => `
 const sendNfeDataToReactNative = (): string => `
     window.ReactNativeWebView.postMessage(
         JSON.stringify({ 
-            consumer: consumerData,
+            cpf: consumer_cpf,
+            name: consumer_name,
             products: productsData 
         })
     );

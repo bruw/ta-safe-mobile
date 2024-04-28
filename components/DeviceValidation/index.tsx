@@ -11,8 +11,8 @@ export default function DeviceValidation() {
     const nfePageHandler = new NfePageHandler();
 
     const handleMessage = (event: WebViewMessageEvent) => {
-        const { consumer, products} = JSON.parse(event.nativeEvent.data);
-        console.log(consumer, products)
+        const { cpf, name, products} = JSON.parse(event.nativeEvent.data);
+        console.log(cpf, name, products)
     };
 
     return (
