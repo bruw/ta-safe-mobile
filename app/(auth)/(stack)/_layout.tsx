@@ -4,6 +4,7 @@ import { Stack } from "expo-router";
 import { useNavigation } from "expo-router/src/useNavigation";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
+import FlashMessage from "react-native-flash-message";
 
 const theme = createTheme({
   lightColors: {
@@ -32,6 +33,9 @@ export default function _Layout() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="light" backgroundColor={theme.lightColors?.primary} />
+
+      <FlashMessage position="top" statusBarHeight={40} />
+
       <Stack
         screenOptions={{
           headerTintColor: "white",
