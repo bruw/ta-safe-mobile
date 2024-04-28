@@ -7,10 +7,9 @@ import { t } from "i18next";
 
 export default function CustomDrawerContent(props: DrawerContentComponentProps) {
     const router = useRouter();
-    const { setToken } = useToken();
 
     const handleLogout = async () => {
-        setToken();
+        useToken.getState().clearToken();
         router.replace("/(public)/login");
     };
 
