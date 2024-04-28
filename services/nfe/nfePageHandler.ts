@@ -2,7 +2,7 @@ import { DeviceContext } from "contexts/DeviceProvider";
 import { useContext } from "react";
 import { Device } from "types/ApiTypes";
 import { injectScriptsForNfeHomePage } from "./scripts/injectScriptsForNfeHomePage";
-import { injectScriptsForNfePreviewPage } from "./scripts/injectScriptsForNfePreviewPage";
+import { injectScriptsForNfeDataExtract } from "./scripts/injectScriptsForNfeDataExtract";
 
 export default class NfePageHandler {
     private readonly device: Device;
@@ -26,7 +26,7 @@ export default class NfePageHandler {
     public scripts(): string {
         return `
             ${this.scriptsForHomePage()}
-            ${this.scriptsForPreviewPage()}
+            ${this.scriptsForNfeDataExtraction()}
         `;
     }
 
@@ -38,9 +38,9 @@ export default class NfePageHandler {
     }
 
     /**
-     * Scripts for the NFe preview page.
+     * Scripts for extracting data from NFe.
      */
-    private scriptsForPreviewPage(): string {
-        return injectScriptsForNfePreviewPage();
+    private scriptsForNfeDataExtraction(): string {
+        return injectScriptsForNfeDataExtract();
     }
 }
