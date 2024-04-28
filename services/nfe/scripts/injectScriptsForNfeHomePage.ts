@@ -17,6 +17,7 @@ export const injectScriptsForNfeHomePage = (device: Device, homeNfeUrl: string):
  */
 const manipulateTheDomForNfeAccess = (device: Device): string => `
     ${getAttributes()}
+    ${adjustZoomAndVisibility()}
     ${randomInterval()}
     ${addAccessKey(device)}
     ${checkCaptcha()}
@@ -31,6 +32,30 @@ const getAttributes = (): string => `
     let divHcaptcha = document.getElementById('ctl00_ContentPlaceHolder1_pnlBotoesHCaptcha');
     let iframeCaptcha = divHcaptcha.querySelector('iframe');
     let confirmButton = document.getElementById('ctl00_ContentPlaceHolder1_btnConsultarHCaptcha');
+    let clearButton = document.getElementById('ctl00_ContentPlaceHolder1_btnLimparHCaptcha');
+`;
+
+/**
+ * Adjusts page zoom and hides NFe query buttons.
+ */
+const adjustZoomAndVisibility = (): string => `  
+    document.body.style.zoom = "400%";
+
+    let divConsultationInfo = document.getElementById('ctl00_ContentPlaceHolder1_pnlInformacoesConsulta');
+    divConsultationInfo.scrollIntoView({ block: "center", inline: "center"});
+
+    divHcaptcha.style.transform = 'scale(' + 4.0 + ')';
+    divHcaptcha.style.transformOrigin = '0 0';
+
+    ${hideConsultationButtons}
+`;
+
+/**
+ * Hides the NFe query buttons.
+ */
+const hideConsultationButtons = (): string => `
+    confirmButton.style.display = 'none';
+    clearButton.style.display = 'none';
 `;
 
 /**
