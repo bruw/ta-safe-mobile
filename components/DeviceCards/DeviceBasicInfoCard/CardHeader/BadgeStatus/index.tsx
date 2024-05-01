@@ -10,12 +10,16 @@ export default function BadgeStatus() {
 
     const statusStyle = {
         pending: styles.pending,
+        in_analysis: styles.inAnalysis,
         rejected: styles.rejected,
         validated: styles.validated
     };
 
     return <Badge
         value={t(`status.${device.validation_status}`)}
-        badgeStyle={statusStyle[device.validation_status]}
+        badgeStyle={[
+            styles.badgeStyle,
+            statusStyle[device.validation_status]
+        ]}
     />
 }

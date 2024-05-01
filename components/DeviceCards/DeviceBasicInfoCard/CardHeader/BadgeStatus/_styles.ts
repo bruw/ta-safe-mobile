@@ -1,19 +1,20 @@
 import { makeStyles } from "@rneui/themed";
 
 export const stylesBadgeStatus = makeStyles((theme) => ({
-    pending: {
+    badgeStyle: {
         height: 30,
         padding: 6,
+    },
+    pending: {
         backgroundColor: theme.colors.warning,
     },
+    inAnalysis: {
+        backgroundColor: theme.colors.info,
+    },
     rejected: {
-        height: 30,
-        padding: 6,
         backgroundColor: theme.colors.error,
     },
     validated: {
-        height: 30,
-        padding: 6,
         backgroundColor: theme.colors.success,
     }
 }));
