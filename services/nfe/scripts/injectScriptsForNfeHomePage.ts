@@ -17,6 +17,7 @@ export const injectScriptsForNfeHomePage = (device: Device, homePageUrl: string)
  */
 const manipulateTheDomForNfeAccess = (device: Device): string => `
     ${getAttributes()}
+    ${blockAccessKeyInputEdit()}
     ${adjustZoomAndVisibility()}
     ${randomInterval()}
     ${addAccessKey(device)}
@@ -33,6 +34,13 @@ const getAttributes = (): string => `
     let iframeCaptcha = divHcaptcha.querySelector('iframe');
     let confirmButton = document.getElementById('ctl00_ContentPlaceHolder1_btnConsultarHCaptcha');
     let clearButton = document.getElementById('ctl00_ContentPlaceHolder1_btnLimparHCaptcha');
+`;
+
+/**
+ * Add the readonly attribute to the key input in the NFe to prevent the user from modifying it.
+ */
+const blockAccessKeyInputEdit = (): string => `
+    inputAccessKey.setAttribute("readonly", "readonly");
 `;
 
 /**
