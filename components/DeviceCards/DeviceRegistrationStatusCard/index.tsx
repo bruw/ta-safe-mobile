@@ -1,10 +1,10 @@
-import { Card } from "@rneui/base";
+import { Card, color } from "@rneui/base";
 import { useContext } from "react";
 import { DeviceContext } from "contexts/DeviceProvider";
 import moment from "moment";
 import { t } from "i18next";
-import TextWithSpan from "components/UI/TextWithSpan";
 import DeviceValidation from "components/DeviceValidation";
+import LabeledText from "components/UI/LabeledText";
 
 export default function DeviceRegistrationStatusCard() {
     const { device } = useContext(DeviceContext);
@@ -17,19 +17,19 @@ export default function DeviceRegistrationStatusCard() {
 
             <Card.Divider />
 
-            <TextWithSpan
-                span={t("cards.deviceRegistrationStatusCard.status")}
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.status")}
                 text={t(`status.${device.validation_status}`)}
-                textColor={"orange"}
+                textStyle={{ color: "orange", fontWeight: "bold" }}
             />
 
-            <TextWithSpan
-                span={t("cards.deviceRegistrationStatusCard.created_at")}
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.created_at")}
                 text={moment(device.created_at).format('DD/MM/YYYY HH:mm')}
             />
 
-            <TextWithSpan
-                span={t("cards.deviceRegistrationStatusCard.updated_at")}
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.updated_at")}
                 text={moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
             />
 
