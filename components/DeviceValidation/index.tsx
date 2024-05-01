@@ -1,18 +1,29 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Modal, View } from "react-native";
-import WebView, { WebViewMessageEvent } from "react-native-webview";
+import { WebViewMessageEvent, WebViewNavigation } from "react-native-webview";
 import MainButton from "components/UI/MainButton";
 import { t } from "i18next";
 import NfePageHandler from "services/nfe/nfePageHandler";
-
+import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
+import WebViewNfe from "./WebViewNfe";
+import { DeviceContext } from "contexts/DeviceProvider";
 
 export default function DeviceValidation() {
+    const device = useContext(DeviceContext);
+    const nfePageHandler = new NfePageHandler(device);
+
     const [modalVisible, setModalVisible] = useState<boolean>(false);
-    const nfePageHandler = new NfePageHandler();
+    const [showActivityIndicator, setShowActivityIndicator] = useState(false);
 
     const handleMessage = (event: WebViewMessageEvent) => {
-        const { cpf, name, products} = JSON.parse(event.nativeEvent.data);
+        const { cpf, name, products } = JSON.parse(event.nativeEvent.data);
         console.log(cpf, name, products)
+    };
+
+    const handleWebViewNavigationStateChange = (navState: WebViewNavigation) => {
+        if (navState.url == nfePageHandler.generalDataNfeUrl()) {
+            setShowActivityIndicator(true);
+        }
     };
 
     return (
@@ -21,19 +32,27 @@ export default function DeviceValidation() {
                 title={t("buttons.validation")}
                 onPress={() => setModalVisible(true)}
             />
+
             <Modal
                 visible={modalVisible}
-                animationType="slide"
-                onRequestClose={() => setModalVisible(false)}
-                transparent
+                onRequestClose={() => {
+                    setModalVisible(false);
+                    setShowActivityIndicator(false);
+                }}
             >
-                <WebView
-                    source={{ uri: nfePageHandler.homeUrl() }}
-                    injectedJavaScript={nfePageHandler.scripts()}
-                    javaScriptEnabled={true}
-                    startInLoadingState={true}
+                <WebViewNfe
+                    device={device}
                     onMessage={handleMessage}
+                    onNavigationStateChange={handleWebViewNavigationStateChange}
                 />
+
+                {showActivityIndicator &&
+                    <CustomActivityIndicator
+                        message={
+                            t("components.customActivityIndicator.nfeValidation")
+                        }
+                    />
+                }
             </Modal>
         </View>
     );
