@@ -10,6 +10,7 @@ import FlashMessage from "react-native-flash-message";
 const theme = createTheme({
   lightColors: {
     primary: "#6100DD",
+    info: "#15A8CE",
   },
   components: {
     Input: {
