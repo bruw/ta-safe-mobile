@@ -70,7 +70,8 @@
       "updated_at": "Última atualização"
     },
     "customActivityIndicator": {
-      "message": "Aguarde..."
+      "default": "Aguarde...",
+      "nfeValidation": "Aguarde, estamos validando sua NFe."
     },
     "device": {
       "title": "Informações do dispositivo"
