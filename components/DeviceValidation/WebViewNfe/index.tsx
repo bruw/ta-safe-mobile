@@ -11,6 +11,19 @@ interface WebViewNfeProps {
 export default function WebViewNfe({ device, onMessage, onNavigationStateChange }: WebViewNfeProps) {
     const nfePageHandler = new NfePageHandler(device);
 
+    const shouldStartLoadWithRequest = (navState: WebViewNavigation) => {
+        const url = navState.url
+
+        switch (url) {
+            case nfePageHandler.homePageUrl():
+                return true;
+            case nfePageHandler.generalDataNfeUrl():
+                return true;
+            default:
+                return false;
+        }
+    }
+
     return (
         <WebView
             source={{ uri: nfePageHandler.homePageUrl() }}
@@ -19,6 +32,7 @@ export default function WebViewNfe({ device, onMessage, onNavigationStateChange 
             injectedJavaScript={nfePageHandler.scripts()}
             onMessage={onMessage}
             onNavigationStateChange={onNavigationStateChange}
+            onShouldStartLoadWithRequest={shouldStartLoadWithRequest}
         />
     );
 }
