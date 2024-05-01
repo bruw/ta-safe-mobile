@@ -78,14 +78,15 @@
     }
   },
   "status": {
-    "pending": "Pendente",
+    "pending": "Validação Pendente",
+    "in_analysis": "Em análise",
     "rejected": "Rejeitado",
     "validated": "Validado"
   },
   "cards": {
     "deviceRegistrationStatusCard": {
       "title": "Registro",
-      "status": "Validação",
+      "status": "Status",
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
     },

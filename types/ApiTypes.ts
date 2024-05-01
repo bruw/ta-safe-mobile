@@ -79,3 +79,8 @@ export type Device = {
   user: User;
   device_model: DeviceModel
 }
+
+export type UpdatedDevice = {
+  device: Device;
+  message: FlashMessage;
+}
