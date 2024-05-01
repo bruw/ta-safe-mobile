@@ -19,6 +19,7 @@ const manipulateTheDomForNfeAccess = (device: Device): string => `
     ${getAttributes()}
     ${blockAccessKeyInputEdit()}
     ${blockPageScrolling()}
+    ${hidePoundElement()}
     ${adjustZoomAndVisibility()}
     ${randomInterval()}
     ${addAccessKey(device)}
@@ -51,6 +52,13 @@ const blockPageScrolling = (): string => `
     document.body.style.overflow = 'hidden';
 `;
 
+/**
+ * Hides a button that opens an assistant in pounds
+ */
+const hidePoundElement = (): string => `
+    const poundElement = document.querySelector('.enabled');
+    poundElement.style.display = 'none';
+`;
 
 /**
  * Adjusts page zoom and hides NFe query buttons.
