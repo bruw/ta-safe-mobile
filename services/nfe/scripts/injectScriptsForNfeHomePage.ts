@@ -4,10 +4,10 @@ import { getCurrentUrl, randomInterval } from "./helpers";
 /**
  * Injects scripts into the NFe home page to manipulate the DOM.
  */
-export const injectScriptsForNfeHomePage = (device: Device, homeNfeUrl: string): string => `
+export const injectScriptsForNfeHomePage = (device: Device, homePageUrl: string): string => `
     ${getCurrentUrl()}
 
-    if(currentUrl == "${homeNfeUrl}"){
+    if(currentUrl == "${homePageUrl}"){
         ${manipulateTheDomForNfeAccess(device)}
     }
 `;

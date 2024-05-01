@@ -1,14 +1,12 @@
 import { getCurrentUrl, randomInterval } from "./helpers";
 
-const viewNfeUrl = 'https://www.nfe.fazenda.gov.br/portal/consultaResumo.aspx?tipoConteudo=7PhJ+gAVw2g=';
-
 /**
  * Inject scripts into the NFe view to extract informations.
  */
-export const injectScriptsForNfeDataExtract = (): string => `
+export const injectScriptsForNfeDataExtract = (generalDataNfeUrl: string): string => `
     ${getCurrentUrl()}
    
-    if(currentUrl == "${viewNfeUrl}"){
+    if(currentUrl == "${generalDataNfeUrl}"){
         ${randomInterval()}
         ${manipulateDomForNfeDataExtract()}
     }
