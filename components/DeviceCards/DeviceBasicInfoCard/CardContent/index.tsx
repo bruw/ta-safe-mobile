@@ -7,7 +7,7 @@ import TextWithSpan from 'components/UI/TextWithSpan';
 import MainButton from 'components/UI/MainButton';
 
 export default function CardContent() {
-    const device = useContext(DeviceContext);
+    const { device } = useContext(DeviceContext);
     const router = useRouter();
 
     return (

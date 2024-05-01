@@ -7,7 +7,7 @@ import { stylesDeviceInfoCard } from "./_styles";
 
 export default function DeviceInfoCard() {
     const styles = stylesDeviceInfoCard();
-    const device = useContext(DeviceContext);
+    const { device } = useContext(DeviceContext);
 
     return (
         <Card containerStyle={styles.container}>

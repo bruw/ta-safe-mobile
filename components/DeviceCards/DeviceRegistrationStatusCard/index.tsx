@@ -7,7 +7,7 @@ import TextWithSpan from "components/UI/TextWithSpan";
 import DeviceValidation from "components/DeviceValidation";
 
 export default function DeviceRegistrationStatusCard() {
-    const device = useContext(DeviceContext);
+    const { device } = useContext(DeviceContext);
 
     return (
         <Card>

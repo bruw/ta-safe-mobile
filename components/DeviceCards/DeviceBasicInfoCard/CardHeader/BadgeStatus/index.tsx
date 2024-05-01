@@ -6,7 +6,7 @@ import { DeviceContext } from 'contexts/DeviceProvider';
 
 export default function BadgeStatus() {
     const styles = stylesBadgeStatus();
-    const device = useContext(DeviceContext);
+    const { device } = useContext(DeviceContext);
 
     const statusStyle = {
         pending: styles.pending,
