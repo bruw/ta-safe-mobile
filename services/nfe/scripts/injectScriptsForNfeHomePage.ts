@@ -18,6 +18,7 @@ export const injectScriptsForNfeHomePage = (device: Device, homePageUrl: string)
 const manipulateTheDomForNfeAccess = (device: Device): string => `
     ${getAttributes()}
     ${blockAccessKeyInputEdit()}
+    ${blockPageScrolling()}
     ${adjustZoomAndVisibility()}
     ${randomInterval()}
     ${addAccessKey(device)}
@@ -44,6 +45,14 @@ const blockAccessKeyInputEdit = (): string => `
 `;
 
 /**
+ * Does not allow the user to scroll .
+ */
+const blockPageScrolling = (): string => `
+    document.body.style.overflow = 'hidden';
+`;
+
+
+/**
  * Adjusts page zoom and hides NFe query buttons.
  */
 const adjustZoomAndVisibility = (): string => `  
@@ -54,6 +63,8 @@ const adjustZoomAndVisibility = (): string => `
 
     divHcaptcha.style.transform = 'scale(' + 4.0 + ')';
     divHcaptcha.style.transformOrigin = '0 0';
+
+    divConsultationInfo.style.overflow = 'hidden';
 
     ${hideConsultationButtons}
 `;
