@@ -1,5 +1,5 @@
 
-import DeviceInfoCard from "components/DeviceCards/DeviceInfoCard";
+import DeviceAttributesCard from "components/DeviceCards/DeviceAttributesCard";
 import DeviceRegistrationStatusCard from "components/DeviceCards/DeviceRegistrationStatusCard";
 import DeviceProvider from "contexts/DeviceProvider";
 import { ScrollView } from "react-native-gesture-handler";
@@ -14,7 +14,7 @@ export default function DeviceWithPendingValidation({ device }: DeviceWithPendin
         <DeviceProvider device={device} >
             <ScrollView>
                 <DeviceRegistrationStatusCard />
-                <DeviceInfoCard />
+                <DeviceAttributesCard />
             </ScrollView>
         </DeviceProvider>
     );
