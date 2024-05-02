@@ -33,6 +33,21 @@ export default function DeviceRegistrationStatusCard() {
             />
 
             <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.owner")}
+                text={device.user.name}
+            />
+
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.cpf")}
+                text={device.user.cpf}
+            />
+
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.phone")}
+                text={device.user.phone}
+            />
+
+            <LabeledText
                 label={t("cards.deviceRegistrationStatusCard.created_at")}
                 text={moment(device.created_at).format('DD/MM/YYYY HH:mm')}
             />
