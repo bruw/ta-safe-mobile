@@ -63,7 +63,7 @@ export type DeviceRegistration = {
 }
 
 export type DeviceValidationStatus = {
-  validation_status: 'pending' | 'validated' | 'rejected';
+  validation_status: 'pending' | 'in_analysis' | 'validated' | 'rejected';
 }
 
 export type Device = {

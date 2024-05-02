@@ -1,13 +1,22 @@
-import { Card, color } from "@rneui/base";
 import { useContext } from "react";
 import { DeviceContext } from "contexts/DeviceProvider";
-import moment from "moment";
-import { t } from "i18next";
-import DeviceValidation from "components/DeviceValidation";
+import { Card } from "@rneui/base";
 import LabeledText from "components/UI/LabeledText";
+import { t } from "i18next";
+import moment from "moment";
+import DeviceValidation from "components/DeviceValidation";
+import { stylesRegistrationStatusCard } from "./_styles";
 
 export default function DeviceRegistrationStatusCard() {
+    const styles = stylesRegistrationStatusCard();
     const { device } = useContext(DeviceContext);
+
+    const statusStyle = {
+        pending: styles.pending,
+        in_analysis: styles.inAnalysis,
+        rejected: styles.rejected,
+        validated: styles.validated
+    };
 
     return (
         <Card>
@@ -20,7 +29,7 @@ export default function DeviceRegistrationStatusCard() {
             <LabeledText
                 label={t("cards.deviceRegistrationStatusCard.status")}
                 text={t(`status.${device.validation_status}`)}
-                textStyle={{ color: "orange", fontWeight: "bold" }}
+                textStyle={statusStyle[device.validation_status]}
             />
 
             <LabeledText
@@ -37,5 +46,5 @@ export default function DeviceRegistrationStatusCard() {
                 <DeviceValidation />
             )}
         </Card >
-    )
+    );
 }
