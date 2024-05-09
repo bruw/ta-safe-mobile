@@ -41,7 +41,10 @@ const extractProductsInfoFromNfe = (): string => `
     let productsData = ""; 
 
     tds.forEach(td => {
-        productsData += td.innerText + "\\n";
+        const span = td.querySelector('span');
+       
+        const spanContent = span.outerHTML;
+        productsData += spanContent;
     });
 `;
 
