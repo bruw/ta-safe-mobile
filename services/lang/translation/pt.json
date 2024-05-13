@@ -8,7 +8,8 @@
     "nextStep": "Próxima etapa",
     "previousStep": "Etapa anterior",
     "details": "Visualizar Detalhes",
-    "validation": "Validar"
+    "validation": "Validar",
+    "registerDevice": "Registrar Celular"
   },
   "forms": {
     "login": {

@@ -1,4 +1,5 @@
 import DeviceList from "components/DeviceList";
+import DeviceRegistrationCallToAction from "components/DeviceRegistrationCallToAction";
 import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { useFocusEffect } from "expo-router/src/useFocusEffect";
 import React, { useCallback, useState } from "react";
@@ -29,11 +30,15 @@ export default function _Screen() {
     return <CustomActivityIndicator />;
   }
 
-  return (
-    <DeviceList
-      devices={devices}
-      refreshing={refreshing}
-      handleDevices={handleDevices}
-    />
-  );
+  if (devices.length > 0) {
+    return (
+      <DeviceList
+        devices={devices}
+        refreshing={refreshing}
+        handleDevices={handleDevices}
+      />
+    );
+  }
+
+  return <DeviceRegistrationCallToAction />;
 }
