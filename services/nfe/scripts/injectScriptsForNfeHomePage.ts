@@ -20,6 +20,7 @@ const manipulateTheDomForNfeAccess = (device: Device): string => `
     ${blockAccessKeyInputEdit()}
     ${blockPageScrolling()}
     ${hidePoundElement()}
+    ${hideCaptcha()}
     ${adjustZoomAndVisibility()}
     ${randomInterval()}
     ${addAccessKey(device)}
@@ -53,11 +54,18 @@ const blockPageScrolling = (): string => `
 `;
 
 /**
- * Hides a button that opens an assistant in pounds
+ * Hides a button that opens an assistant in pounds.
  */
 const hidePoundElement = (): string => `
     const poundElement = document.querySelector('.enabled');
     poundElement.style.display = 'none';
+`;
+
+/**
+ * Hide the capctha until the key is inserted.
+ */
+const hideCaptcha = (): string => `
+    divHcaptcha.style.display = 'none'; 
 `;
 
 /**
@@ -91,6 +99,7 @@ const hideConsultationButtons = (): string => `
 const addAccessKey = (device: Device): string => `
     setTimeout(() => {
         inputAccessKey.value = "${device.access_key}";
+        divHcaptcha.style.display = 'block'; 
     }, generateInterval(1230, 3323));
 `;
 
