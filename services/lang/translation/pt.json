@@ -94,8 +94,8 @@
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
     },
-    "deviceResourcesCard": {
-      "title": "Características",
+    "registrationAttributes": {
+      "title": "Atributos",
       "brand": "Marca",
       "model": "Modelo",
       "color": "Cor",

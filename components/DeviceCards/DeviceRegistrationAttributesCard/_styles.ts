@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceAttributesCard = makeStyles(() => ({
+export const stylesDeviceRegistrationAttributesCard = makeStyles(() => ({
     container: {
         marginBottom: 50,
     },
