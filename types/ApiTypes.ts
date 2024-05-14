@@ -84,3 +84,8 @@ export type UpdatedDevice = {
   device: Device;
   message: FlashMessage;
 }
+
+export type InvalidatedDevice = {
+  device: Device;
+  message: FlashMessage;
+}

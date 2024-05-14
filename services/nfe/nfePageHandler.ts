@@ -5,6 +5,7 @@ import { injectScriptsForNfeDataExtract } from "./scripts/injectScriptsForNfeDat
 export default class NfePageHandler {
     private static HOME_PAGE_URL: string = 'https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=resumo&tipoConteudo=7PhJ+gAVw2g=';
     private static GENERAL_DATA_NFE_URL: string = 'https://www.nfe.fazenda.gov.br/portal/consultaResumo.aspx?tipoConteudo=7PhJ+gAVw2g=';
+    private static INVALID_NFE_URL: string = 'https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=resumo&tipoConteudo=7PhJ+gAVw2g%3d';
     private readonly device: Device;
 
     constructor(device: Device) {
@@ -23,6 +24,13 @@ export default class NfePageHandler {
      */
     public generalDataNfeUrl(): string {
         return NfePageHandler.GENERAL_DATA_NFE_URL;
+    }
+
+    /**
+     * Returns the URL of the NFe query error page.
+     */
+    public invalidNfeUrl(): string {
+        return NfePageHandler.INVALID_NFE_URL;
     }
 
     /**
