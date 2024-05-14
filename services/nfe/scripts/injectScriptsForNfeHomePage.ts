@@ -32,11 +32,11 @@ const manipulateTheDomForNfeAccess = (device: Device): string => `
  * Get the attributes needed to access the NFe.
  */
 const getAttributes = (): string => `
-    let inputAccessKey = document.getElementById('ctl00_ContentPlaceHolder1_txtChaveAcessoResumo');
-    let divHcaptcha = document.getElementById('ctl00_ContentPlaceHolder1_pnlBotoesHCaptcha');
-    let iframeCaptcha = divHcaptcha.querySelector('iframe');
-    let confirmButton = document.getElementById('ctl00_ContentPlaceHolder1_btnConsultarHCaptcha');
-    let clearButton = document.getElementById('ctl00_ContentPlaceHolder1_btnLimparHCaptcha');
+    const inputAccessKey = document.getElementById('ctl00_ContentPlaceHolder1_txtChaveAcessoResumo');
+    const divHcaptcha = document.getElementById('ctl00_ContentPlaceHolder1_pnlBotoesHCaptcha');
+    const iframeCaptcha = divHcaptcha.querySelector('iframe');
+    const confirmButton = document.getElementById('ctl00_ContentPlaceHolder1_btnConsultarHCaptcha');
+    const clearButton = document.getElementById('ctl00_ContentPlaceHolder1_btnLimparHCaptcha');
 `;
 
 /**
@@ -58,7 +58,10 @@ const blockPageScrolling = (): string => `
  */
 const hidePoundElement = (): string => `
     const poundElement = document.querySelector('.enabled');
+    const brasilVLibras = document.getElementById("brasil-vlibras");
+    
     poundElement.style.display = 'none';
+    brasilVLibras.style.display = 'none';
 `;
 
 /**
