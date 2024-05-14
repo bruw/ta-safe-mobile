@@ -1,3 +1,4 @@
+import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import WebView, { WebViewMessageEvent, WebViewNavigation } from "react-native-webview";
 import NfePageHandler from "services/nfe/nfePageHandler";
 import { Device } from "types/ApiTypes";
@@ -10,6 +11,10 @@ interface WebViewNfeProps {
 
 export default function WebViewNfe({ device, onMessage, onNavigationStateChange }: WebViewNfeProps) {
     const nfePageHandler = new NfePageHandler(device);
+
+    const renderLoading = () => (
+        <CustomActivityIndicator />
+    );
 
     const shouldStartLoadWithRequest = (navState: WebViewNavigation) => {
         const url = navState.url
@@ -33,6 +38,7 @@ export default function WebViewNfe({ device, onMessage, onNavigationStateChange 
             onMessage={onMessage}
             onNavigationStateChange={onNavigationStateChange}
             onShouldStartLoadWithRequest={shouldStartLoadWithRequest}
+            renderLoading={renderLoading}
         />
     );
 }
