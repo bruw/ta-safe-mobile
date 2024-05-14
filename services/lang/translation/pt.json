@@ -8,7 +8,8 @@
     "nextStep": "Próxima etapa",
     "previousStep": "Etapa anterior",
     "details": "Visualizar Detalhes",
-    "validation": "Validar"
+    "validation": "Validar",
+    "registerDevice": "Registrar Celular"
   },
   "forms": {
     "login": {
@@ -70,21 +71,26 @@
       "updated_at": "Última atualização"
     },
     "customActivityIndicator": {
-      "message": "Aguarde..."
+      "default": "Aguarde...",
+      "nfeValidation": "Aguarde, estamos validando sua NFe."
     },
     "device": {
       "title": "Informações do dispositivo"
     }
   },
   "status": {
-    "pending": "Pendente",
+    "pending": "Validação Pendente",
+    "in_analysis": "Em análise",
     "rejected": "Rejeitado",
     "validated": "Validado"
   },
   "cards": {
     "deviceRegistrationStatusCard": {
       "title": "Registro",
-      "status": "Validação",
+      "status": "Status",
+      "owner": "Proprietário",
+      "cpf": "CPF",
+      "phone": "Telefone",
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
     },

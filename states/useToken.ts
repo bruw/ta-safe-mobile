@@ -7,8 +7,8 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 type State = {
-  token?: string;
-  user?: User;
+  token: string | null;
+  user: User | null;
 };
 
 type Actions = {
@@ -19,10 +19,10 @@ type Actions = {
 const useToken = create<State & Actions>()(
   persist(
     (set) => ({
-      token: undefined,
-      user: undefined,
+      token: null,
+      user: null,
       setToken: (token: string, user: User) => set(() => ({ token, user })),
-      clearToken: () => set(() => ({ token: undefined, user: undefined })),
+      clearToken: () => set(() => ({ token: null, user: null })),
     }),
     {
       name: "token",

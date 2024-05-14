@@ -1,13 +1,22 @@
-import { Card } from "@rneui/base";
 import { useContext } from "react";
 import { DeviceContext } from "contexts/DeviceProvider";
-import moment from "moment";
+import { Card } from "@rneui/base";
+import LabeledText from "components/UI/LabeledText";
 import { t } from "i18next";
-import TextWithSpan from "components/UI/TextWithSpan";
-import MainButton from "components/UI/MainButton";
+import moment from "moment";
+import DeviceValidation from "components/DeviceValidation";
+import { stylesRegistrationStatusCard } from "./_styles";
 
 export default function DeviceRegistrationStatusCard() {
-    const device = useContext(DeviceContext);
+    const styles = stylesRegistrationStatusCard();
+    const { device } = useContext(DeviceContext);
+
+    const statusStyle = {
+        pending: styles.pending,
+        in_analysis: styles.inAnalysis,
+        rejected: styles.rejected,
+        validated: styles.validated
+    };
 
     return (
         <Card>
@@ -17,26 +26,40 @@ export default function DeviceRegistrationStatusCard() {
 
             <Card.Divider />
 
-            <TextWithSpan
-                span={t("cards.deviceRegistrationStatusCard.status")}
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.status")}
                 text={t(`status.${device.validation_status}`)}
-                textColor={"orange"}
+                textStyle={statusStyle[device.validation_status]}
             />
 
-            <TextWithSpan
-                span={t("cards.deviceRegistrationStatusCard.created_at")}
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.owner")}
+                text={device.user.name}
+            />
+
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.cpf")}
+                text={device.user.cpf}
+            />
+
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.phone")}
+                text={device.user.phone}
+            />
+
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.created_at")}
                 text={moment(device.created_at).format('DD/MM/YYYY HH:mm')}
             />
 
-            <TextWithSpan
-                span={t("cards.deviceRegistrationStatusCard.updated_at")}
+            <LabeledText
+                label={t("cards.deviceRegistrationStatusCard.updated_at")}
                 text={moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
             />
 
             {device.validation_status == 'pending' && (
-                <MainButton title={t("buttons.validation")} />
+                <DeviceValidation />
             )}
-
         </Card >
-    )
+    );
 }

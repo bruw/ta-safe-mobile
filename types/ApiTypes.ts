@@ -63,7 +63,7 @@ export type DeviceRegistration = {
 }
 
 export type DeviceValidationStatus = {
-  validation_status: 'pending' | 'validated' | 'rejected';
+  validation_status: 'pending' | 'in_analysis' | 'validated' | 'rejected';
 }
 
 export type Device = {
@@ -71,10 +71,21 @@ export type Device = {
   color: string;
   imei_1: string;
   imei_2: string;
-  validation_status: DeviceValidationStatus['validation_status'];
+  access_key?: string;
   sharing_token?: string;
+  validation_status: DeviceValidationStatus['validation_status'];
   created_at: string;
   updated_at: string;
   user: User;
   device_model: DeviceModel
+}
+
+export type UpdatedDevice = {
+  device: Device;
+  message: FlashMessage;
+}
+
+export type InvalidatedDevice = {
+  device: Device;
+  message: FlashMessage;
 }

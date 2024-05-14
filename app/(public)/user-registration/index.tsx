@@ -49,7 +49,7 @@ export default function _Screen() {
       });
 
       setToken(response.data.user.token, response.data.user);
-      router.replace("/(auth)/my-devices");
+      router.replace("/(auth)/(drawer)/my-devices");
     } catch (error: any) {
       const data = error.response.data;
 

@@ -7,7 +7,7 @@ import { DeviceContext } from "contexts/DeviceProvider";
 
 export default function CardHeader() {
     const styles = stylesDeviceCardHeader();
-    const device = useContext(DeviceContext);
+    const { device } = useContext(DeviceContext);
 
     return (
         <View style={styles.container}>

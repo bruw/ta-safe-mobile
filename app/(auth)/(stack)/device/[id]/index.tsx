@@ -1,4 +1,4 @@
-import DeviceWithPendingValidation from "components/Device/PendingStatus";
+import DeviceWithPendingValidation from "components/DeviceView/DeviceWithPendingValidation";
 import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { Stack, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { t } from "i18next";

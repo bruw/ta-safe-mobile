@@ -3,18 +3,24 @@ import { ActivityIndicator, View } from "react-native";
 import { stylesCustomActivityIndicator } from "./_styles";
 import { t } from "i18next";
 
-export default function CustomActivityIndicator() {
+interface CustomActivityIndicatorProps {
+    message?: string;
+}
+
+export default function CustomActivityIndicator({ message }: CustomActivityIndicatorProps) {
     const { theme } = useTheme();
     const styles = stylesCustomActivityIndicator();
 
     return (
         <View style={styles.container}>
             <ActivityIndicator
-                size={60}
+                size="large"
                 color={theme.colors.primary}
+                style={styles.activityIndicator}
             />
+
             <Text h4 h4Style={styles.text}>
-                {t('components.customActivityIndicator.message')}
+                {message || t('components.customActivityIndicator.default')}
             </Text>
         </View>
     );

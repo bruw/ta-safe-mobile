@@ -1,10 +1,10 @@
 import { makeStyles } from "@rneui/themed";
 
 export const stylesTextWithSpan = makeStyles((theme) => ({
-    textContainer: {
+    container: {
         marginBottom: theme.spacing.sm,
     },
-    span: {
-        fontWeight: '900',
+    label: {
+        fontWeight: 'bold',
     },
 }));

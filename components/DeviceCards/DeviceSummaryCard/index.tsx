@@ -10,7 +10,7 @@ interface DeviceCardProps {
     device: Device;
 }
 
-export default function DeviceBasicInfoCard({ device }: DeviceCardProps) {
+export default function DeviceSummaryCard({ device }: DeviceCardProps) {
     return (
         <DeviceProvider device={device}>
             <Card>
