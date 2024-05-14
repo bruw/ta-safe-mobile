@@ -18,37 +18,37 @@ export default function DeviceRegitrationAttributesCard() {
             <Card.Divider />
 
             <LabeledText
-                label={t("cards.registrationAttributes.brand")}
+                label={t("attributes.device.brand")}
                 text={device.device_model.brand.name}
             />
 
             <LabeledText
-                label={t("cards.registrationAttributes.model")}
+                label={t("attributes.device.model")}
                 text={device.device_model.name}
             />
 
             <LabeledText
-                label={t("cards.registrationAttributes.color")}
+                label={t("attributes.device.color")}
                 text={device.color}
             />
 
             <LabeledText
-                label={t("cards.registrationAttributes.ram")}
+                label={t("attributes.device.ram")}
                 text={device.device_model.ram}
             />
 
             <LabeledText
-                label={t("cards.registrationAttributes.storage")}
+                label={t("attributes.device.storage")}
                 text={device.device_model.storage}
             />
 
             <LabeledText
-                label={t("cards.registrationAttributes.imei_1")}
+                label={t("attributes.device.imei_1")}
                 text={device.imei_1}
             />
 
             <LabeledText
-                label={t("cards.registrationAttributes.imei_2")}
+                label={t("attributes.device.imei_2")}
                 text={device.imei_2}
             />
         </Card>

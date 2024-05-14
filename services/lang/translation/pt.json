@@ -1,4 +1,15 @@
 {
+  "attributes": {
+    "device": {
+      "brand": "Marca",
+      "model": "Modelo",
+      "color": "Cor",
+      "ram": "Ram",
+      "storage": "Armazenamento",
+      "imei_1": "IMEI 1",
+      "imei_2": "IMEI 2"
+    }
+  },
   "buttons": {
     "login": "Entrar",
     "logout": "Sair",
@@ -95,14 +106,7 @@
       "updated_at": "Última alteração"
     },
     "registrationAttributes": {
-      "title": "Atributos",
-      "brand": "Marca",
-      "model": "Modelo",
-      "color": "Cor",
-      "ram": "Ram",
-      "storage": "Armazenamento",
-      "imei_1": "IMEI 1",
-      "imei_2": "IMEI 2"
+      "title": "Atributos"
     }
   }
 }
