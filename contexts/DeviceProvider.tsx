@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useState } from 'react';
+import React, { createContext, ReactNode, useEffect, useState } from 'react';
 import { Device } from 'types/ApiTypes';
 
 interface DeviceProviderProps {
@@ -18,6 +18,10 @@ export const DeviceContext = createContext<DeviceContextType>({
 
 export default function DeviceProvider({ device, children }: DeviceProviderProps) {
     const [currentDevice, setCurrentDevice] = useState<Device>(device);
+
+    useEffect(() => {
+        setCurrentDevice(device);
+    }, [device]);
 
     const updateDevice = (updatedDevice: Device) => {
         setCurrentDevice(updatedDevice);
