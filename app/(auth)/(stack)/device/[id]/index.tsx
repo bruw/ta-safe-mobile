@@ -1,4 +1,5 @@
 import DeviceWithPendingStatus from "components/DeviceView/DeviceWithPendingStatus";
+import DeviceWithValidatedStatus from "components/DeviceView/DeviceWithValidatedStatus";
 import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { Stack, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { t } from "i18next";
@@ -39,6 +40,15 @@ export default function _Screen() {
       <>
         <Stack.Screen options={{ title: t("components.device.title") }} />
         <DeviceWithPendingStatus device={device} />
+      </>
+    );
+  }
+
+  if (device?.validation_status === "validated") {
+    return (
+      <>
+        <Stack.Screen options={{ title: t("components.device.title") }} />
+        <DeviceWithValidatedStatus device={device} />
       </>
     );
   }

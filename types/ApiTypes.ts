@@ -66,6 +66,18 @@ export type DeviceValidationStatus = {
   validation_status: 'pending' | 'in_analysis' | 'validated' | 'rejected';
 }
 
+export type ValidationAttributes = {
+  cpf: boolean;
+  user_name: boolean;
+  brand_name: boolean;
+  model_name: boolean;
+  color: boolean;
+  ram: boolean;
+  storage: boolean;
+  imei_1: boolean;
+  imei_2: boolean;
+}
+
 export type Device = {
   id: number;
   color: string;
@@ -77,7 +89,8 @@ export type Device = {
   created_at: string;
   updated_at: string;
   user: User;
-  device_model: DeviceModel
+  device_model: DeviceModel;
+  validation_attributes?: ValidationAttributes;
 }
 
 export type UpdatedDevice = {

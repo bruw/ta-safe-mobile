@@ -20,7 +20,8 @@
     "previousStep": "Etapa anterior",
     "details": "Visualizar Detalhes",
     "validation": "Validar",
-    "registerDevice": "Registrar Celular"
+    "registerDevice": "Registrar Celular",
+    "transfer": "Criar transferência"
   },
   "forms": {
     "login": {
@@ -107,6 +108,14 @@
     },
     "registrationAttributes": {
       "title": "Atributos"
+    },
+    "validDeviceAttributes": {
+      "title": "Atributos Válidados",
+      "nonAttributes": "Sem atributos válidos."
+    },
+    "invalidDeviceAttributes": {
+      "title": "Atributos não Válidados",
+      "nonAttributes": "Sem atributos inválidos."
     }
   }
 }
