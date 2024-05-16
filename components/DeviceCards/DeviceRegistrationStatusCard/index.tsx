@@ -6,6 +6,9 @@ import { t } from "i18next";
 import moment from "moment";
 import DeviceValidation from "components/DeviceValidation";
 import { stylesRegistrationStatusCard } from "./_styles";
+import { Button, Text } from "@rneui/themed";
+import MainButton from "components/UI/MainButton";
+import { Link, router } from "expo-router";
 
 export default function DeviceRegistrationStatusCard() {
     const styles = stylesRegistrationStatusCard();
@@ -59,6 +62,13 @@ export default function DeviceRegistrationStatusCard() {
 
             {device.validation_status == 'pending' && (
                 <DeviceValidation />
+            )}
+
+            {device.validation_status === 'validated' && (
+                <MainButton
+                    title={t("buttons.transfer")}
+                    onPress={() => router.push('/(auth)/(drawer)/my-devices')}
+                />
             )}
         </Card >
     );
