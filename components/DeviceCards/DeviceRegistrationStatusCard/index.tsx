@@ -6,9 +6,9 @@ import { t } from "i18next";
 import moment from "moment";
 import DeviceValidation from "components/DeviceValidation";
 import { stylesRegistrationStatusCard } from "./_styles";
-import { Button, Text } from "@rneui/themed";
 import MainButton from "components/UI/MainButton";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
+import DeleteInvalidDevice from "components/DeleteInvalidDevice";
 
 export default function DeviceRegistrationStatusCard() {
     const styles = stylesRegistrationStatusCard();
@@ -60,15 +60,19 @@ export default function DeviceRegistrationStatusCard() {
                 text={moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
             />
 
-            {device.validation_status == 'pending' && (
-                <DeviceValidation />
-            )}
-
             {device.validation_status === 'validated' && (
                 <MainButton
                     title={t("buttons.transfer")}
                     onPress={() => router.push('/(auth)/(drawer)/my-devices')}
                 />
+            )}
+
+            {device.validation_status == 'pending' && (
+                <DeviceValidation />
+            )}
+
+            {device.validation_status === 'rejected' && (
+                <DeleteInvalidDevice />
             )}
         </Card >
     );

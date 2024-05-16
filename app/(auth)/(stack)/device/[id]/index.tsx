@@ -1,4 +1,5 @@
 import DeviceWithPendingStatus from "components/DeviceView/DeviceWithPendingStatus";
+import DeviceWithRejectedStatus from "components/DeviceView/DeviceWithRejectedStatus";
 import DeviceWithValidatedStatus from "components/DeviceView/DeviceWithValidatedStatus";
 import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { Stack, useFocusEffect, useLocalSearchParams } from "expo-router";
@@ -49,6 +50,15 @@ export default function _Screen() {
       <>
         <Stack.Screen options={{ title: t("components.device.title") }} />
         <DeviceWithValidatedStatus device={device} />
+      </>
+    );
+  }
+
+  if (device?.validation_status === "rejected") {
+    return (
+      <>
+        <Stack.Screen options={{ title: t("components.device.title") }} />
+        <DeviceWithRejectedStatus device={device} />
       </>
     );
   }

@@ -28,7 +28,8 @@
     "details": "Visualizar Detalhes",
     "validation": "Validar",
     "registerDevice": "Registrar Celular",
-    "transfer": "Criar transferência"
+    "transfer": "Criar transferência",
+    "delete": "Excluir"
   },
   "forms": {
     "login": {

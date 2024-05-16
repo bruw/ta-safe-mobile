@@ -70,6 +70,10 @@ export type DeviceRegistration = {
   imei_2: string
 }
 
+export type DeleteDevice = {
+  message: FlashMessage;
+}
+
 export type DeviceValidationStatus = {
   validation_status: 'pending' | 'in_analysis' | 'validated' | 'rejected';
 }
