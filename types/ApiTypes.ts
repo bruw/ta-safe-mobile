@@ -14,6 +14,14 @@ export type User = {
   token: string;
 };
 
+export type UserMinimalInfo = {
+  id: number;
+  name: string;
+  cpf: string;
+  phone: string;
+  created_at: string;
+}
+
 export type UserAuth = {
   user: User;
   message: FlashMessage;
@@ -78,6 +86,14 @@ export type ValidationAttributes = {
   imei_2: boolean;
 }
 
+export type Transfer = {
+  id: number;
+  status: DeviceValidationStatus['validation_status'];
+  source_user: UserMinimalInfo;
+  target_user: UserMinimalInfo;
+  updated_at: string;
+}
+
 export type Device = {
   id: number;
   color: string;
@@ -91,6 +107,7 @@ export type Device = {
   user: User;
   device_model: DeviceModel;
   validation_attributes?: ValidationAttributes;
+  transfers_history?: Transfer[];
 }
 
 export type UpdatedDevice = {

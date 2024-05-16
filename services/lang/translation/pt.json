@@ -8,6 +8,13 @@
       "storage": "Armazenamento",
       "imei_1": "IMEI 1",
       "imei_2": "IMEI 2"
+    },
+    "user": {
+      "name": "Nome",
+      "email": "Email",
+      "cpf": "CPF",
+      "phone": "Celular",
+      "password": "Senha"
     }
   },
   "buttons": {
@@ -88,6 +95,10 @@
     },
     "device": {
       "title": "Informações do dispositivo"
+    },
+    "transferInfo": {
+      "sourceUser": "Proprietário Anterior",
+      "targetUser": "Novo Proprietário"
     }
   },
   "status": {
@@ -116,6 +127,10 @@
     "invalidDeviceAttributes": {
       "title": "Atributos não Válidados",
       "nonAttributes": "Sem atributos inválidos."
+    },
+    "deviceTranfersHistory": {
+      "title": "Histórico de Transferências",
+      "nonTransfers": "Este dispositivo ainda não possui histórico de transferências."
     }
   }
 }
