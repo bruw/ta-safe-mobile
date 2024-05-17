@@ -103,6 +103,10 @@
     },
     "deviceRegistrationReminder": {
       "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
+    },
+    "deviceShare": {
+      "title": "Código de Compartilhamento",
+      "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro."
     }
   },
   "status": {

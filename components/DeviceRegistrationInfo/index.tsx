@@ -9,6 +9,9 @@ import { stylesDeviceRegistrationInfo } from "./_styles";
 import MainButton from "components/UI/MainButton";
 import { router } from "expo-router";
 import DeleteInvalidDevice from "components/DeleteInvalidDevice";
+import { Text } from "@rneui/themed";
+import { View } from "react-native";
+import DeviceShare from "components/DeviceShare";
 
 export default function DeviceRegistrationInfo() {
     const styles = stylesDeviceRegistrationInfo();
@@ -23,9 +26,19 @@ export default function DeviceRegistrationInfo() {
 
     return (
         <Card>
-            <Card.Title style={{ fontSize: 16 }}>
-                {t("cards.deviceRegistrationInfo.title")}
-            </Card.Title>
+            {device.validation_status == "validated" ? (
+                <View style={styles.titleContainer}>
+                    <Text style={styles.titleContent}>
+                        {t("cards.deviceRegistrationInfo.title")}
+                    </Text>
+
+                    <DeviceShare />
+                </View>
+            ) : (
+                <Card.Title style={{ fontSize: 16 }}>
+                    {t("cards.deviceRegistrationInfo.title")}
+                </Card.Title>
+            )}
 
             <Card.Divider />
 
