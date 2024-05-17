@@ -1,4 +1,4 @@
-import { Button, Dialog, Icon, Text, useTheme } from "@rneui/themed";
+import { Button, Dialog, Icon, Text } from "@rneui/themed";
 import CopyToClipboardButton from "components/UI/CopyToClipboardButton";
 import { DeviceContext } from "contexts/DeviceProvider";
 import { isTokenExpired } from "helpers/isTokenExpired";
@@ -9,6 +9,7 @@ import { View } from "react-native";
 import api from "services/api/api";
 import { DeviceSharedToken } from "types/ApiTypes";
 import { stylesDeviceShare } from "./_styles";
+import moment from "moment";
 
 export default function DeviceShare() {
     const styles = stylesDeviceShare();
@@ -20,7 +21,7 @@ export default function DeviceShare() {
     const onSubmit = async () => {
         try {
             const response = await api.post<DeviceSharedToken>(`/api/devices/${device.id}/share`);
-            
+
             setToken(response.data.token);
             setVisible(true);
         } catch (error: any) {
@@ -53,6 +54,9 @@ export default function DeviceShare() {
             >
                 <Dialog.Title title={t("components.deviceShare.title")} titleStyle={styles.text} />
                 <CopyToClipboardButton text={token} />
+                <Text style={[styles.text, styles.expiration]}>
+                    {t("components.deviceShare.expires")}{moment(device.sharing_token?.expires_at).format('DD/MM/Y [às] HH:mm:ss')}
+                </Text>
                 <Text style={styles.text}>{t("components.deviceShare.instruction")}</Text>
             </Dialog>
             <Button type="clear" onPress={handleSharePress}>

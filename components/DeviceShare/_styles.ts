@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceShare = makeStyles(() => ({
+export const stylesDeviceShare = makeStyles((theme) => ({
     overlay: {
         width: "90%",
         justifyContent: "center",
@@ -10,5 +10,9 @@ export const stylesDeviceShare = makeStyles(() => ({
     },
     text: {
         textAlign: "center",
+    },
+    expiration: {
+        color: "red",
+        marginBottom: theme.spacing.md
     }
 }));

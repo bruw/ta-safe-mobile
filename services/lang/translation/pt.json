@@ -106,7 +106,8 @@
     },
     "deviceShare": {
       "title": "Código de Compartilhamento",
-      "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro."
+      "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro.",
+      "expires": "Expira em: "
     }
   },
   "status": {
