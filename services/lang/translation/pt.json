@@ -128,7 +128,7 @@
     }
   },
   "status": {
-    "pending": "Validação Pendente",
+    "pending": "Pendente",
     "in_analysis": "Em análise",
     "rejected": "Rejeitado",
     "canceled": "Cancelado",

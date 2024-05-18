@@ -1,9 +1,9 @@
 import { Text } from "@rneui/themed";
 import { View } from "react-native";
-import BadgeStatus from "./BadgeStatus";
 import { stylesDeviceSummaryHeader } from "./_styles";
 import { useContext } from "react";
 import { DeviceContext } from "contexts/DeviceProvider";
+import BadgeStatus from "components/UI/BadgeStatus";
 
 export default function DeviceSummaryHeader() {
     const styles = stylesDeviceSummaryHeader();
@@ -17,7 +17,7 @@ export default function DeviceSummaryHeader() {
                 </Text>
             </View>
             <View style={styles.status}>
-                <BadgeStatus />
+                <BadgeStatus status={device.validation_status} />
             </View>
         </View>
     );
