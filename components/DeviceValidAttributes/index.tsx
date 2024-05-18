@@ -3,11 +3,11 @@ import LabeledText from "components/UI/LabeledText";
 import { DeviceContext } from "contexts/DeviceProvider";
 import { t } from "i18next";
 import { useContext } from "react";
-import { stylesValidDeviceAttributesCard } from "./_styles";
+import { stylesDeviceValidAttributes } from "./_styles";
 import { Text } from "@rneui/themed";
 
-export default function ValidDeviceAttributesCard() {
-    const styles = stylesValidDeviceAttributesCard();
+export default function DeviceValidAttributes() {
+    const styles = stylesDeviceValidAttributes();
     const { device } = useContext(DeviceContext);
 
     const hasValidAttributes = () => {
