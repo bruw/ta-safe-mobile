@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesInvalidDeviceAttributesCard = makeStyles(() => ({
+export const stylesDeviceInvalidAttributes = makeStyles(() => ({
     title: {
         fontSize: 16,
     },

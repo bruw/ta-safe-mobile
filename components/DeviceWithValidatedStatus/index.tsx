@@ -1,5 +1,5 @@
-import InvalidDeviceAttributesCard from "components/DeviceCards/InvalidDeviceAttributesCard";
 import ValidDeviceAttributesCard from "components/DeviceCards/ValidDeviceAttributesCard";
+import DeviceInvalidAttributes from "components/DeviceInvalidAttributes";
 import DeviceRegistrationInfo from "components/DeviceRegistrationInfo";
 import DeviceTransfersHistory from "components/DeviceTransfersHistory";
 import DeviceProvider from "contexts/DeviceProvider";
@@ -16,7 +16,7 @@ export default function DeviceWithValidatedStatus({ device }: DeviceWithValidate
             <ScrollView>
                 <DeviceRegistrationInfo />
                 <ValidDeviceAttributesCard />
-                <InvalidDeviceAttributesCard />
+                <DeviceInvalidAttributes />
 
                 {device.transfers_history && (
                     <DeviceTransfersHistory />
