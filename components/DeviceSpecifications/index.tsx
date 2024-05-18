@@ -3,10 +3,10 @@ import LabeledText from "components/UI/LabeledText";
 import { DeviceContext } from "contexts/DeviceProvider";
 import { t } from "i18next";
 import { useContext } from "react";
-import { stylesDeviceRegistrationAttributesCard } from "./_styles";
+import { stylesDeviceSpecifications } from "./_styles";
 
-export default function DeviceRegitrationAttributesCard() {
-    const styles = stylesDeviceRegistrationAttributesCard();
+export default function DeviceSpecifications() {
+    const styles = stylesDeviceSpecifications();
     const { device } = useContext(DeviceContext);
 
     return (
