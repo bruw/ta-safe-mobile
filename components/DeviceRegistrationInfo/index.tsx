@@ -7,12 +7,10 @@ import moment from "moment";
 import { stylesDeviceRegistrationInfo } from "./_styles";
 import DeviceRegistrationInfoHeader from "./DeviceRegistrationInfoTitle";
 import DeviceRegistrationInfoActions from "./DeviceRegistrationInfoActions";
-import useToken from "states/useToken";
 
 export default function DeviceRegistrationInfo() {
     const styles = stylesDeviceRegistrationInfo();
-    const { user } = useToken();
-    const { device } = useContext(DeviceContext);
+    const { device, publicMode } = useContext(DeviceContext);
 
     const statusStyle = {
         pending: styles.pending,
@@ -48,7 +46,7 @@ export default function DeviceRegistrationInfo() {
                 text={device.user.phone}
             />
 
-            {device.user.id == user?.id && (
+            {!publicMode && (
                 <>
                     <LabeledText
                         label={t("cards.deviceRegistrationInfo.created_at")}
