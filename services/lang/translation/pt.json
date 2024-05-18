@@ -125,6 +125,10 @@
       "title2": "Confirmação de Transferência de Registro",
       "userInfoTitle": "Usuário de Destino",
       "deviceInfoTitle": "Dispositivo"
+    },
+    "defaultMessageForInactivity": {
+      "message": "Ainda não há atividades por aqui... Explore nossos serviços para obter uma experiência completa.",
+      "goHome": "Voltar para meus dispositivos"
     }
   },
   "status": {
