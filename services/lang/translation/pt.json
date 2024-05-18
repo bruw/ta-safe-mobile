@@ -131,7 +131,9 @@
     "pending": "Validação Pendente",
     "in_analysis": "Em análise",
     "rejected": "Rejeitado",
-    "validated": "Validado"
+    "canceled": "Cancelado",
+    "validated": "Validado",
+    "accepted": "Aceito"
   },
   "cards": {
     "deviceRegistrationInfo": {
