@@ -26,9 +26,7 @@ export default function _Screen() {
 
   useFocusEffect(handleDevices);
 
-  if (isLoading) {
-    return <CustomActivityIndicator />;
-  }
+  if (isLoading) return <CustomActivityIndicator />;
 
   if (devices.length > 0) {
     return (
