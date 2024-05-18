@@ -1,6 +1,6 @@
-import DeviceWithPendingStatus from "components/DeviceView/DeviceWithPendingStatus";
-import DeviceWithRejectedStatus from "components/DeviceView/DeviceWithRejectedStatus";
-import DeviceWithValidatedStatus from "components/DeviceView/DeviceWithValidatedStatus";
+import DeviceWithPendingStatus from "components/DeviceWithPendingStatus";
+import DeviceWithRejectedStatus from "components/DeviceWithRejectedStatus";
+import DeviceWithValidatedStatus from "components/DeviceWithValidatedStatus";
 import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { Stack, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { t } from "i18next";
