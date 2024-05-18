@@ -28,7 +28,8 @@
     "details": "Visualizar Detalhes",
     "validation": "Validar",
     "registerDevice": "Registrar Celular",
-    "transfer": "Criar transferência",
+    "transfer": "Transferir",
+    "createTransfer": "Criar Transferência",
     "delete": "Excluir",
     "search": "Pesquisar"
   },
@@ -67,6 +68,9 @@
     },
     "searchDevice": {
       "token": "Código de Acesso"
+    },
+    "searchUser": {
+      "title": "Informe o Email do usuário de destino"
     }
   },
   "components": {
@@ -115,6 +119,12 @@
     },
     "searchDevice": {
       "title": "Pesquisar Dispositivo"
+    },
+    "createDeviceTransfer": {
+      "title": "Nova Transferência",
+      "title2": "Confirmação de Transferência de Registro",
+      "userInfoTitle": "Usuário de Destino",
+      "deviceInfoTitle": "Dispositivo"
     }
   },
   "status": {
@@ -146,5 +156,8 @@
       "title": "Histórico de Transferências",
       "nonTransfers": "Este dispositivo ainda não possui histórico de transferências."
     }
+  },
+  "checkBoxs": {
+    "confirmationOfInfo": "Confirmo que todas as informações estão corretas."
   }
 }

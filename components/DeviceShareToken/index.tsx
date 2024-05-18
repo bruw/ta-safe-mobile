@@ -14,8 +14,7 @@ import moment from "moment";
 export default function DeviceShareToken() {
     const styles = stylesDeviceShareToken();
     const { device, updateDevice } = useContext(DeviceContext);
-
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState<boolean>(false);
     const [token, setToken] = useState<string>('');
 
     const onSubmit = async () => {

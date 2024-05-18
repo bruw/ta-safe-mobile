@@ -140,3 +140,12 @@ export type DeviceSharedToken = {
 export type SearchDevice = {
   token: string;
 }
+
+export type SearchUserByEmail = {
+  email: string;
+}
+
+export type SearchedUser = {
+  message: FlashMessage;
+  user: User;
+}
