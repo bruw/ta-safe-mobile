@@ -10,7 +10,7 @@ export default function DeviceRegistrationInfoTitle() {
     const styles = stylesDeviceRegistrationInfoHeader();
     const { device, publicMode } = useContext(DeviceContext);
 
-    if (publicMode) {
+    if (publicMode || device.validation_status != "validated") {
         return (
             <Card.Title style={{ fontSize: 16 }}>
                 {t("cards.deviceRegistrationInfo.title")}
