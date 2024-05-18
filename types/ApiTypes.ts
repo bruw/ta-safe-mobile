@@ -132,6 +132,7 @@ export type InvalidatedDevice = {
 
 export type DeviceSharedToken = {
   message: FlashMessage;
+  id: number;
   token: string;
   expires_at: Date;
 }

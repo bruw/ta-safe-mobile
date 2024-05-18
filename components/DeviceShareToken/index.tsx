@@ -13,7 +13,7 @@ import moment from "moment";
 
 export default function DeviceShareToken() {
     const styles = stylesDeviceShareToken();
-    const { device } = useContext(DeviceContext);
+    const { device, updateDevice } = useContext(DeviceContext);
 
     const [visible, setVisible] = useState(false);
     const [token, setToken] = useState<string>('');
@@ -21,6 +21,15 @@ export default function DeviceShareToken() {
     const onSubmit = async () => {
         try {
             const response = await api.post<DeviceSharedToken>(`/api/devices/${device.id}/share`);
+
+            updateDevice({
+                ...device,
+                sharing_token: {
+                    id: response.data.id,
+                    token: response.data.token,
+                    expires_at: response.data.expires_at
+                }
+            });
 
             setToken(response.data.token);
             setVisible(true);
