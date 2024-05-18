@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceRegistrationCallToAction = makeStyles((theme) => ({
+export const stylesDeviceRegistrationReminder = makeStyles((theme) => ({
     container: {
         flex: 1,
         alignItems: 'center',

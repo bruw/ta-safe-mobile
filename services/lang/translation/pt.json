@@ -100,6 +100,9 @@
     "transferInfo": {
       "sourceUser": "Proprietário Anterior",
       "targetUser": "Novo Proprietário"
+    },
+    "deviceRegistrationReminder": {
+      "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
     }
   },
   "status": {
