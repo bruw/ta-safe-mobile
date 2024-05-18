@@ -4,15 +4,14 @@ import { Card } from "@rneui/base";
 import LabeledText from "components/UI/LabeledText";
 import { t } from "i18next";
 import moment from "moment";
-import DeviceValidation from "components/DeviceValidation";
 import { stylesDeviceRegistrationInfo } from "./_styles";
-import MainButton from "components/UI/MainButton";
-import { router } from "expo-router";
-import DeleteInvalidDevice from "components/DeleteInvalidDevice";
 import DeviceRegistrationInfoHeader from "./DeviceRegistrationInfoTitle";
+import DeviceRegistrationInfoActions from "./DeviceRegistrationInfoActions";
+import useToken from "states/useToken";
 
 export default function DeviceRegistrationInfo() {
     const styles = stylesDeviceRegistrationInfo();
+    const { user } = useToken();
     const { device } = useContext(DeviceContext);
 
     const statusStyle = {
@@ -49,30 +48,21 @@ export default function DeviceRegistrationInfo() {
                 text={device.user.phone}
             />
 
-            <LabeledText
-                label={t("cards.deviceRegistrationInfo.created_at")}
-                text={moment(device.created_at).format('DD/MM/YYYY HH:mm')}
-            />
+            {device.user.id == user?.id && (
+                <>
+                    <LabeledText
+                        label={t("cards.deviceRegistrationInfo.created_at")}
+                        text={moment(device.created_at).format('DD/MM/YYYY HH:mm')}
+                    />
 
-            <LabeledText
-                label={t("cards.deviceRegistrationInfo.updated_at")}
-                text={moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
-            />
-
-            {device.validation_status === 'validated' && (
-                <MainButton
-                    title={t("buttons.transfer")}
-                    onPress={() => router.push('/(auth)/(drawer)/my-devices')}
-                />
+                    <LabeledText
+                        label={t("cards.deviceRegistrationInfo.updated_at")}
+                        text={moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
+                    />
+                </>
             )}
 
-            {device.validation_status == 'pending' && (
-                <DeviceValidation />
-            )}
-
-            {device.validation_status === 'rejected' && (
-                <DeleteInvalidDevice />
-            )}
+            <DeviceRegistrationInfoActions />
         </Card >
     );
 }
