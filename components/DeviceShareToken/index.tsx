@@ -8,11 +8,11 @@ import { useContext, useState } from "react";
 import { View } from "react-native";
 import api from "services/api/api";
 import { DeviceSharedToken } from "types/ApiTypes";
-import { stylesDeviceShare } from "./_styles";
+import { stylesDeviceShareToken } from "./_styles";
 import moment from "moment";
 
-export default function DeviceShare() {
-    const styles = stylesDeviceShare();
+export default function DeviceShareToken() {
+    const styles = stylesDeviceShareToken();
     const { device } = useContext(DeviceContext);
 
     const [visible, setVisible] = useState(false);

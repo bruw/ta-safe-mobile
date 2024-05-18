@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceShare = makeStyles((theme) => ({
+export const stylesDeviceShareToken = makeStyles((theme) => ({
     overlay: {
         width: "90%",
         justifyContent: "center",

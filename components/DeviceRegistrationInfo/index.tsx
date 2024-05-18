@@ -11,7 +11,7 @@ import { router } from "expo-router";
 import DeleteInvalidDevice from "components/DeleteInvalidDevice";
 import { Text } from "@rneui/themed";
 import { View } from "react-native";
-import DeviceShare from "components/DeviceShare";
+import DeviceShareToken from "components/DeviceShareToken";
 
 export default function DeviceRegistrationInfo() {
     const styles = stylesDeviceRegistrationInfo();
@@ -32,7 +32,7 @@ export default function DeviceRegistrationInfo() {
                         {t("cards.deviceRegistrationInfo.title")}
                     </Text>
 
-                    <DeviceShare />
+                    <DeviceShareToken />
                 </View>
             ) : (
                 <Card.Title style={{ fontSize: 16 }}>
