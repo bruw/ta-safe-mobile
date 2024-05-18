@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import { Device } from 'types/ApiTypes';
 import { stylesDeviceList } from './_styles';
-import DeviceSummaryCard from 'components/DeviceCards/DeviceSummaryCard';
+import DeviceSummary from './DeviceSummary';
 
 interface DeviceListProps {
     devices: Device[];
@@ -18,7 +18,7 @@ export default function DeviceList({ devices, refreshing, handleDevices }: Devic
             <View style={styles.flatListContainer}>
                 <FlatList
                     data={devices}
-                    renderItem={({ item }) => <DeviceSummaryCard device={item} />}
+                    renderItem={({ item }) => <DeviceSummary device={item} />}
                     keyExtractor={item => item.id.toString()}
                     refreshing={refreshing}
                     onRefresh={handleDevices}

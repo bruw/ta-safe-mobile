@@ -1,5 +1,5 @@
 import DeviceList from "components/DeviceList";
-import DeviceRegistrationCallToAction from "components/DeviceRegistrationCallToAction";
+import DeviceRegistrationReminder from "components/DeviceRegistrationReminder";
 import CustomActivityIndicator from "components/UI/CustomActivityIndicator";
 import { useFocusEffect } from "expo-router/src/useFocusEffect";
 import React, { useCallback, useState } from "react";
@@ -40,5 +40,5 @@ export default function _Screen() {
     );
   }
 
-  return <DeviceRegistrationCallToAction />;
+  return <DeviceRegistrationReminder />;
 }

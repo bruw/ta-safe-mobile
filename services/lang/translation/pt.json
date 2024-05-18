@@ -100,6 +100,9 @@
     "transferInfo": {
       "sourceUser": "Proprietário Anterior",
       "targetUser": "Novo Proprietário"
+    },
+    "deviceRegistrationReminder": {
+      "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
     }
   },
   "status": {
@@ -109,12 +112,10 @@
     "validated": "Validado"
   },
   "cards": {
-    "deviceRegistrationStatusCard": {
+    "deviceRegistrationInfo": {
       "title": "Registro",
       "status": "Status",
       "owner": "Proprietário",
-      "cpf": "CPF",
-      "phone": "Telefone",
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
     },
