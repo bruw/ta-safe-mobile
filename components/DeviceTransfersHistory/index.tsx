@@ -1,13 +1,13 @@
 import { Card } from "@rneui/base";
 import { DeviceContext } from "contexts/DeviceProvider";
 import { useContext, useState } from "react";
-import { stylesDeviceTransfersHistoryCard } from "./_styles";
+import { stylesDeviceTransfersHistory } from "./_styles";
 import TransferInfo from "./TransferInfo";
 import { t } from "i18next";
 import { Text } from "@rneui/themed";
 
-export default function DeviceTransfersHistoryCard() {
-    const styles = stylesDeviceTransfersHistoryCard();
+export default function DeviceTransfersHistory() {
+    const styles = stylesDeviceTransfersHistory();
     const { device } = useContext(DeviceContext);
 
     const [expandedTransferId, setExpandedTranferId] = useState<number>();
