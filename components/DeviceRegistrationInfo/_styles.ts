@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesRegistrationStatusCard = makeStyles((theme) => ({
+export const stylesDeviceRegistrationInfo = makeStyles((theme) => ({
     pending: {
         color: theme.colors.warning,
         fontWeight: 'bold',

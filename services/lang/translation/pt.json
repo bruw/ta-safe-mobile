@@ -112,12 +112,10 @@
     "validated": "Validado"
   },
   "cards": {
-    "deviceRegistrationStatusCard": {
+    "deviceRegistrationInfo": {
       "title": "Registro",
       "status": "Status",
       "owner": "Proprietário",
-      "cpf": "CPF",
-      "phone": "Telefone",
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
     },

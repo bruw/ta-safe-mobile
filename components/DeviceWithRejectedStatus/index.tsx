@@ -1,5 +1,5 @@
-import DeviceRegitrationAttributesCard from "components/DeviceCards/DeviceRegistrationAttributesCard";
-import DeviceRegistrationStatusCard from "components/DeviceCards/DeviceRegistrationStatusCard";
+import DeviceRegistrationInfo from "components/DeviceRegistrationInfo";
+import DeviceSpecifications from "components/DeviceSpecifications";
 import DeviceProvider from "contexts/DeviceProvider";
 import { ScrollView } from "react-native-gesture-handler";
 import { Device } from "types/ApiTypes";
@@ -12,8 +12,8 @@ export default function DeviceWithRejectedStatus({ device }: DeviceWithRejectedS
     return (
         <DeviceProvider device={device} >
             <ScrollView>
-                <DeviceRegistrationStatusCard />
-                <DeviceRegitrationAttributesCard />
+                <DeviceRegistrationInfo />
+                <DeviceSpecifications />
             </ScrollView>
         </DeviceProvider>
     );

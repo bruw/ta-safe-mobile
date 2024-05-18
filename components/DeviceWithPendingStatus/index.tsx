@@ -1,4 +1,4 @@
-import DeviceRegistrationStatusCard from "components/DeviceCards/DeviceRegistrationStatusCard";
+import DeviceRegistrationInfo from "components/DeviceRegistrationInfo";
 import DeviceSpecifications from "components/DeviceSpecifications";
 import DeviceProvider from "contexts/DeviceProvider";
 import { ScrollView } from "react-native-gesture-handler";
@@ -12,7 +12,7 @@ export default function DeviceWithPendingStatus({ device }: DeviceWithPendingSta
     return (
         <DeviceProvider device={device} >
             <ScrollView>
-                <DeviceRegistrationStatusCard />
+                <DeviceRegistrationInfo />
                 <DeviceSpecifications />
             </ScrollView>
         </DeviceProvider>

@@ -1,7 +1,7 @@
-import DeviceRegistrationStatusCard from "components/DeviceCards/DeviceRegistrationStatusCard";
 import DeviceTransfersHistoryCard from "components/DeviceCards/DeviceTransfersHistoryCard";
 import InvalidDeviceAttributesCard from "components/DeviceCards/InvalidDeviceAttributesCard";
 import ValidDeviceAttributesCard from "components/DeviceCards/ValidDeviceAttributesCard";
+import DeviceRegistrationInfo from "components/DeviceRegistrationInfo";
 import DeviceProvider from "contexts/DeviceProvider";
 import { ScrollView } from "react-native-gesture-handler";
 import { Device } from "types/ApiTypes";
@@ -14,7 +14,7 @@ export default function DeviceWithValidatedStatus({ device }: DeviceWithValidate
     return (
         <DeviceProvider device={device} >
             <ScrollView>
-                <DeviceRegistrationStatusCard />
+                <DeviceRegistrationInfo />
                 <ValidDeviceAttributesCard />
                 <InvalidDeviceAttributesCard />
 

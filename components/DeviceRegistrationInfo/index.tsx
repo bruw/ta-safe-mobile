@@ -5,13 +5,13 @@ import LabeledText from "components/UI/LabeledText";
 import { t } from "i18next";
 import moment from "moment";
 import DeviceValidation from "components/DeviceValidation";
-import { stylesRegistrationStatusCard } from "./_styles";
+import { stylesDeviceRegistrationInfo } from "./_styles";
 import MainButton from "components/UI/MainButton";
 import { router } from "expo-router";
 import DeleteInvalidDevice from "components/DeleteInvalidDevice";
 
-export default function DeviceRegistrationStatusCard() {
-    const styles = stylesRegistrationStatusCard();
+export default function DeviceRegistrationInfo() {
+    const styles = stylesDeviceRegistrationInfo();
     const { device } = useContext(DeviceContext);
 
     const statusStyle = {
@@ -24,39 +24,39 @@ export default function DeviceRegistrationStatusCard() {
     return (
         <Card>
             <Card.Title style={{ fontSize: 16 }}>
-                {t("cards.deviceRegistrationStatusCard.title")}
+                {t("cards.deviceRegistrationInfo.title")}
             </Card.Title>
 
             <Card.Divider />
 
             <LabeledText
-                label={t("cards.deviceRegistrationStatusCard.status")}
+                label={t("cards.deviceRegistrationInfo.status")}
                 text={t(`status.${device.validation_status}`)}
                 textStyle={statusStyle[device.validation_status]}
             />
 
             <LabeledText
-                label={t("cards.deviceRegistrationStatusCard.owner")}
+                label={t("cards.deviceRegistrationInfo.owner")}
                 text={device.user.name}
             />
 
             <LabeledText
-                label={t("cards.deviceRegistrationStatusCard.cpf")}
+                label={t("attributes.user.cpf")}
                 text={device.user.cpf}
             />
 
             <LabeledText
-                label={t("cards.deviceRegistrationStatusCard.phone")}
+                label={t("attributes.user.phone")}
                 text={device.user.phone}
             />
 
             <LabeledText
-                label={t("cards.deviceRegistrationStatusCard.created_at")}
+                label={t("cards.deviceRegistrationInfo.created_at")}
                 text={moment(device.created_at).format('DD/MM/YYYY HH:mm')}
             />
 
             <LabeledText
-                label={t("cards.deviceRegistrationStatusCard.updated_at")}
+                label={t("cards.deviceRegistrationInfo.updated_at")}
                 text={moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
             />
 
