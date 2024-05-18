@@ -106,6 +106,25 @@ export default function _Layout() {
         />
 
         <Drawer.Screen
+          name="device-transfers/index"
+          options={{
+            drawerLabel: t("components.userDeviceTransfers.title"),
+            title: t("components.userDeviceTransfers.title"),
+            drawerIcon: (item) => (
+              <Icon
+                name="transfer"
+                type="material-community"
+                color={
+                  item.focused
+                    ? theme.lightColors?.primary
+                    : theme.lightColors?.grey2
+                }
+              />
+            ),
+          }}
+        />
+
+        <Drawer.Screen
           name="profile/index"
           options={{
             drawerLabel: t("components.profile.title"),

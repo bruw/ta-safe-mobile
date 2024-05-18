@@ -100,6 +100,7 @@ export type Transfer = {
   source_user: UserMinimalInfo;
   target_user: UserMinimalInfo;
   updated_at: string;
+  device?: Device;
 }
 
 export type SharingToken = {
