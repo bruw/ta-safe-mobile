@@ -29,7 +29,8 @@
     "validation": "Validar",
     "registerDevice": "Registrar Celular",
     "transfer": "Criar transferência",
-    "delete": "Excluir"
+    "delete": "Excluir",
+    "search": "Pesquisar"
   },
   "forms": {
     "login": {
@@ -63,6 +64,9 @@
         "imei_1": "IMEI 1",
         "imei_2": "IMEI 2"
       }
+    },
+    "searchDevice": {
+      "token": "Código de Acesso"
     }
   },
   "components": {
@@ -103,6 +107,14 @@
     },
     "deviceRegistrationReminder": {
       "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
+    },
+    "deviceShare": {
+      "title": "Código de Acesso",
+      "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro.",
+      "expires": "Expira em: "
+    },
+    "searchDevice": {
+      "title": "Pesquisar Dispositivo"
     }
   },
   "status": {

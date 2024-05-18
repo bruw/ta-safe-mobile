@@ -8,11 +8,12 @@ import DeviceValidAttributes from "components/DeviceValidAttributes";
 
 interface DeviceWithValidatedStatusProps {
     device: Device;
+    publicMode?: boolean;
 }
 
-export default function DeviceWithValidatedStatus({ device }: DeviceWithValidatedStatusProps) {
+export default function DeviceWithValidatedStatus({ device, publicMode }: DeviceWithValidatedStatusProps) {
     return (
-        <DeviceProvider device={device} >
+        <DeviceProvider device={device} initialPublicMode={publicMode}>
             <ScrollView>
                 <DeviceRegistrationInfo />
                 <DeviceValidAttributes />

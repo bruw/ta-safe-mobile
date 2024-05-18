@@ -9,8 +9,8 @@ export type User = {
   email: string;
   cpf: string;
   phone: string;
-  created_at: string;
-  updated_at: string;
+  created_at: Date;
+  updated_at: Date;
   token: string;
 };
 
@@ -19,7 +19,7 @@ export type UserMinimalInfo = {
   name: string;
   cpf: string;
   phone: string;
-  created_at: string;
+  created_at: Date;
 }
 
 export type UserAuth = {
@@ -95,7 +95,13 @@ export type Transfer = {
   status: DeviceValidationStatus['validation_status'];
   source_user: UserMinimalInfo;
   target_user: UserMinimalInfo;
-  updated_at: string;
+  updated_at: Date;
+}
+
+export type SharingToken = {
+  id: number,
+  token: string,
+  expires_at: Date;
 }
 
 export type Device = {
@@ -104,10 +110,10 @@ export type Device = {
   imei_1: string;
   imei_2: string;
   access_key?: string;
-  sharing_token?: string;
+  sharing_token?: SharingToken;
   validation_status: DeviceValidationStatus['validation_status'];
-  created_at: string;
-  updated_at: string;
+  created_at: Date;
+  updated_at: Date;
   user: User;
   device_model: DeviceModel;
   validation_attributes?: ValidationAttributes;
@@ -122,4 +128,15 @@ export type UpdatedDevice = {
 export type InvalidatedDevice = {
   device: Device;
   message: FlashMessage;
+}
+
+export type DeviceSharedToken = {
+  message: FlashMessage;
+  id: number;
+  token: string;
+  expires_at: Date;
+}
+
+export type SearchDevice = {
+  token: string;
 }
