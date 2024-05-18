@@ -1,22 +1,22 @@
 import React from 'react';
 import { Device } from 'types/ApiTypes';
-import DeviceCardHeader from './CardHeader';
-import DeviceCardContent from './CardContent';
 import DeviceProvider from 'contexts/DeviceProvider';
 import { Card } from '@rneui/base';
 import CustomDivider from 'components/UI/CustomDivider';
+import DeviceSummaryHeader from './DeviceSummaryHeader';
+import DeviceSummaryContent from './DeviceSummaryContent';
 
 interface DeviceCardProps {
     device: Device;
 }
 
-export default function DeviceSummaryCard({ device }: DeviceCardProps) {
+export default function DeviceSummary({ device }: DeviceCardProps) {
     return (
         <DeviceProvider device={device}>
             <Card>
-                <DeviceCardHeader />
+                <DeviceSummaryHeader />
                 <CustomDivider />
-                <DeviceCardContent />
+                <DeviceSummaryContent />
             </Card>
         </DeviceProvider>
     );

@@ -1,12 +1,12 @@
 import { Text } from "@rneui/themed";
 import { View } from "react-native";
 import BadgeStatus from "./BadgeStatus";
-import { stylesDeviceCardHeader } from "./_styles";
+import { stylesDeviceSummaryHeader } from "./_styles";
 import { useContext } from "react";
 import { DeviceContext } from "contexts/DeviceProvider";
 
-export default function CardHeader() {
-    const styles = stylesDeviceCardHeader();
+export default function DeviceSummaryHeader() {
+    const styles = stylesDeviceSummaryHeader();
     const { device } = useContext(DeviceContext);
 
     return (

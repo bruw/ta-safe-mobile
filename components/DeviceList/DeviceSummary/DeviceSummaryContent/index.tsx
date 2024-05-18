@@ -6,7 +6,7 @@ import { useRouter } from 'expo-router';
 import MainButton from 'components/UI/MainButton';
 import LabeledText from 'components/UI/LabeledText';
 
-export default function CardContent() {
+export default function DeviceSummaryContent() {
     const { device } = useContext(DeviceContext);
     const router = useRouter();
 
