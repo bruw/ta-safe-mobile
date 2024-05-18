@@ -135,3 +135,7 @@ export type DeviceSharedToken = {
   token: string;
   expires_at: Date;
 }
+
+export type SearchDevice = {
+  token: string;
+}

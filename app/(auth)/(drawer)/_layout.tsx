@@ -87,6 +87,25 @@ export default function _Layout() {
         />
 
         <Drawer.Screen
+          name="search-device/index"
+          options={{
+            drawerLabel: t("components.searchDevice.title"),
+            title: t("components.searchDevice.title"),
+            drawerIcon: (item) => (
+              <Icon
+                name="file-search-outline"
+                type="material-community"
+                color={
+                  item.focused
+                    ? theme.lightColors?.primary
+                    : theme.lightColors?.grey2
+                }
+              />
+            ),
+          }}
+        />
+
+        <Drawer.Screen
           name="profile/index"
           options={{
             drawerLabel: t("components.profile.title"),
