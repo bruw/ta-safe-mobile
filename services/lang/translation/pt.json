@@ -135,7 +135,7 @@
     },
     "createDeviceTransfer": {
       "title": "Nova Transferência",
-      "title2": "Confirmação de Transferência de Registro",
+      "title2": "Transferência de Registro",
       "userInfoTitle": "Usuário de Destino",
       "deviceInfoTitle": "Dispositivo"
     },
