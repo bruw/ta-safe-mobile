@@ -17,7 +17,7 @@ export default function ParticipantInfo({ title, titleStyle, name, cpf }: Partic
             <ListItem.Content>
                 <ListItem.Title style={titleStyle}>{title}</ListItem.Title>
                 <ListItem.Title>{name}</ListItem.Title>
-                <ListItem.Title>{t("attributes.user.cpf")}{":"} {cpf}</ListItem.Title>
+                <ListItem.Title>{t("labels.cpf")}{":"} {cpf}</ListItem.Title>
             </ListItem.Content>
         </ListItem>
     );

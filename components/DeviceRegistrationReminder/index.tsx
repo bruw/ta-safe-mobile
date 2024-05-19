@@ -11,10 +11,10 @@ export default function DeviceRegistrationReminder() {
         <View style={styles.container}>
             <View style={styles.contentMessage}>
                 <Text style={styles.text}>
-                    {t("components.deviceRegistrationReminder.message")}
+                    {t("components.device_registration_reminder.message")}
                 </Text>
                 <Link href="/(auth)/(drawer)/device-registration/">
-                    <Text style={styles.link}>{t("buttons.registerDevice")}</Text>
+                    <Text style={styles.link}>{t("buttons.register_device")}</Text>
                 </Link>
             </View>
         </View>

@@ -14,13 +14,13 @@ export default function DeviceTransfersHistory() {
     return (
         <Card containerStyle={styles.container}>
             <Card.Title style={styles.title}>
-                {t("cards.deviceTranfersHistory.title")}
+                {t("cards.device_transfers_history.title")}
             </Card.Title>
 
             <Card.Divider />
 
             {device.transfers_history?.length == 0 && (
-                <Text>{t("cards.deviceTranfersHistory.nonTransfers")}</Text>
+                <Text>{t("cards.device_transfers_history.non_transfers")}</Text>
             )}
 
             {device.transfers_history?.map(transfer => (

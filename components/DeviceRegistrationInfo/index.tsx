@@ -26,40 +26,40 @@ export default function DeviceRegistrationInfo() {
             <Card.Divider />
 
             <LabeledText
-                label={t("cards.deviceRegistrationInfo.status")}
+                label={t("labels.status")}
                 text={t(`status.${device.validation_status}`)}
                 textStyle={statusStyle[device.validation_status]}
             />
 
             <LabeledText
-                label={t("attributes.device.identifier")}
+                label={t("labels.identifier")}
                 text={device.id.toString()}
             />
 
             <LabeledText
-                label={t("cards.deviceRegistrationInfo.owner")}
+                label={t("labels.owner")}
                 text={device.user.name}
             />
 
             <LabeledText
-                label={t("attributes.user.cpf")}
+                label={t("labels.cpf")}
                 text={device.user.cpf}
             />
 
             <LabeledText
-                label={t("attributes.user.phone")}
+                label={t("labels.phone")}
                 text={device.user.phone}
             />
 
             {!publicMode && (
                 <>
                     <LabeledText
-                        label={t("cards.deviceRegistrationInfo.created_at")}
+                        label={t("cards.device_registration_info.created_at")}
                         text={moment(device.created_at).format('DD/MM/YYYY HH:mm')}
                     />
 
                     <LabeledText
-                        label={t("cards.deviceRegistrationInfo.updated_at")}
+                        label={t("cards.device_registration_info.updated_at")}
                         text={moment(device.updated_at).format('DD/MM/YYYY HH:mm')}
                     />
                 </>

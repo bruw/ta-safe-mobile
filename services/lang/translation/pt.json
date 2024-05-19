@@ -1,159 +1,57 @@
 {
   "labels": {
-    "device": "Dipositivo"
-  },
-  "attributes": {
-    "device": {
-      "identifier": "Identiticador",
-      "brand": "Marca",
-      "model": "Modelo",
-      "color": "Cor",
-      "ram": "Ram",
-      "storage": "Armazenamento",
-      "imei_1": "IMEI 1",
-      "imei_2": "IMEI 2"
-    },
-    "user": {
-      "name": "Nome",
-      "email": "Email",
-      "cpf": "CPF",
-      "phone": "Celular",
-      "password": "Senha"
-    },
-    "last_update": "Última alteração"
+    "device": "Dispositivo",
+    "identifier": "Identiticador",
+    "brand": "Marca",
+    "model": "Modelo",
+    "color": "Cor",
+    "ram": "Ram",
+    "storage": "Armazenamento",
+    "imei_1": "IMEI 1",
+    "imei_2": "IMEI 2",
+    "last_update": "Última alteração",
+    "name": "Nome",
+    "email": "Email",
+    "cpf": "CPF",
+    "phone": "Celular",
+    "password": "Senha",
+    "password_confirmation": "Confirmação de Senha",
+    "token": "Código de Visualização",
+    "profile": "Perfil",
+    "origin": "Origem",
+    "destination": "Destino",
+    "received": "Recebida",
+    "sent": "Enviada",
+    "access_key": "Chave de acesso (NF-e)",
+    "source_user": "Proprietário Anterior",
+    "target_user": "Novo Proprietário",
+    "search_device": "Pesquisar Dispositivo",
+    "transfers": "Transferências",
+    "registration": "Registro",
+    "status": "Status",
+    "owner": "Proprietário"
   },
   "buttons": {
     "login": "Entrar",
     "logout": "Sair",
     "register": "Registrar",
     "save": "Salvar",
-    "signUp": "Novo por aqui? Cadastre-se.",
-    "nextStep": "Próxima etapa",
-    "previousStep": "Etapa anterior",
-    "details": "Visualizar Detalhes",
-    "validation": "Validar",
-    "registerDevice": "Registrar Celular",
-    "transfer": "Transferir",
-    "createTransfer": "Criar Transferência",
     "delete": "Excluir",
     "search": "Pesquisar",
     "accept": "Aceitar",
     "cancel": "Cancelar",
-    "reject": "Rejeitar"
+    "reject": "Rejeitar",
+    "sign_up": "Novo por aqui? Cadastre-se.",
+    "next_step": "Próxima etapa",
+    "previous_step": "Etapa anterior",
+    "details": "Visualizar Detalhes",
+    "validation": "Validar",
+    "register_device": "Registrar Celular",
+    "transfer": "Transferir",
+    "create_transfer": "Criar Transferência"
   },
-  "forms": {
-    "login": {
-      "email": "Email",
-      "password": "Senha"
-    },
-    "userRegistration": {
-      "name": "Nome",
-      "email": "Email",
-      "cpf": "CPF",
-      "phone": "Celular",
-      "password": "Senha",
-      "passwordConfirmation": "Confirmação de Senha"
-    },
-    "deviceRegistration": {
-      "brandStep": {
-        "titleSpan": "Passo 1",
-        "titleContent": "Selecione a marca do dispositivo que deseja registrar.",
-        "selectBrand": "Selecione uma marca"
-      },
-      "modelStep": {
-        "titleSpan": "Passo 2",
-        "titleContent": "Selecione o modelo do dispositivo.",
-        "selectModel": "Selecione um modelo"
-      },
-      "deviceInfoStep": {
-        "titleSpan": "Passo 3",
-        "titleContent": "Informe os dados básicos do aparelho.",
-        "color": "Cor",
-        "access_key": "Chave de acesso (NF-e)",
-        "imei_1": "IMEI 1",
-        "imei_2": "IMEI 2"
-      }
-    },
-    "searchDevice": {
-      "token": "Código de Visualização"
-    },
-    "searchUser": {
-      "title": "Informe o Email do usuário de destino"
-    }
-  },
-  "components": {
-    "login": {
-      "title": "Bem vindo!",
-      "subtitle": "Acesse sua conta para continuar."
-    },
-    "userRegistration": {
-      "title": "Cadastro de Usuário"
-    },
-    "myDevices": {
-      "title": "Meus Celulares"
-    },
-    "profile": {
-      "title": "Perfil"
-    },
-    "deviceRegistration": {
-      "title": "Registrar Celular"
-    },
-    "deviceCard": {
-      "brand": "Marca",
-      "color": "Cor",
-      "imei_1": "IMEI 1",
-      "imei_2": "IMEI 2",
-      "created_at": "Data de registro",
-      "updated_at": "Última atualização"
-    },
-    "customActivityIndicator": {
-      "default": "Aguarde...",
-      "nfeValidation": "Aguarde, estamos validando sua NFe."
-    },
-    "device": {
-      "title": "Informações do dispositivo"
-    },
-    "transferInfo": {
-      "sourceUser": "Proprietário Anterior",
-      "targetUser": "Novo Proprietário"
-    },
-    "deviceRegistrationReminder": {
-      "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
-    },
-    "deviceShare": {
-      "title": "Código de Visualização",
-      "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro.",
-      "expires": "Expira em: "
-    },
-    "searchDevice": {
-      "title": "Pesquisar Dispositivo"
-    },
-    "userDeviceTransfers": {
-      "title": "Transferências",
-      "origin": "Origem",
-      "destination": "Destino"
-    },
-    "createDeviceTransfer": {
-      "title": "Nova Transferência",
-      "title2": "Transferência de Registro",
-      "userInfoTitle": "Usuário de Destino",
-      "deviceInfoTitle": "Dispositivo"
-    },
-    "defaultMessageForInactivity": {
-      "message": "Ainda não há atividades por aqui... Explore nossos serviços para obter uma experiência completa.",
-      "goHome": "Voltar para meus dispositivos"
-    },
-    "transferType": {
-      "received": "Recebida",
-      "sent": "Enviada"
-    },
-    "transferDeviceBasicInfo": {
-      "title": "Informações básicas do dispositivo"
-    },
-    "deviceSharingToken": {
-      "label": "Código de Visualização",
-      "message": "Expirado. Solicite um novo código ao proprietário."
-    }
+  "check_boxs": {
+    "confirmation_of_info": "Confirmo que todas as informações estão corretas."
   },
   "status": {
     "pending": "Pendente",
@@ -163,31 +61,87 @@
     "validated": "Validado",
     "accepted": "Aceito"
   },
+  "forms": {
+    "device_registration": {
+      "brand_step": {
+        "title_span": "Passo 1",
+        "title_content": "Selecione a marca do dispositivo que deseja registrar.",
+        "select_brand": "Selecione uma marca"
+      },
+      "model_step": {
+        "title_span": "Passo 2",
+        "title_content": "Selecione o modelo do dispositivo.",
+        "select_model": "Selecione um modelo"
+      },
+      "device_info_step": {
+        "title_span": "Passo 3",
+        "title_content": "Informe os dados básicos do aparelho."
+      }
+    },
+    "search_user": {
+      "title": "Informe o e-mail do usuário de destino"
+    }
+  },
+  "components": {
+    "login": {
+      "title": "Bem vindo!",
+      "subtitle": "Acesse sua conta para continuar."
+    },
+    "user_registration": {
+      "title": "Cadastro de Usuário"
+    },
+    "my_devices": {
+      "title": "Meus Celulares"
+    },
+    "device_registration": {
+      "title": "Registrar Celular"
+    },
+    "custom_activity_indicator": {
+      "default": "Aguarde...",
+      "nfe_validation": "Aguarde, estamos validando sua NFe."
+    },
+    "device": {
+      "title": "Informações do dispositivo"
+    },
+    "device_registration_reminder": {
+      "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
+    },
+    "device_share": {
+      "title": "Código de Visualização",
+      "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro.",
+      "expires": "Expira em: "
+    },
+    "create_device_transfer": {
+      "title": "Nova Transferência",
+      "title2": "Transferência de Registro",
+      "user_info_title": "Usuário de Destino"
+    },
+    "default_message_for_inactivity": {
+      "message": "Ainda não há atividades por aqui... Explore nossos serviços para obter uma experiência completa.",
+      "go_home": "Voltar para meus dispositivos"
+    },
+    "device_sharing_token": {
+      "message": "Expirado. Solicite um novo código ao proprietário."
+    }
+  },
   "cards": {
-    "deviceRegistrationInfo": {
-      "title": "Registro",
-      "status": "Status",
-      "owner": "Proprietário",
+    "device_registration_info": {
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
     },
-    "registrationAttributes": {
+    "registration_attributes": {
       "title": "Atributos"
     },
-    "validDeviceAttributes": {
+    "valid_device_attributes": {
       "title": "Atributos Válidados",
-      "nonAttributes": "Sem atributos válidos."
+      "non_attributes": "Sem atributos válidos."
     },
-    "invalidDeviceAttributes": {
-      "title": "Atributos não Válidados",
-      "nonAttributes": "Sem atributos inválidos."
+    "invalid_device_attributes": {
+      "title": "Atributos não Válidados"
     },
-    "deviceTranfersHistory": {
+    "device_transfers_history": {
       "title": "Histórico de Transferências",
-      "nonTransfers": "Este dispositivo ainda não possui histórico de transferências."
+      "non_transfers": "Este dispositivo ainda não possui histórico de transferências."
     }
-  },
-  "checkBoxs": {
-    "confirmationOfInfo": "Confirmo que todas as informações estão corretas."
   }
 }

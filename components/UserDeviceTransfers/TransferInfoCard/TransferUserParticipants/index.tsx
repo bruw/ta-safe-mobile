@@ -11,17 +11,17 @@ export default function TransferUserParticipants() {
     return (
         <ListItem.Content style={{ marginLeft: -15 }}>
             <LabeledText
-                label={t("components.userDeviceTransfers.origin")}
+                label={t("labels.origin")}
                 text={transfer.source_user.name}
             />
 
             <LabeledText
-                label={t("components.userDeviceTransfers.destination")}
+                label={t("labels.destination")}
                 text={transfer.target_user.name}
             />
 
             <LabeledText
-                label={t("attributes.last_update")}
+                label={t("labels.last_update")}
                 text={moment(transfer.updated_at).format("DD/MM/YYYY HH:mm")}
             />
         </ListItem.Content>

@@ -43,7 +43,7 @@ export default function CreateDeviceTransfer() {
             </Dialog>
 
             <MainButton
-                title={t("buttons.createTransfer")}
+                title={t("buttons.create_transfer")}
                 onPress={() => setVisible(true)}
             />
         </View>

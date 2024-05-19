@@ -39,7 +39,7 @@ export default function SearchUser({ setUser }: SearchUserProps) {
     return (
         <>
             <Dialog.Title
-                title={t("components.createDeviceTransfer.title")}
+                title={t("components.create_device_transfer.title")}
                 titleStyle={styles.title}
             />
 
@@ -48,7 +48,7 @@ export default function SearchUser({ setUser }: SearchUserProps) {
                 control={control}
                 render={({ field: { value, onChange } }) => (
                     <Input
-                        label={t("forms.searchUser.title")}
+                        label={t("forms.search_user.title")}
                         value={value}
                         onChangeText={onChange}
                         errorMessage={errors.email?.message}

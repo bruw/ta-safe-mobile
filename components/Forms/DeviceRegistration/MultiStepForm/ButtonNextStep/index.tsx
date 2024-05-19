@@ -12,7 +12,7 @@ export default function ButtonNextStep({ onNext, disabled }: ButtonNextStepProps
 
     return (
         <Button
-            title={t("buttons.nextStep")}
+            title={t("buttons.next_step")}
             onPress={onNext}
             disabled={disabled}
             color={theme.colors.primary}

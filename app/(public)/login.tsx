@@ -36,7 +36,7 @@ export default function _Screen() {
       });
 
       setToken(response.data.user.token, response.data.user);
-      router.replace("/(auth)/my-devices");
+      router.replace("/(auth)/(drawer)/my-devices");
     } catch (error: any) {
       const data = error.response.data;
 
@@ -69,7 +69,7 @@ export default function _Screen() {
                 control={control}
                 render={({ field: { value, onChange } }) => (
                   <Input
-                    placeholder={t("forms.login.email")}
+                    placeholder={t("labels.email")}
                     value={value}
                     onChangeText={onChange}
                     errorMessage={errors.email?.message}
@@ -91,7 +91,7 @@ export default function _Screen() {
                 control={control}
                 render={({ field: { value, onChange } }) => (
                   <Input
-                    placeholder={t("forms.login.password")}
+                    placeholder={t("labels.password")}
                     value={value}
                     onChangeText={onChange}
                     errorMessage={errors.password?.message}
@@ -126,7 +126,7 @@ export default function _Screen() {
         </View>
         <View style={{ marginTop: 30 }}>
           <Link href="/user-registration/" style={styles.link}>
-            {t("buttons.signUp")}
+            {t("buttons.sign_up")}
           </Link>
         </View>
       </View>

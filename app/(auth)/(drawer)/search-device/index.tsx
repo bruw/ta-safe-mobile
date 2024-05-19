@@ -65,7 +65,7 @@ export default function _Screen() {
           control={control}
           render={({ field: { value, onChange } }) => (
             <Input
-              label={t("forms.searchDevice.token")}
+              label={t("labels.token")}
               value={value}
               onChangeText={(text) => onChange(maskOnlyNumbers(text))}
               errorMessage={errors.token?.message}

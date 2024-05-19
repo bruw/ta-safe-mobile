@@ -56,7 +56,7 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
         <>
             <View style={styles.titleContainer}>
                 <Text style={styles.title}>
-                    {t("components.createDeviceTransfer.title2")}
+                    {t("components.create_device_transfer.title2")}
                 </Text>
 
                 <Icon
@@ -70,49 +70,49 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
             <ScrollView>
                 <View style={styles.userInfoContainer}>
                     <Text style={styles.userInfoContainerTitle}>
-                        {t("components.createDeviceTransfer.userInfoTitle")}
+                        {t("components.create_device_transfer.user_info_title")}
                     </Text>
 
                     <LabeledText
-                        label={t("attributes.user.name")}
+                        label={t("labels.name")}
                         text={user.name}
                     />
 
                     <LabeledText
-                        label={t("attributes.user.cpf")}
+                        label={t("labels.cpf")}
                         text={user.cpf}
                     />
 
                     <LabeledText
-                        label={t("attributes.user.phone")}
+                        label={t("labels.phone")}
                         text={user.phone}
                     />
                 </View>
 
                 <View style={styles.deviceInfoContainer}>
                     <Text style={styles.deviceInfoContainerTitle}>
-                        {t("components.createDeviceTransfer.deviceInfoTitle")}
+                        {t("labels.device")}
                     </Text>
 
                     <LabeledText
-                        label={t("attributes.device.identifier")}
+                        label={t("labels.identifier")}
                         text={device.id.toString()}
                     />
 
                     <LabeledText
-                        label={t("attributes.device.brand")}
+                        label={t("labels.brand")}
                         text={device.device_model.brand.name}
                     />
 
                     <LabeledText
-                        label={t("attributes.device.model")}
+                        label={t("labels.model")}
                         text={device.device_model.name}
                     />
                 </View>
 
 
                 <CheckBoxConfirmation
-                    label={t("checkBoxs.confirmationOfInfo")}
+                    label={t("check_boxs.confirmation_of_info")}
                     checked={checked}
                     onPress={setChecked}
                 />
