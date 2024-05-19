@@ -9,7 +9,7 @@ import { View } from "react-native";
 import api from "services/api/api";
 import { DeviceSharedToken } from "types/ApiTypes";
 import { stylesDeviceShareToken } from "./_styles";
-import moment from "moment";
+import formatDateToBrLocale from "helpers/formatDateToBrLocale";
 
 export default function DeviceShareToken() {
     const styles = stylesDeviceShareToken();
@@ -61,12 +61,29 @@ export default function DeviceShareToken() {
                 backdropStyle={styles.backdrop}
             >
                 <Dialog.Title title={t("components.deviceShare.title")} titleStyle={styles.text} />
-                <CopyToClipboardButton text={token} />
+
+                <View style={styles.tokenContainer}>
+                    <CopyToClipboardButton
+                        text={token}
+                        iconSize={24}
+                        textStyle={{
+                            fontSize: 20,
+                            fontWeight: 'bold'
+                        }}
+                    />
+                </View>
+
                 <Text style={[styles.text, styles.expiration]}>
-                    {t("components.deviceShare.expires")}{moment(device.sharing_token?.expires_at).format('DD/MM/Y [às] HH:mm:ss')}
+                    {t("components.deviceShare.expires")}
+                    {formatDateToBrLocale(device.sharing_token?.expires_at)}
                 </Text>
-                <Text style={styles.text}>{t("components.deviceShare.instruction")}</Text>
+
+                <Text style={styles.text}>
+                    {t("components.deviceShare.instruction")}
+                </Text>
+
             </Dialog>
+
             <Button type="clear" onPress={handleSharePress}>
                 <Icon name="share" type="feather" size={22} />
             </Button>

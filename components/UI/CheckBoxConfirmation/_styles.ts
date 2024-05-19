@@ -1,8 +1,8 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesCheckBoxConfirmation = makeStyles((theme) => ({
+export const stylesCheckBoxConfirmation = makeStyles(() => ({
     containerStyle: {
-        marginTop: theme.spacing.lg,
-        marginBottom: theme.spacing.lg
+        marginTop: 40,
+        marginBottom: 40
     }
 }));
