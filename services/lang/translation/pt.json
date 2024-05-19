@@ -1,18 +1,16 @@
 {
   "labels": {
-    "device": "Dipositivo"
+    "device": "Dipositivo",
+    "identifier": "Identiticador",
+    "brand": "Marca",
+    "model": "Modelo",
+    "color": "Cor",
+    "ram": "Ram",
+    "storage": "Armazenamento",
+    "imei_1": "IMEI 1",
+    "imei_2": "IMEI 2"
   },
   "attributes": {
-    "device": {
-      "identifier": "Identiticador",
-      "brand": "Marca",
-      "model": "Modelo",
-      "color": "Cor",
-      "ram": "Ram",
-      "storage": "Armazenamento",
-      "imei_1": "IMEI 1",
-      "imei_2": "IMEI 2"
-    },
     "user": {
       "name": "Nome",
       "email": "Email",
@@ -68,10 +66,7 @@
       "deviceInfoStep": {
         "titleSpan": "Passo 3",
         "titleContent": "Informe os dados básicos do aparelho.",
-        "color": "Cor",
-        "access_key": "Chave de acesso (NF-e)",
-        "imei_1": "IMEI 1",
-        "imei_2": "IMEI 2"
+        "access_key": "Chave de acesso (NF-e)"
       }
     },
     "searchDevice": {
@@ -99,10 +94,7 @@
       "title": "Registrar Celular"
     },
     "deviceCard": {
-      "brand": "Marca",
       "color": "Cor",
-      "imei_1": "IMEI 1",
-      "imei_2": "IMEI 2",
       "created_at": "Data de registro",
       "updated_at": "Última atualização"
     },

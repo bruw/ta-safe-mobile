@@ -18,37 +18,37 @@ export default function DeviceSpecifications() {
             <Card.Divider />
 
             <LabeledText
-                label={t("attributes.device.brand")}
+                label={t("labels.brand")}
                 text={device.device_model.brand.name}
             />
 
             <LabeledText
-                label={t("attributes.device.model")}
+                label={t("labels.model")}
                 text={device.device_model.name}
             />
 
             <LabeledText
-                label={t("attributes.device.color")}
+                label={t("labels.color")}
                 text={device.color}
             />
 
             <LabeledText
-                label={t("attributes.device.ram")}
+                label={t("labels.ram")}
                 text={device.device_model.ram}
             />
 
             <LabeledText
-                label={t("attributes.device.storage")}
+                label={t("labels.storage")}
                 text={device.device_model.storage}
             />
 
             <LabeledText
-                label={t("attributes.device.imei_1")}
+                label={t("labels.imei_1")}
                 text={device.imei_1}
             />
 
             <LabeledText
-                label={t("attributes.device.imei_2")}
+                label={t("labels.imei_2")}
                 text={device.imei_2}
             />
         </Card>

@@ -86,7 +86,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                             control={control}
                             render={({ field: { value, onChange } }) => (
                                 <Input
-                                    label={t("forms.deviceRegistration.deviceInfoStep.color")}
+                                    label={t("labels.color")}
                                     value={value}
                                     onChangeText={onChange}
                                     errorMessage={errors.color?.message}
@@ -129,7 +129,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                             control={control}
                             render={({ field: { value, onChange } }) => (
                                 <Input
-                                    label={t("forms.deviceRegistration.deviceInfoStep.imei_1")}
+                                    label={t("labels.imei_1")}
                                     value={value}
                                     onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.imei_1?.message}
@@ -151,7 +151,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                             control={control}
                             render={({ field: { value, onChange } }) => (
                                 <Input
-                                    label={t("forms.deviceRegistration.deviceInfoStep.imei_2")}
+                                    label={t("labels.imei_2")}
                                     value={value}
                                     onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.imei_2?.message}

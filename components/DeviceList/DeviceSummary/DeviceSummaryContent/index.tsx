@@ -13,7 +13,7 @@ export default function DeviceSummaryContent() {
     return (
         <View>
             <LabeledText
-                label={t("components.deviceCard.brand")}
+                label={t("labels.brand")}
                 text={device.device_model.brand.name}
             />
 

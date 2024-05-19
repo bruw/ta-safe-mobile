@@ -22,12 +22,12 @@ export default function TransferDeviceBasicInfo() {
             <Text style={styles.title}>{t("labels.device")}</Text>
 
             <LabeledText
-                label={t("attributes.device.brand")}
+                label={t("labels.brand")}
                 text={device.device_model.brand.name}
             />
 
             <LabeledText
-                label={t("attributes.device.model")}
+                label={t("labels.model")}
                 text={device.device_model.name}
             />
 

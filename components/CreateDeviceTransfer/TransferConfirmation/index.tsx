@@ -95,17 +95,17 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
                     </Text>
 
                     <LabeledText
-                        label={t("attributes.device.identifier")}
+                        label={t("labels.identifier")}
                         text={device.id.toString()}
                     />
 
                     <LabeledText
-                        label={t("attributes.device.brand")}
+                        label={t("labels.brand")}
                         text={device.device_model.brand.name}
                     />
 
                     <LabeledText
-                        label={t("attributes.device.model")}
+                        label={t("labels.model")}
                         text={device.device_model.name}
                     />
                 </View>
