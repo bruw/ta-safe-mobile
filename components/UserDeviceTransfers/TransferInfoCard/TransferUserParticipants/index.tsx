@@ -1,17 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
 import { t } from 'i18next';
-import MainButton from 'components/UI/MainButton';
 import LabeledText from 'components/UI/LabeledText';
 import { Transfer } from 'types/ApiTypes';
+import { ListItem } from '@rneui/themed';
 
-interface TransferSummaryContentProps {
+interface TransferUserParticipantsProps {
     transfer: Transfer;
 }
 
-export default function TransferSummaryContent({ transfer }: TransferSummaryContentProps) {
+export default function TransferUserParticipants({ transfer }: TransferUserParticipantsProps) {
     return (
-        <View>
+        <ListItem.Content style={{ marginLeft: -15 }}>
             <LabeledText
                 label={t("components.userDeviceTransfers.origin")}
                 text={transfer.source_user.name}
@@ -21,11 +20,6 @@ export default function TransferSummaryContent({ transfer }: TransferSummaryCont
                 label={t("components.userDeviceTransfers.destination")}
                 text={transfer.target_user.name}
             />
-
-            <MainButton
-                type='clear'
-                title={t("buttons.details")}
-            />
-        </View>
+        </ListItem.Content>
     );
 }

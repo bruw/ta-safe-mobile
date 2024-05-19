@@ -139,6 +139,9 @@
     "transferType": {
       "received": "Recebida",
       "sent": "Enviada"
+    },
+    "transferDeviceBasicInfo": {
+      "title": "Informações básicas do dispositivo"
     }
   },
   "status": {

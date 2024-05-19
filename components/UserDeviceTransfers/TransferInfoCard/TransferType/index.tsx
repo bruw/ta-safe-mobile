@@ -1,4 +1,4 @@
-import { Icon, Text, useTheme } from '@rneui/themed';
+import { Icon, Text } from '@rneui/themed';
 import React from 'react';
 import { View } from 'react-native';
 import useToken from 'states/useToken';
@@ -14,30 +14,23 @@ export default function TransferType({ transfer }: TransferTypeProps) {
     const styles = stylesTransferType();
     const { user } = useToken();
 
-    if (transfer.source_user.id == user?.id) {
-        return (
-            <View style={styles.container}>
-                <Icon
-                    name="tray-arrow-up"
-                    type="material-community"
-                    style={styles.icon}
-                    size={22}
-                />
-                <Text>{t("components.transferType.sent")}</Text>
-            </View>
-        );
-    }
-
     return (
         <View style={styles.container}>
             <Icon
-                name="tray-arrow-down"
+                name={transfer.source_user.id == user?.id
+                    ? "tray-arrow-up"
+                    : "tray-arrow-down"
+                }
                 type="material-community"
                 style={styles.icon}
                 size={22}
             />
-            <Text>{t("components.transferType.received")}</Text>
+            <Text>
+                {transfer.source_user.id == user?.id
+                    ? t("components.transferType.sent")
+                    : t("components.transferType.received")
+                }
+            </Text>
         </View>
     );
-
 }

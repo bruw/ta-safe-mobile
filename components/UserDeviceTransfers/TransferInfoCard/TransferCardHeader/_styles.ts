@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceSummaryHeader = makeStyles(() => ({
+export const stylesTransferCardHeader = makeStyles(() => ({
     container: {
         flex: 1,
         flexDirection: "row",
@@ -15,7 +15,6 @@ export const stylesDeviceSummaryHeader = makeStyles(() => ({
         fontWeight: "900",
     },
     status: {
-        width: "40%",
         alignItems: "flex-end"
     }
 }));

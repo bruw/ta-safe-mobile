@@ -9,7 +9,6 @@ import { Text } from "@rneui/themed";
 export default function DeviceTransfersHistory() {
     const styles = stylesDeviceTransfersHistory();
     const { device } = useContext(DeviceContext);
-
     const [expandedTransferId, setExpandedTranferId] = useState<number>();
 
     return (
