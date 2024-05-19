@@ -1,4 +1,4 @@
-import { CheckBox, Dialog } from "@rneui/themed";
+import { Dialog } from "@rneui/themed";
 import MainButton from "components/UI/MainButton";
 import { View } from "react-native";
 import { Text } from "@rneui/themed";
@@ -9,6 +9,7 @@ import { stylesTransferConfirmation } from "./_styles";
 import { t } from "i18next";
 import api from "services/api/api";
 import notify from "helpers/notify";
+import CheckBoxConfirmation from "components/UI/CheckBoxConfirmation";
 
 interface TransferConfirmationProps {
     user: User;
@@ -20,8 +21,6 @@ interface TransferConfirmationProps {
 export default function TransferConfirmation({ user, device, setVisible, setUser }: TransferConfirmationProps) {
     const styles = stylesTransferConfirmation();
     const [checked, setChecked] = useState<boolean>(false);
-
-    const toggleCheckbox = () => setChecked(!checked);
 
     const onSubmit = async () => {
         try {
@@ -93,13 +92,10 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
                 />
             </View>
 
-            <CheckBox
+            <CheckBoxConfirmation
+                label={t("checkBoxs.confirmationOfInfo")}
                 checked={checked}
-                onPress={toggleCheckbox}
-                title={t("checkBoxs.confirmationOfInfo")}
-                iconType="material-community"
-                checkedIcon="checkbox-outline"
-                uncheckedIcon={'checkbox-blank-outline'}
+                onPress={setChecked}
             />
 
             <MainButton
