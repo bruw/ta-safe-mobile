@@ -13,9 +13,9 @@ export default function DeviceSharingToken() {
     const { transfer } = useContext(TransferContext);
     const device: Device | undefined = transfer.device;
 
-    if (!device) return <></>;
+    if (!device) return null;
 
-    if (isTokenExpired(device?.sharing_token?.expires_at)) {
+    if (isTokenExpired(device?.sharing_token?.expires_at) && transfer.status == 'pending') {
         return (
             <LabeledText
                 label={t("components.deviceSharingToken.label")}
