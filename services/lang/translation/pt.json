@@ -50,6 +50,17 @@
     "transfer": "Transferir",
     "create_transfer": "Criar Transferência"
   },
+  "check_boxs": {
+    "confirmation_of_info": "Confirmo que todas as informações estão corretas."
+  },
+  "status": {
+    "pending": "Pendente",
+    "in_analysis": "Em análise",
+    "rejected": "Rejeitado",
+    "canceled": "Cancelado",
+    "validated": "Validado",
+    "accepted": "Aceito"
+  },
   "forms": {
     "device_registration": {
       "brand_step": {
@@ -113,14 +124,6 @@
       "message": "Expirado. Solicite um novo código ao proprietário."
     }
   },
-  "status": {
-    "pending": "Pendente",
-    "in_analysis": "Em análise",
-    "rejected": "Rejeitado",
-    "canceled": "Cancelado",
-    "validated": "Validado",
-    "accepted": "Aceito"
-  },
   "cards": {
     "device_registration_info": {
       "created_at": "Registrado em",
@@ -140,8 +143,5 @@
       "title": "Histórico de Transferências",
       "non_transfers": "Este dispositivo ainda não possui histórico de transferências."
     }
-  },
-  "check_boxs": {
-    "confirmation_of_info": "Confirmo que todas as informações estão corretas."
   }
 }
