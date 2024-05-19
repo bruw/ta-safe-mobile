@@ -18,7 +18,7 @@ export default function DeviceValidAttributes() {
     };
 
     return (
-        <Card>
+        <Card containerStyle={styles.cardContainerStyle}>
             <Card.Title style={styles.title}>
                 {t("cards.validDeviceAttributes.title")}
             </Card.Title>

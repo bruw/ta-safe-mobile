@@ -16,5 +16,8 @@ export const stylesDeviceRegistrationInfo = makeStyles((theme) => ({
     validated: {
         color: theme.colors.success,
         fontWeight: 'bold',
+    },
+    cardContainerStyle: {
+        marginBottom: theme.spacing.xl,
     }
 }));

@@ -20,7 +20,7 @@ export default function DeviceRegistrationInfo() {
     };
 
     return (
-        <Card>
+        <Card containerStyle={styles.cardContainerStyle}>
             <DeviceRegistrationInfoHeader />
 
             <Card.Divider />

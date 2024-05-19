@@ -10,7 +10,7 @@ export default function DeviceInvalidAttributes() {
     const { device } = useContext(DeviceContext);
 
     return (
-        <Card>
+        <Card containerStyle={styles.cardContainerStyle}>
             <Card.Title style={styles.title}>
                 {t("cards.invalidDeviceAttributes.title")}
             </Card.Title>
