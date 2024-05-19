@@ -5,16 +5,19 @@ export const stylesBadgeStatus = makeStyles((theme) => ({
         height: 30,
         padding: 6,
     },
-    pending: {
+    badgeTextStyle: {
+        fontSize: 13,
+    },
+    warning: {
         backgroundColor: theme.colors.warning,
     },
-    inAnalysis: {
+    info: {
         backgroundColor: theme.colors.info,
     },
-    rejected: {
+    error: {
         backgroundColor: theme.colors.error,
     },
-    validated: {
+    success: {
         backgroundColor: theme.colors.success,
     }
 }));

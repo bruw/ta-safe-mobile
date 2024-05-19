@@ -1,6 +1,10 @@
 {
+  "labels": {
+    "device": "Dipositivo"
+  },
   "attributes": {
     "device": {
+      "identifier": "Identiticador",
       "brand": "Marca",
       "model": "Modelo",
       "color": "Cor",
@@ -15,7 +19,8 @@
       "cpf": "CPF",
       "phone": "Celular",
       "password": "Senha"
-    }
+    },
+    "last_update": "Última alteração"
   },
   "buttons": {
     "login": "Entrar",
@@ -28,9 +33,13 @@
     "details": "Visualizar Detalhes",
     "validation": "Validar",
     "registerDevice": "Registrar Celular",
-    "transfer": "Criar transferência",
+    "transfer": "Transferir",
+    "createTransfer": "Criar Transferência",
     "delete": "Excluir",
-    "search": "Pesquisar"
+    "search": "Pesquisar",
+    "accept": "Aceitar",
+    "cancel": "Cancelar",
+    "reject": "Rejeitar"
   },
   "forms": {
     "login": {
@@ -66,7 +75,10 @@
       }
     },
     "searchDevice": {
-      "token": "Código de Acesso"
+      "token": "Código de Visualização"
+    },
+    "searchUser": {
+      "title": "Informe o Email do usuário de destino"
     }
   },
   "components": {
@@ -109,19 +121,47 @@
       "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
     },
     "deviceShare": {
-      "title": "Código de Acesso",
+      "title": "Código de Visualização",
       "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro.",
       "expires": "Expira em: "
     },
     "searchDevice": {
       "title": "Pesquisar Dispositivo"
+    },
+    "userDeviceTransfers": {
+      "title": "Transferências",
+      "origin": "Origem",
+      "destination": "Destino"
+    },
+    "createDeviceTransfer": {
+      "title": "Nova Transferência",
+      "title2": "Transferência de Registro",
+      "userInfoTitle": "Usuário de Destino",
+      "deviceInfoTitle": "Dispositivo"
+    },
+    "defaultMessageForInactivity": {
+      "message": "Ainda não há atividades por aqui... Explore nossos serviços para obter uma experiência completa.",
+      "goHome": "Voltar para meus dispositivos"
+    },
+    "transferType": {
+      "received": "Recebida",
+      "sent": "Enviada"
+    },
+    "transferDeviceBasicInfo": {
+      "title": "Informações básicas do dispositivo"
+    },
+    "deviceSharingToken": {
+      "label": "Código de Visualização",
+      "message": "Expirado. Solicite um novo código ao proprietário."
     }
   },
   "status": {
-    "pending": "Validação Pendente",
+    "pending": "Pendente",
     "in_analysis": "Em análise",
     "rejected": "Rejeitado",
-    "validated": "Validado"
+    "canceled": "Cancelado",
+    "validated": "Validado",
+    "accepted": "Aceito"
   },
   "cards": {
     "deviceRegistrationInfo": {
@@ -146,5 +186,8 @@
       "title": "Histórico de Transferências",
       "nonTransfers": "Este dispositivo ainda não possui histórico de transferências."
     }
+  },
+  "checkBoxs": {
+    "confirmationOfInfo": "Confirmo que todas as informações estão corretas."
   }
 }

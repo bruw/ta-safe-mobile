@@ -1,35 +1,42 @@
 import { Button, Icon, Text } from "@rneui/themed";
 import { useState } from "react";
-import { View } from "react-native";
+import { TextStyle } from "react-native";
 import * as Clipboard from 'expo-clipboard';
-import { stylesCopyToClipboardButton } from "./_styles";
 
 interface CopyToClipboardButtonProps {
+    label?: string;
+    labeStyle?: TextStyle;
     text: string;
+    textStyle?: TextStyle;
+    iconSize?: number;
 }
 
-export default function CopyToClipboardButton({ text }: CopyToClipboardButtonProps) {
-    const styles = stylesCopyToClipboardButton();
+export default function CopyToClipboardButton({ label, labeStyle, text, textStyle, iconSize = 18 }: CopyToClipboardButtonProps) {
     const [copy, setCopy] = useState<boolean>(false);
 
     const copyToClipboard = async () => {
         await Clipboard.setStringAsync(text);
         setCopy(true);
+
+        setTimeout(() => {
+            setCopy(false);
+        }, 2000);
     };
 
     return (
-        <View style={styles.container}>
-            <Text h4>{text}</Text>
+        <>
+            {label && <Text style={labeStyle}>{label}{': '}</Text>}
 
-            {!copy ? (
-                <Button type="clear" onPress={copyToClipboard}>
-                    <Icon name="content-copy" type="material-community" size={24} />
-                </Button>
-            ) : (
-                <Button type="clear">
-                    <Icon name="check" type="material-community" size={24} color="green" />
-                </Button>
-            )}
-        </View>
+            <Text style={textStyle}>{text}</Text>
+
+            <Button type="clear" onPress={copyToClipboard} disabled={copy}>
+                <Icon
+                    name={copy ? "check" : "content-copy"}
+                    type="material-community"
+                    size={iconSize}
+                    color={copy ? "green" : undefined}
+                />
+            </Button>
+        </>
     );
 }

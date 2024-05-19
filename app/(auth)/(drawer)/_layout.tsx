@@ -24,6 +24,7 @@ const theme = createTheme({
     Text: {
       style: {
         fontSize: 16,
+        lineHeight: 26,
       },
     },
   },
@@ -94,6 +95,25 @@ export default function _Layout() {
             drawerIcon: (item) => (
               <Icon
                 name="file-search-outline"
+                type="material-community"
+                color={
+                  item.focused
+                    ? theme.lightColors?.primary
+                    : theme.lightColors?.grey2
+                }
+              />
+            ),
+          }}
+        />
+
+        <Drawer.Screen
+          name="device-transfers/index"
+          options={{
+            drawerLabel: t("components.userDeviceTransfers.title"),
+            title: t("components.userDeviceTransfers.title"),
+            drawerIcon: (item) => (
+              <Icon
+                name="transfer"
                 type="material-community"
                 color={
                   item.focused

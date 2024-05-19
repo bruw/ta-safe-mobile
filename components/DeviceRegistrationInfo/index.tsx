@@ -20,7 +20,7 @@ export default function DeviceRegistrationInfo() {
     };
 
     return (
-        <Card>
+        <Card containerStyle={styles.cardContainerStyle}>
             <DeviceRegistrationInfoHeader />
 
             <Card.Divider />
@@ -29,6 +29,11 @@ export default function DeviceRegistrationInfo() {
                 label={t("cards.deviceRegistrationInfo.status")}
                 text={t(`status.${device.validation_status}`)}
                 textStyle={statusStyle[device.validation_status]}
+            />
+
+            <LabeledText
+                label={t("attributes.device.identifier")}
+                text={device.id.toString()}
             />
 
             <LabeledText
