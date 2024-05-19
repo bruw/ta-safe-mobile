@@ -5,6 +5,9 @@ export const stylesBadgeStatus = makeStyles((theme) => ({
         height: 30,
         padding: 6,
     },
+    badgeTextStyle: {
+        fontSize: 13,
+    },
     warning: {
         backgroundColor: theme.colors.warning,
     },

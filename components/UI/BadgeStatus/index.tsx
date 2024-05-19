@@ -22,6 +22,7 @@ export default function BadgeStatus({ status }: BadgeStatusProps) {
 
     return <Badge
         value={t(`status.${status}`)}
+        textStyle={styles.badgeTextStyle}
         badgeStyle={[
             styles.badgeStyle,
             statusStyle[status]
