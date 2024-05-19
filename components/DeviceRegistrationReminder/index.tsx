@@ -14,7 +14,7 @@ export default function DeviceRegistrationReminder() {
                     {t("components.deviceRegistrationReminder.message")}
                 </Text>
                 <Link href="/(auth)/(drawer)/device-registration/">
-                    <Text style={styles.link}>{t("buttons.registerDevice")}</Text>
+                    <Text style={styles.link}>{t("buttons.register_device")}</Text>
                 </Link>
             </View>
         </View>

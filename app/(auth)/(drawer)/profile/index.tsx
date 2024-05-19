@@ -129,7 +129,7 @@ export default function _Screen() {
 
           <View>
             <Button
-              title={t("labels.save")}
+              title={t("buttons.save")}
               color={theme.colors.primary}
               onPress={handleSubmit(onSubmit)}
             />

@@ -113,7 +113,7 @@ export default function _Screen() {
 
           <View>
             <Button
-              title={t("labels.login")}
+              title={t("buttons.login")}
               onPress={handleSubmit(onSubmit)}
               color={theme.colors.primary}
               icon={{
@@ -126,7 +126,7 @@ export default function _Screen() {
         </View>
         <View style={{ marginTop: 30 }}>
           <Link href="/user-registration/" style={styles.link}>
-            {t("buttons.signUp")}
+            {t("buttons.sign_up")}
           </Link>
         </View>
       </View>

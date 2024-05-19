@@ -19,7 +19,7 @@ export default function ButtonPreviousStep({ fieldName, onPrevious }: ButtonPrev
 
     return (
         <Button
-            title={t("buttons.previousStep")}
+            title={t("buttons.previous_step")}
             onPress={handlePrevious}
             color={theme.colors.primary}
             iconPosition='left'

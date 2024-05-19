@@ -23,19 +23,19 @@
     "logout": "Sair",
     "register": "Registrar",
     "save": "Salvar",
-    "signUp": "Novo por aqui? Cadastre-se.",
-    "nextStep": "Próxima etapa",
-    "previousStep": "Etapa anterior",
-    "details": "Visualizar Detalhes",
-    "validation": "Validar",
-    "registerDevice": "Registrar Celular",
-    "transfer": "Transferir",
-    "createTransfer": "Criar Transferência",
     "delete": "Excluir",
     "search": "Pesquisar",
     "accept": "Aceitar",
     "cancel": "Cancelar",
-    "reject": "Rejeitar"
+    "reject": "Rejeitar",
+    "sign_up": "Novo por aqui? Cadastre-se.",
+    "next_step": "Próxima etapa",
+    "previous_step": "Etapa anterior",
+    "details": "Visualizar Detalhes",
+    "validation": "Validar",
+    "register_device": "Registrar Celular",
+    "transfer": "Transferir",
+    "create_transfer": "Criar Transferência"
   },
   "forms": {
     "deviceRegistration": {
