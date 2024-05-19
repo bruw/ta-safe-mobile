@@ -21,7 +21,8 @@
     "origin": "Origem",
     "destination": "Destino",
     "received": "Recebida",
-    "sent": "Enviada"
+    "sent": "Enviada",
+    "access_key": "Chave de acesso (NF-e)"
   },
   "buttons": {
     "login": "Entrar",
@@ -43,24 +44,23 @@
     "create_transfer": "Criar Transferência"
   },
   "forms": {
-    "deviceRegistration": {
-      "brandStep": {
-        "titleSpan": "Passo 1",
-        "titleContent": "Selecione a marca do dispositivo que deseja registrar.",
-        "selectBrand": "Selecione uma marca"
+    "device_registration": {
+      "brand_step": {
+        "title_span": "Passo 1",
+        "title_content": "Selecione a marca do dispositivo que deseja registrar.",
+        "select_brand": "Selecione uma marca"
       },
-      "modelStep": {
-        "titleSpan": "Passo 2",
-        "titleContent": "Selecione o modelo do dispositivo.",
-        "selectModel": "Selecione um modelo"
+      "model_step": {
+        "title_span": "Passo 2",
+        "title_content": "Selecione o modelo do dispositivo.",
+        "select_model": "Selecione um modelo"
       },
-      "deviceInfoStep": {
-        "titleSpan": "Passo 3",
-        "titleContent": "Informe os dados básicos do aparelho.",
-        "access_key": "Chave de acesso (NF-e)"
+      "device_info_step": {
+        "title_span": "Passo 3",
+        "title_content": "Informe os dados básicos do aparelho."
       }
     },
-    "searchUser": {
+    "search_user": {
       "title": "Informe o e-mail do usuário de destino"
     }
   },

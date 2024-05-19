@@ -74,8 +74,8 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
         <ScrollView>
             <View style={styles.container}>
                 <StepTitle
-                    span={t("forms.deviceRegistration.deviceInfoStep.titleSpan")}
-                    content={t("forms.deviceRegistration.deviceInfoStep.titleContent")}
+                    span={t("forms.device_registration.device_info_step.title_span")}
+                    content={t("forms.device_registration.device_info_step.title_content")}
                     style={styles.StepTitle}
                 />
 
@@ -107,7 +107,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                             control={control}
                             render={({ field: { value, onChange } }) => (
                                 <Input
-                                    label={t("forms.deviceRegistration.deviceInfoStep.access_key")}
+                                    label={t("labels.access_key")}
                                     value={value}
                                     onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.access_key?.message}

@@ -45,8 +45,8 @@ export default function DeviceModelSelectionStep({ onPrevious, onNext }: DeviceM
     return (
         <View style={styles.container}>
             <StepTitle
-                span={t("forms.deviceRegistration.modelStep.titleSpan")}
-                content={t("forms.deviceRegistration.modelStep.titleContent")}
+                span={t("forms.device_registration.model_step.title_span")}
+                content={t("forms.device_registration.model_step.title_content")}
                 style={styles.stepTitle}
             />
 
@@ -60,7 +60,7 @@ export default function DeviceModelSelectionStep({ onPrevious, onNext }: DeviceM
                     numberOfLines={4}
                 >
                     <Picker.Item
-                        label={t("forms.deviceRegistration.modelStep.selectModel")}
+                        label={t("forms.device_registration.model_step.select_model")}
                         value=""
                     />
 

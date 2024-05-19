@@ -27,7 +27,6 @@ export default function BrandSelectionStep({ onNext }: BrandSelectionStepProps) 
                 setBrands(response.data);
 
             } catch (error: any) {
-                // talvez exibir uma tela de erro...
                 console.error('Ocorreu um erro:', error);
             }
         };
@@ -42,8 +41,8 @@ export default function BrandSelectionStep({ onNext }: BrandSelectionStepProps) 
     return (
         <View style={styles.container}>
             <StepTitle
-                span={t("forms.deviceRegistration.brandStep.titleSpan")}
-                content={t("forms.deviceRegistration.brandStep.titleContent")}
+                span={t("forms.device_registration.brand_step.title_span")}
+                content={t("forms.device_registration.brand_step.title_content")}
                 style={styles.stepTitle}
             />
 
@@ -56,7 +55,7 @@ export default function BrandSelectionStep({ onNext }: BrandSelectionStepProps) 
                     }}
                 >
                     <Picker.Item
-                        label={t("forms.deviceRegistration.brandStep.selectBrand")}
+                        label={t("forms.device_registration.brand_step.select_brand")}
                         value=""
                     />
 
