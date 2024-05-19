@@ -1,17 +1,14 @@
 import { Icon, Text } from '@rneui/themed';
-import React from 'react';
+import React, { useContext } from 'react';
 import { View } from 'react-native';
 import useToken from 'states/useToken';
-import { Transfer } from 'types/ApiTypes';
 import { stylesTransferType } from './_styles';
 import { t } from 'i18next';
+import { TransferContext } from 'contexts/TransferProvider';
 
-interface TransferTypeProps {
-    transfer: Transfer;
-}
-
-export default function TransferType({ transfer }: TransferTypeProps) {
+export default function TransferType() {
     const styles = stylesTransferType();
+    const { transfer } = useContext(TransferContext);
     const { user } = useToken();
 
     return (

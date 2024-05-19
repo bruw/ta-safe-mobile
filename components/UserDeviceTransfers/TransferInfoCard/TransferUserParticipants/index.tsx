@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { t } from 'i18next';
 import LabeledText from 'components/UI/LabeledText';
-import { Transfer } from 'types/ApiTypes';
 import { ListItem } from '@rneui/themed';
+import { TransferContext } from 'contexts/TransferProvider';
 
-interface TransferUserParticipantsProps {
-    transfer: Transfer;
-}
+export default function TransferUserParticipants() {
+    const { transfer } = useContext(TransferContext);
 
-export default function TransferUserParticipants({ transfer }: TransferUserParticipantsProps) {
     return (
         <ListItem.Content style={{ marginLeft: -15 }}>
             <LabeledText

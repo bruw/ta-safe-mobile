@@ -1,24 +1,22 @@
 import { Text } from "@rneui/themed";
 import { View } from "react-native";
 import { stylesTransferCardHeader } from "./_styles";
-import { Transfer } from "types/ApiTypes";
 import BadgeStatus from "components/UI/BadgeStatus";
 import TransferType from "../TransferType";
 import CustomDivider from "components/UI/CustomDivider";
+import { useContext } from "react";
+import { TransferContext } from "contexts/TransferProvider";
 
-interface TransferCardHeaderProps {
-    transfer: Transfer;
-}
-
-export default function TransferCardHeader({ transfer }: TransferCardHeaderProps) {
+export default function TransferCardHeader() {
     const styles = stylesTransferCardHeader();
+    const { transfer } = useContext(TransferContext);
 
     return (
         <>
             <View style={styles.container}>
                 <View style={styles.title}>
                     <Text style={styles.textTitle}>
-                        <TransferType transfer={transfer} />
+                        <TransferType />
                     </Text>
                 </View>
                 <View style={styles.status}>

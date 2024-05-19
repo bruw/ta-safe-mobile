@@ -4,6 +4,7 @@ import { Card, ListItem } from '@rneui/base';
 import TransferCardHeader from './TransferCardHeader';
 import TransferUserParticipants from './TransferUserParticipants';
 import TransferDeviceBasicInfo from './TransferDeviceBasicInfo';
+import TransferProvider from 'contexts/TransferProvider';
 
 interface TransferInfoCardProps {
     transfer: Transfer;
@@ -17,15 +18,17 @@ export default function TransferInfoCard({ transfer, expanded, setExpanded }: Tr
     };
 
     return (
-        <Card>
-            <TransferCardHeader transfer={transfer} />
-            <ListItem.Accordion
-                content={<TransferUserParticipants transfer={transfer} />}
-                isExpanded={expanded}
-                onPress={handlePress}
-            >
-                <TransferDeviceBasicInfo device={transfer.device} />
-            </ListItem.Accordion>
-        </Card>
+        <TransferProvider transfer={transfer}>
+            <Card>
+                <TransferCardHeader />
+                <ListItem.Accordion
+                    content={<TransferUserParticipants />}
+                    isExpanded={expanded}
+                    onPress={handlePress}
+                >
+                    <TransferDeviceBasicInfo device={transfer.device} />
+                </ListItem.Accordion>
+            </Card>
+        </TransferProvider>
     );
 }
