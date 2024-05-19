@@ -18,7 +18,7 @@ export default function DeviceSummaryContent() {
             />
 
             <LabeledText
-                label={t("components.deviceCard.color")}
+                label={t("labels.color")}
                 text={device.color}
             />
 

@@ -91,7 +91,7 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
 
                 <View style={styles.deviceInfoContainer}>
                     <Text style={styles.deviceInfoContainerTitle}>
-                        {t("components.createDeviceTransfer.deviceInfoTitle")}
+                        {t("labels.device")}
                     </Text>
 
                     <LabeledText

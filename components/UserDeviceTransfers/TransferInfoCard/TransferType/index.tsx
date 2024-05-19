@@ -24,8 +24,8 @@ export default function TransferType() {
             />
             <Text>
                 {transfer.source_user.id == user?.id
-                    ? t("components.transferType.sent")
-                    : t("components.transferType.received")
+                    ? t("labels.sent")
+                    : t("labels.received")
                 }
             </Text>
         </View>

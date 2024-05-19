@@ -128,8 +128,8 @@ export default function _Layout() {
         <Drawer.Screen
           name="profile/index"
           options={{
-            drawerLabel: t("components.profile.title"),
-            title: t("components.profile.title"),
+            drawerLabel: t("labels.profile"),
+            title: t("labels.profile"),
             drawerIcon: (item) => (
               <Icon
                 name="account"

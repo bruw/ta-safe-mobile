@@ -1,6 +1,6 @@
 {
   "labels": {
-    "device": "Dipositivo",
+    "device": "Dispositivo",
     "identifier": "Identiticador",
     "brand": "Marca",
     "model": "Modelo",
@@ -16,7 +16,12 @@
     "phone": "Celular",
     "password": "Senha",
     "password_confirmation": "Confirmação de Senha",
-    "token": "Código de Visualização"
+    "token": "Código de Visualização",
+    "profile": "Perfil",
+    "origin": "Origem",
+    "destination": "Destino",
+    "received": "Recebida",
+    "sent": "Enviada"
   },
   "buttons": {
     "login": "Entrar",
@@ -70,14 +75,10 @@
     "myDevices": {
       "title": "Meus Celulares"
     },
-    "profile": {
-      "title": "Perfil"
-    },
     "deviceRegistration": {
       "title": "Registrar Celular"
     },
     "deviceCard": {
-      "color": "Cor",
       "created_at": "Data de registro",
       "updated_at": "Última atualização"
     },
@@ -104,23 +105,16 @@
       "title": "Pesquisar Dispositivo"
     },
     "userDeviceTransfers": {
-      "title": "Transferências",
-      "origin": "Origem",
-      "destination": "Destino"
+      "title": "Transferências"
     },
     "createDeviceTransfer": {
       "title": "Nova Transferência",
       "title2": "Transferência de Registro",
-      "userInfoTitle": "Usuário de Destino",
-      "deviceInfoTitle": "Dispositivo"
+      "userInfoTitle": "Usuário de Destino"
     },
     "defaultMessageForInactivity": {
       "message": "Ainda não há atividades por aqui... Explore nossos serviços para obter uma experiência completa.",
       "goHome": "Voltar para meus dispositivos"
-    },
-    "transferType": {
-      "received": "Recebida",
-      "sent": "Enviada"
     },
     "transferDeviceBasicInfo": {
       "title": "Informações básicas do dispositivo"
