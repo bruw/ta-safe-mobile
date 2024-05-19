@@ -32,6 +32,11 @@ export default function DeviceRegistrationInfo() {
             />
 
             <LabeledText
+                label={t("attributes.device.identifier")}
+                text={device.id.toString()}
+            />
+
+            <LabeledText
                 label={t("cards.deviceRegistrationInfo.owner")}
                 text={device.user.name}
             />

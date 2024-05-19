@@ -1,6 +1,7 @@
 {
   "attributes": {
     "device": {
+      "identifier": "Número Identiticador",
       "brand": "Marca",
       "model": "Modelo",
       "color": "Cor",
