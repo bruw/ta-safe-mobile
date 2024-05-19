@@ -11,12 +11,12 @@ export default function DeviceRegistrationInfoActions() {
         return <></>;
     }
 
-    if (device.validation_status == 'pending') {
+    if (device.validation_status === 'pending') {
         return <DeviceValidation />;
     }
 
-    if (device.validation_status == 'rejected') {
-        <DeleteInvalidDevice />
+    if (device.validation_status === 'rejected') {
+        return <DeleteInvalidDevice />
     }
 
     if (device.validation_status === 'validated') {
