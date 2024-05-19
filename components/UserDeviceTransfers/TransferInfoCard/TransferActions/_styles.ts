@@ -9,5 +9,9 @@ export const stylesTransferActions = makeStyles((theme) => ({
     },
     button: {
         width: "45%",
+    },
+    buttonCancel: {
+        marginTop: theme.spacing.xl,
+        marginBottom: theme.spacing.xl,
     }
 }));

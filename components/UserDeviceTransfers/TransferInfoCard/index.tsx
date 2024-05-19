@@ -6,6 +6,7 @@ import TransferUserParticipants from './TransferUserParticipants';
 import TransferDeviceBasicInfo from './TransferDeviceBasicInfo';
 import TransferProvider from 'contexts/TransferProvider';
 import TransferActions from './TransferActions';
+import { useTheme } from '@rneui/themed';
 
 interface TransferInfoCardProps {
     transfer: Transfer;
@@ -14,13 +15,15 @@ interface TransferInfoCardProps {
 }
 
 export default function TransferInfoCard({ transfer, expanded, setExpanded }: TransferInfoCardProps) {
+    const { theme } = useTheme();
+
     const handlePress = () => {
         setExpanded(expanded ? undefined : transfer.id);
     };
 
     return (
         <TransferProvider transfer={transfer}>
-            <Card>
+            <Card containerStyle={{ marginBottom: theme.spacing.xl }}>
                 <TransferCardHeader />
                 <ListItem.Accordion
                     content={<TransferUserParticipants />}

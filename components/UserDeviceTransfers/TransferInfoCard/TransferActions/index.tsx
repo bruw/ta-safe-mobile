@@ -6,7 +6,6 @@ import CancelTransferButton from "./CancelTransferButton";
 import AcceptTransferButton from "./AcceptTransferButton";
 import RejectTransferButton from "./RejectTransferButton";
 import { stylesTransferActions } from "./_styles";
-import { CheckBox } from "@rneui/themed";
 import { t } from "i18next";
 import CheckBoxConfirmation from "components/UI/CheckBoxConfirmation";
 
@@ -18,7 +17,11 @@ export default function TransferActions() {
 
     if (user?.id == transfer.source_user.id) {
         if (transfer.status == 'pending') {
-            return <CancelTransferButton />
+            return (
+                <View style={styles.buttonCancel}>
+                    <CancelTransferButton />
+                </View>
+            );
         }
     }
 
