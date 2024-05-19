@@ -32,7 +32,7 @@ export default function DeviceRegistrationInfo() {
             />
 
             <LabeledText
-                label={t("attributes.device.identifier")}
+                label={t("labels.identifier")}
                 text={device.id.toString()}
             />
 
@@ -42,12 +42,12 @@ export default function DeviceRegistrationInfo() {
             />
 
             <LabeledText
-                label={t("attributes.user.cpf")}
+                label={t("labels.cpf")}
                 text={device.user.cpf}
             />
 
             <LabeledText
-                label={t("attributes.user.phone")}
+                label={t("labels.phone")}
                 text={device.user.phone}
             />
 

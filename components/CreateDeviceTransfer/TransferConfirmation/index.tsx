@@ -74,17 +74,17 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
                     </Text>
 
                     <LabeledText
-                        label={t("attributes.user.name")}
+                        label={t("labels.name")}
                         text={user.name}
                     />
 
                     <LabeledText
-                        label={t("attributes.user.cpf")}
+                        label={t("labels.cpf")}
                         text={user.cpf}
                     />
 
                     <LabeledText
-                        label={t("attributes.user.phone")}
+                        label={t("labels.phone")}
                         text={user.phone}
                     />
                 </View>

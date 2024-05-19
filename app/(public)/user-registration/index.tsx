@@ -76,7 +76,7 @@ export default function _Screen() {
               control={control}
               render={({ field: { value, onChange } }) => (
                 <Input
-                  label={t("forms.userRegistration.name")}
+                  label={t("labels.name")}
                   value={value}
                   onChangeText={onChange}
                   errorMessage={errors.name?.message}
@@ -96,7 +96,7 @@ export default function _Screen() {
               control={control}
               render={({ field: { value, onChange } }) => (
                 <Input
-                  label={t("forms.userRegistration.email")}
+                  label={t("labels.email")}
                   value={value}
                   onChangeText={onChange}
                   errorMessage={errors.email?.message}
@@ -118,7 +118,7 @@ export default function _Screen() {
               control={control}
               render={({ field: { value, onChange } }) => (
                 <Input
-                  label={t("forms.userRegistration.cpf")}
+                  label={t("labels.cpf")}
                   value={value}
                   onChangeText={(text) => onChange(maskCpf(text))}
                   errorMessage={errors.cpf?.message}
@@ -139,7 +139,7 @@ export default function _Screen() {
               control={control}
               render={({ field: { value, onChange } }) => (
                 <Input
-                  label={t("forms.userRegistration.phone")}
+                  label={t("labels.phone")}
                   value={value}
                   onChangeText={(text) => onChange(maskPhone(text))}
                   errorMessage={errors.phone?.message}
@@ -160,7 +160,7 @@ export default function _Screen() {
               control={control}
               render={({ field: { value, onChange } }) => (
                 <Input
-                  label={t("forms.login.password")}
+                  label={t("labels.password")}
                   value={value}
                   onChangeText={onChange}
                   errorMessage={errors.password?.message}
@@ -185,7 +185,7 @@ export default function _Screen() {
               control={control}
               render={({ field: { value, onChange } }) => (
                 <Input
-                  label={t("forms.userRegistration.passwordConfirmation")}
+                  label={t("labels.password_confirmation")}
                   value={value}
                   onChangeText={onChange}
                   errorMessage={errors.password_confirmation?.message}

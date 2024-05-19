@@ -21,7 +21,7 @@ export default function TransferUserParticipants() {
             />
 
             <LabeledText
-                label={t("attributes.last_update")}
+                label={t("labels.last_update")}
                 text={moment(transfer.updated_at).format("DD/MM/YYYY HH:mm")}
             />
         </ListItem.Content>

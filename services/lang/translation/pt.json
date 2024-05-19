@@ -8,17 +8,14 @@
     "ram": "Ram",
     "storage": "Armazenamento",
     "imei_1": "IMEI 1",
-    "imei_2": "IMEI 2"
-  },
-  "attributes": {
-    "user": {
-      "name": "Nome",
-      "email": "Email",
-      "cpf": "CPF",
-      "phone": "Celular",
-      "password": "Senha"
-    },
-    "last_update": "Última alteração"
+    "imei_2": "IMEI 2",
+    "last_update": "Última alteração",
+    "name": "Nome",
+    "email": "Email",
+    "cpf": "CPF",
+    "phone": "Celular",
+    "password": "Senha",
+    "password_confirmation": "Confirmação de Senha"
   },
   "buttons": {
     "login": "Entrar",
@@ -40,18 +37,6 @@
     "reject": "Rejeitar"
   },
   "forms": {
-    "login": {
-      "email": "Email",
-      "password": "Senha"
-    },
-    "userRegistration": {
-      "name": "Nome",
-      "email": "Email",
-      "cpf": "CPF",
-      "phone": "Celular",
-      "password": "Senha",
-      "passwordConfirmation": "Confirmação de Senha"
-    },
     "deviceRegistration": {
       "brandStep": {
         "titleSpan": "Passo 1",
