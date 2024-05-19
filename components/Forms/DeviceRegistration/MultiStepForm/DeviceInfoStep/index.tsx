@@ -185,7 +185,7 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                     />
 
                     <Button
-                        title={t("buttons.register")}
+                        title={t("labels.register")}
                         onPress={handleSubmit(onSubmit)}
                         buttonStyle={styles.registerButton}
                         icon={{

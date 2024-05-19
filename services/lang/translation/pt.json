@@ -15,7 +15,8 @@
     "cpf": "CPF",
     "phone": "Celular",
     "password": "Senha",
-    "password_confirmation": "Confirmação de Senha"
+    "password_confirmation": "Confirmação de Senha",
+    "token": "Código de Visualização"
   },
   "buttons": {
     "login": "Entrar",
@@ -54,11 +55,8 @@
         "access_key": "Chave de acesso (NF-e)"
       }
     },
-    "searchDevice": {
-      "token": "Código de Visualização"
-    },
     "searchUser": {
-      "title": "Informe o Email do usuário de destino"
+      "title": "Informe o e-mail do usuário de destino"
     }
   },
   "components": {
@@ -128,7 +126,6 @@
       "title": "Informações básicas do dispositivo"
     },
     "deviceSharingToken": {
-      "label": "Código de Visualização",
       "message": "Expirado. Solicite um novo código ao proprietário."
     }
   },

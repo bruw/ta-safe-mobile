@@ -206,7 +206,7 @@ export default function _Screen() {
 
           <View>
             <Button
-              title={t("buttons.register")}
+              title={t("labels.register")}
               onPress={handleSubmit(onSubmit)}
               color={theme.colors.primary}
             />

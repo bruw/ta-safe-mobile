@@ -113,7 +113,7 @@ export default function _Screen() {
 
           <View>
             <Button
-              title={t("buttons.login")}
+              title={t("labels.login")}
               onPress={handleSubmit(onSubmit)}
               color={theme.colors.primary}
               icon={{

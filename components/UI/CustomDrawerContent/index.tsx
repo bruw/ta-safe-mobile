@@ -17,7 +17,7 @@ export default function CustomDrawerContent(props: DrawerContentComponentProps) 
         <DrawerContentScrollView {...props} >
             <DrawerItemList {...props} />
             <DrawerItem
-                label={t("buttons.logout")}
+                label={t("labels.logout")}
                 onPress={handleLogout}
                 labelStyle={{ color: "red" }}
                 pressColor="#FFB5B5"

@@ -18,7 +18,7 @@ export default function DeviceSharingToken() {
     if (isTokenExpired(device?.sharing_token?.expires_at) && transfer.status == 'pending') {
         return (
             <LabeledText
-                label={t("components.deviceSharingToken.label")}
+                label={t("labels.token")}
                 text={t("components.deviceSharingToken.message")}
             />
         );
@@ -28,7 +28,7 @@ export default function DeviceSharingToken() {
         return (
             <View style={styles.clipBoardContainer}>
                 <CopyToClipboardButton
-                    label={t("components.deviceSharingToken.label")}
+                    label={t("labels.token")}
                     labeStyle={{ fontWeight: 'bold' }}
                     text={device.sharing_token.token.toString()}
                     iconSize={18}
