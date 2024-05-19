@@ -16,7 +16,8 @@
       "cpf": "CPF",
       "phone": "Celular",
       "password": "Senha"
-    }
+    },
+    "last_update": "Última alteração"
   },
   "buttons": {
     "login": "Entrar",
