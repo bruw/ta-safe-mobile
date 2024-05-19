@@ -83,9 +83,15 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
                 </Text>
 
                 <LabeledText
+                    label={t("attributes.device.identifier")}
+                    text={device.id.toString()}
+                />
+
+                <LabeledText
                     label={t("attributes.device.brand")}
                     text={device.device_model.brand.name}
                 />
+
                 <LabeledText
                     label={t("attributes.device.model")}
                     text={device.device_model.name}

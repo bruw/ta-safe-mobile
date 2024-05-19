@@ -5,6 +5,7 @@ import TransferCardHeader from './TransferCardHeader';
 import TransferUserParticipants from './TransferUserParticipants';
 import TransferDeviceBasicInfo from './TransferDeviceBasicInfo';
 import TransferProvider from 'contexts/TransferProvider';
+import TransferActions from './TransferActions';
 
 interface TransferInfoCardProps {
     transfer: Transfer;
@@ -27,6 +28,7 @@ export default function TransferInfoCard({ transfer, expanded, setExpanded }: Tr
                     onPress={handlePress}
                 >
                     <TransferDeviceBasicInfo device={transfer.device} />
+                    <TransferActions />
                 </ListItem.Accordion>
             </Card>
         </TransferProvider>

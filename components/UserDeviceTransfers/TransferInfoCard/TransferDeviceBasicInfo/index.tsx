@@ -15,7 +15,7 @@ export default function TransferDeviceBasicInfo({ device }: TransferDeviceBasicI
     if (!device) return <></>;
 
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.title}>
                 {t("components.transferDeviceBasicInfo.title")}
             </Text>

@@ -32,7 +32,10 @@
     "transfer": "Transferir",
     "createTransfer": "Criar Transferência",
     "delete": "Excluir",
-    "search": "Pesquisar"
+    "search": "Pesquisar",
+    "accept": "Aceitar",
+    "cancel": "Cancelar",
+    "reject": "Rejeitar"
   },
   "forms": {
     "login": {

@@ -154,3 +154,8 @@ export type SearchedUser = {
   message: FlashMessage;
   user: User;
 }
+
+export type UpdatedTransfer = {
+  message: FlashMessage;
+  transfer: Transfer;
+}
