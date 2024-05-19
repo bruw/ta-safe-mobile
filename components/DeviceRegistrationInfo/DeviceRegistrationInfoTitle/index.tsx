@@ -13,7 +13,7 @@ export default function DeviceRegistrationInfoTitle() {
     if (publicMode || device.validation_status != "validated") {
         return (
             <Card.Title style={{ fontSize: 16 }}>
-                {t("cards.deviceRegistrationInfo.title")}
+                {t("labels.registration")}
             </Card.Title >
         );
     }
@@ -22,7 +22,7 @@ export default function DeviceRegistrationInfoTitle() {
         return (
             <View style={styles.titleContainer}>
                 <Text style={styles.titleContent}>
-                    {t("cards.deviceRegistrationInfo.title")}
+                    {t("labels.registration")}
                 </Text>
 
                 <DeviceShareToken />

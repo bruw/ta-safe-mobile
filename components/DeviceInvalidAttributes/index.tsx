@@ -12,7 +12,7 @@ export default function DeviceInvalidAttributes() {
     return (
         <Card containerStyle={styles.cardContainerStyle}>
             <Card.Title style={styles.title}>
-                {t("cards.invalidDeviceAttributes.title")}
+                {t("cards.invalid_device_attributes.title")}
             </Card.Title>
 
             <Card.Divider />

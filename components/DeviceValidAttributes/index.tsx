@@ -20,13 +20,13 @@ export default function DeviceValidAttributes() {
     return (
         <Card containerStyle={styles.cardContainerStyle}>
             <Card.Title style={styles.title}>
-                {t("cards.validDeviceAttributes.title")}
+                {t("cards.valid_device_attributes.title")}
             </Card.Title>
 
             <Card.Divider />
 
             {!hasValidAttributes() && (
-                <Text>{t("cards.validDeviceAttributes.nonAttributes")}</Text>
+                <Text>{t("cards.valid_device_attributes.non_attributes")}</Text>
             )}
 
             {device.validation_attributes?.brand_name && (

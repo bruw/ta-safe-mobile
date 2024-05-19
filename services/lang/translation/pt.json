@@ -22,7 +22,14 @@
     "destination": "Destino",
     "received": "Recebida",
     "sent": "Enviada",
-    "access_key": "Chave de acesso (NF-e)"
+    "access_key": "Chave de acesso (NF-e)",
+    "source_user": "Proprietário Anterior",
+    "target_user": "Novo Proprietário",
+    "search_device": "Pesquisar Dispositivo",
+    "transfers": "Transferências",
+    "registration": "Registro",
+    "status": "Status",
+    "owner": "Proprietário"
   },
   "buttons": {
     "login": "Entrar",
@@ -69,57 +76,40 @@
       "title": "Bem vindo!",
       "subtitle": "Acesse sua conta para continuar."
     },
-    "userRegistration": {
+    "user_registration": {
       "title": "Cadastro de Usuário"
     },
-    "myDevices": {
+    "my_devices": {
       "title": "Meus Celulares"
     },
-    "deviceRegistration": {
+    "device_registration": {
       "title": "Registrar Celular"
     },
-    "deviceCard": {
-      "created_at": "Data de registro",
-      "updated_at": "Última atualização"
-    },
-    "customActivityIndicator": {
+    "custom_activity_indicator": {
       "default": "Aguarde...",
-      "nfeValidation": "Aguarde, estamos validando sua NFe."
+      "nfe_validation": "Aguarde, estamos validando sua NFe."
     },
     "device": {
       "title": "Informações do dispositivo"
     },
-    "transferInfo": {
-      "sourceUser": "Proprietário Anterior",
-      "targetUser": "Novo Proprietário"
-    },
-    "deviceRegistrationReminder": {
+    "device_registration_reminder": {
       "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
     },
-    "deviceShare": {
+    "device_share": {
       "title": "Código de Visualização",
       "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro.",
       "expires": "Expira em: "
     },
-    "searchDevice": {
-      "title": "Pesquisar Dispositivo"
-    },
-    "userDeviceTransfers": {
-      "title": "Transferências"
-    },
-    "createDeviceTransfer": {
+    "create_device_transfer": {
       "title": "Nova Transferência",
       "title2": "Transferência de Registro",
-      "userInfoTitle": "Usuário de Destino"
+      "user_info_title": "Usuário de Destino"
     },
-    "defaultMessageForInactivity": {
+    "default_message_for_inactivity": {
       "message": "Ainda não há atividades por aqui... Explore nossos serviços para obter uma experiência completa.",
-      "goHome": "Voltar para meus dispositivos"
+      "go_home": "Voltar para meus dispositivos"
     },
-    "transferDeviceBasicInfo": {
-      "title": "Informações básicas do dispositivo"
-    },
-    "deviceSharingToken": {
+    "device_sharing_token": {
       "message": "Expirado. Solicite um novo código ao proprietário."
     }
   },
@@ -132,30 +122,26 @@
     "accepted": "Aceito"
   },
   "cards": {
-    "deviceRegistrationInfo": {
-      "title": "Registro",
-      "status": "Status",
-      "owner": "Proprietário",
+    "device_registration_info": {
       "created_at": "Registrado em",
       "updated_at": "Última alteração"
     },
-    "registrationAttributes": {
+    "registration_attributes": {
       "title": "Atributos"
     },
-    "validDeviceAttributes": {
+    "valid_device_attributes": {
       "title": "Atributos Válidados",
-      "nonAttributes": "Sem atributos válidos."
+      "non_attributes": "Sem atributos válidos."
     },
-    "invalidDeviceAttributes": {
-      "title": "Atributos não Válidados",
-      "nonAttributes": "Sem atributos inválidos."
+    "invalid_device_attributes": {
+      "title": "Atributos não Válidados"
     },
-    "deviceTranfersHistory": {
+    "device_transfers_history": {
       "title": "Histórico de Transferências",
-      "nonTransfers": "Este dispositivo ainda não possui histórico de transferências."
+      "non_transfers": "Este dispositivo ainda não possui histórico de transferências."
     }
   },
-  "checkBoxs": {
-    "confirmationOfInfo": "Confirmo que todas as informações estão corretas."
+  "check_boxs": {
+    "confirmation_of_info": "Confirmo que todas as informações estão corretas."
   }
 }

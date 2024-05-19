@@ -11,10 +11,10 @@ export default function DefaultMessageForInactivity() {
         <View style={styles.container}>
             <View style={styles.contentMessage}>
                 <Text style={styles.text}>
-                    {t("components.defaultMessageForInactivity.message")}
+                    {t("components.default_message_for_inactivity.message")}
                 </Text>
                 <Link href="/(auth)/(drawer)/my-devices/">
-                    <Text style={styles.link}>{t("components.defaultMessageForInactivity.goHome")}</Text>
+                    <Text style={styles.link}>{t("components.default_message_for_inactivity.go_home")}</Text>
                 </Link>
             </View>
         </View>

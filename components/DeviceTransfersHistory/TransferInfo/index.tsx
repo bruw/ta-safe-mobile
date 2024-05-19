@@ -23,13 +23,13 @@ export default function TransferInfo({ transfer, expanded, setExpanded }: Transf
             onPress={handlePress}
         >
             <ParticipantInfo
-                title={t("components.transferInfo.targetUser")}
+                title={t("labels.target_user")}
                 name={transfer.target_user.name}
                 cpf={transfer.target_user.cpf}
             />
 
             <ParticipantInfo
-                title={t("components.transferInfo.sourceUser")}
+                title={t("labels.source_user")}
                 name={transfer.source_user.name}
                 cpf={transfer.source_user.cpf}
             />

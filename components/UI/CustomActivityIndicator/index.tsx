@@ -20,7 +20,7 @@ export default function CustomActivityIndicator({ message }: CustomActivityIndic
             />
 
             <Text h4 h4Style={styles.text}>
-                {message || t('components.customActivityIndicator.default')}
+                {message || t('components.custom_activity_indicator.default')}
             </Text>
         </View>
     );

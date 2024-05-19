@@ -12,7 +12,7 @@ export default function DeviceSpecifications() {
     return (
         <Card containerStyle={styles.container}>
             <Card.Title style={styles.title}>
-                {t('cards.registrationAttributes.title')}
+                {t('cards.registration_attributes.title')}
             </Card.Title>
 
             <Card.Divider />

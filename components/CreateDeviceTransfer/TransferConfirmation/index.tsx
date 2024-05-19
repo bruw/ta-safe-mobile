@@ -56,7 +56,7 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
         <>
             <View style={styles.titleContainer}>
                 <Text style={styles.title}>
-                    {t("components.createDeviceTransfer.title2")}
+                    {t("components.create_device_transfer.title2")}
                 </Text>
 
                 <Icon
@@ -70,7 +70,7 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
             <ScrollView>
                 <View style={styles.userInfoContainer}>
                     <Text style={styles.userInfoContainerTitle}>
-                        {t("components.createDeviceTransfer.userInfoTitle")}
+                        {t("components.create_device_transfer.user_info_title")}
                     </Text>
 
                     <LabeledText
@@ -112,7 +112,7 @@ export default function TransferConfirmation({ user, device, setVisible, setUser
 
 
                 <CheckBoxConfirmation
-                    label={t("checkBoxs.confirmationOfInfo")}
+                    label={t("check_boxs.confirmation_of_info")}
                     checked={checked}
                     onPress={setChecked}
                 />

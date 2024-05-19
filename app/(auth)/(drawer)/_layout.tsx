@@ -52,8 +52,8 @@ export default function _Layout() {
         <Drawer.Screen
           name="my-devices/index"
           options={{
-            drawerLabel: t("components.myDevices.title"),
-            title: t("components.myDevices.title"),
+            drawerLabel: t("components.my_devices.title"),
+            title: t("components.my_devices.title"),
             drawerIcon: (item) => (
               <Icon
                 name="cellphone"
@@ -71,8 +71,8 @@ export default function _Layout() {
         <Drawer.Screen
           name="device-registration/index"
           options={{
-            drawerLabel: t("components.deviceRegistration.title"),
-            title: t("components.deviceRegistration.title"),
+            drawerLabel: t("components.device_registration.title"),
+            title: t("components.device_registration.title"),
             drawerIcon: (item) => (
               <Icon
                 name="newspaper-variant-multiple-outline"
@@ -90,8 +90,8 @@ export default function _Layout() {
         <Drawer.Screen
           name="search-device/index"
           options={{
-            drawerLabel: t("components.searchDevice.title"),
-            title: t("components.searchDevice.title"),
+            drawerLabel: t("labels.search_device"),
+            title: t("labels.search_device"),
             drawerIcon: (item) => (
               <Icon
                 name="file-search-outline"
@@ -109,8 +109,8 @@ export default function _Layout() {
         <Drawer.Screen
           name="device-transfers/index"
           options={{
-            drawerLabel: t("components.userDeviceTransfers.title"),
-            title: t("components.userDeviceTransfers.title"),
+            drawerLabel: t("labels.transfers"),
+            title: t("labels.transfers"),
             drawerIcon: (item) => (
               <Icon
                 name="transfer"

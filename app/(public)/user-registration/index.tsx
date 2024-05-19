@@ -66,7 +66,7 @@ export default function _Screen() {
   return (
     <ScrollView>
       <Stack.Screen
-        options={{ title: t("components.userRegistration.title") }}
+        options={{ title: t("components.user_registration.title") }}
       />
       <View style={styles.container}>
         <View style={styles.registerContainer}>

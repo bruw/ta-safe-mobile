@@ -19,7 +19,7 @@ export default function DeviceSharingToken() {
         return (
             <LabeledText
                 label={t("labels.token")}
-                text={t("components.deviceSharingToken.message")}
+                text={t("components.device_sharing_token.message")}
             />
         );
     }

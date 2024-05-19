@@ -60,7 +60,7 @@ export default function DeviceShareToken() {
                 overlayStyle={styles.overlay}
                 backdropStyle={styles.backdrop}
             >
-                <Dialog.Title title={t("components.deviceShare.title")} titleStyle={styles.text} />
+                <Dialog.Title title={t("components.device_share.title")} titleStyle={styles.text} />
 
                 <View style={styles.tokenContainer}>
                     <CopyToClipboardButton
@@ -74,12 +74,12 @@ export default function DeviceShareToken() {
                 </View>
 
                 <Text style={[styles.text, styles.expiration]}>
-                    {t("components.deviceShare.expires")}
+                    {t("components.device_share.expires")}
                     {formatDateToBrLocale(device.sharing_token?.expires_at)}
                 </Text>
 
                 <Text style={styles.text}>
-                    {t("components.deviceShare.instruction")}
+                    {t("components.device_share.instruction")}
                 </Text>
 
             </Dialog>

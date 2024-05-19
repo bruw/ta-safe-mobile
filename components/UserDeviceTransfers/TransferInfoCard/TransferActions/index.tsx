@@ -29,7 +29,7 @@ export default function TransferActions() {
         return (
             <View>
                 <CheckBoxConfirmation
-                    label={t("checkBoxs.confirmationOfInfo")}
+                    label={t("check_boxs.confirmation_of_info")}
                     checked={checked}
                     onPress={setChecked}
                 />

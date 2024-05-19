@@ -39,7 +39,7 @@ export default function SearchUser({ setUser }: SearchUserProps) {
     return (
         <>
             <Dialog.Title
-                title={t("components.createDeviceTransfer.title")}
+                title={t("components.create_device_transfer.title")}
                 titleStyle={styles.title}
             />
 

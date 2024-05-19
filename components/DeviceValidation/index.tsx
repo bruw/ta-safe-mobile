@@ -114,7 +114,7 @@ export default function DeviceValidation() {
                 {showActivityIndicator &&
                     <CustomActivityIndicator
                         message={
-                            t("components.customActivityIndicator.nfeValidation")
+                            t("components.custom_activity_indicator.nfe_validation")
                         }
                     />
                 }
