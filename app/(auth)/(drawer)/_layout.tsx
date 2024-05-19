@@ -24,6 +24,7 @@ const theme = createTheme({
     Text: {
       style: {
         fontSize: 16,
+        lineHeight: 26,
       },
     },
   },
