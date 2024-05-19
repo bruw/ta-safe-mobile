@@ -30,7 +30,7 @@ export default function TransferInfoCard({ transfer, expanded, setExpanded }: Tr
                     isExpanded={expanded}
                     onPress={handlePress}
                 >
-                    <TransferDeviceBasicInfo device={transfer.device} />
+                    <TransferDeviceBasicInfo />
                     <TransferActions />
                 </ListItem.Accordion>
             </Card>

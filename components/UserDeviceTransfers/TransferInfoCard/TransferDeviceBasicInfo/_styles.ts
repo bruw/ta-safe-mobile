@@ -1,11 +1,14 @@
 import { makeStyles } from "@rneui/themed";
 
 export const stylesTransferDeviceBasicInfo = makeStyles((theme) => ({
-    container: {
-        marginBottom: theme.spacing.md,
-    },
     title: {
-        fontWeight: '900',
+        fontWeight: 'bold',
         marginBottom: theme.spacing.md
     },
+    dividerTop: {
+        marginBottom: theme.spacing.lg
+    },
+    dividerBottom: {
+        marginTop: theme.spacing.lg
+    }
 }));

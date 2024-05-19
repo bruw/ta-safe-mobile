@@ -1,4 +1,7 @@
 {
+  "labels": {
+    "device": "Dipositivo"
+  },
   "attributes": {
     "device": {
       "identifier": "Identiticador",
@@ -72,7 +75,7 @@
       }
     },
     "searchDevice": {
-      "token": "Código de Acesso"
+      "token": "Código de Visualização"
     },
     "searchUser": {
       "title": "Informe o Email do usuário de destino"
@@ -118,7 +121,7 @@
       "message": "Ainda não registrou seu celular? Clique no link abaixo e não perca mais tempo!"
     },
     "deviceShare": {
-      "title": "Código de Acesso",
+      "title": "Código de Visualização",
       "instruction": "Atenção: copie este código e compartilhe com os usuários que você deseja permitir à visualização temporária deste registro.",
       "expires": "Expira em: "
     },
@@ -146,6 +149,10 @@
     },
     "transferDeviceBasicInfo": {
       "title": "Informações básicas do dispositivo"
+    },
+    "deviceSharingToken": {
+      "label": "Código de Visualização",
+      "message": "Expirado. Solicite um novo código ao proprietário."
     }
   },
   "status": {
