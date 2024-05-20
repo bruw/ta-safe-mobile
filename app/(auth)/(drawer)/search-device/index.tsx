@@ -9,9 +9,13 @@ import React, { useCallback, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { View } from "react-native";
 import api from "services/api/api";
-import { Device, SearchDevice } from "types/ApiTypes";
+import { Device } from "types/ApiTypes";
 
 import { stylesSearchDevice } from "./_styles";
+
+interface SearchDevice {
+  token: string;
+}
 
 export default function _Screen() {
   const styles = stylesSearchDevice();

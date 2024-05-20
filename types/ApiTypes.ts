@@ -3,16 +3,13 @@ export type FlashMessage = {
   text: string;
 }
 
-export type User = {
-  id: number;
-  name: string;
-  email: string;
-  cpf: string;
-  phone: string;
-  created_at: string;
-  updated_at: string;
-  token: string;
-};
+export type DeviceValidationStatus = {
+  validation_status: 'pending' | 'in_analysis' | 'validated' | 'rejected';
+}
+
+export type DeviceTransferStatus = {
+  status: 'pending' | 'accepted' | 'canceled' | 'rejected';
+}
 
 export type UserMinimalInfo = {
   id: number;
@@ -22,14 +19,20 @@ export type UserMinimalInfo = {
   created_at: string;
 }
 
-export type UserAuth = {
-  user: User;
-  message: FlashMessage;
+export type User = UserMinimalInfo & {
+  email: string;
+  token: string;
+  updated_at: string;
 };
 
-export type UserLogin = {
+export interface UserLogin {
   email: string;
   password: string;
+};
+
+export type UserAuth = {
+  message: FlashMessage;
+  user: User;
 };
 
 export type UserRegistration = {
@@ -70,19 +73,7 @@ export type DeviceRegistration = {
   imei_2: string
 }
 
-export type DeleteDevice = {
-  message: FlashMessage;
-}
-
-export type DeviceValidationStatus = {
-  validation_status: 'pending' | 'in_analysis' | 'validated' | 'rejected';
-}
-
-export type DeviceTransferStatus = {
-  status: 'pending' | 'accepted' | 'canceled' | 'rejected';
-}
-
-export type ValidationAttributes = {
+export type DeviceValidationAttributes = {
   cpf: boolean;
   user_name: boolean;
   brand_name: boolean;
@@ -121,18 +112,8 @@ export type Device = {
   updated_at: string;
   user: User;
   device_model: DeviceModel;
-  validation_attributes?: ValidationAttributes;
+  validation_attributes?: DeviceValidationAttributes;
   transfers_history?: Transfer[];
-}
-
-export type UpdatedDevice = {
-  device: Device;
-  message: FlashMessage;
-}
-
-export type InvalidatedDevice = {
-  device: Device;
-  message: FlashMessage;
 }
 
 export type DeviceSharedToken = {
@@ -142,12 +123,14 @@ export type DeviceSharedToken = {
   expires_at: string;
 }
 
-export type SearchDevice = {
-  token: string;
+export type UpdatedDevice = {
+  message: FlashMessage;
+  device: Device;
 }
 
-export type SearchUserByEmail = {
-  email: string;
+export type InvalidatedDevice = {
+  message: FlashMessage;
+  device: Device;
 }
 
 export type SearchedUser = {

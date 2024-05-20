@@ -6,7 +6,11 @@ import notify from "helpers/notify";
 import { t } from "i18next";
 import { useContext } from "react";
 import api from "services/api/api";
-import { DeleteDevice } from "types/ApiTypes";
+import { FlashMessage } from "types/ApiTypes";
+
+interface DeleteDevice {
+    message: FlashMessage;
+}
 
 export default function DeleteInvalidDevice() {
     const { device } = useContext(DeviceContext);
