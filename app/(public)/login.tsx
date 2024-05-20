@@ -8,7 +8,7 @@ import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import api from "services/api/api";
 import useToken from "states/useToken";
-import { UserAuth, UserLogin } from "types/ApiTypes";
+import { User, UserAuth, UserLogin } from "types/ApiTypes";
 
 export default function _Screen() {
   const router = useRouter();
@@ -34,13 +34,17 @@ export default function _Screen() {
         email,
         password,
       });
+      const user: User = response.data.user;
 
-      setToken(response.data.user.token, response.data.user);
+      setToken(user.token, user);
       router.replace("/(auth)/(drawer)/my-devices");
     } catch (error: any) {
       const data = error.response.data;
 
-      notify({ type: data.message.type, message: data.message.text });
+      notify({
+        type: data.message.type,
+        message: data.message.text,
+      });
 
       if (data.errors) {
         for (const [fieldName, value] of Object.entries(data.errors)) {

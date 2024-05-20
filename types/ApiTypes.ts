@@ -3,17 +3,6 @@ export type FlashMessage = {
   text: string;
 }
 
-export type User = {
-  id: number;
-  name: string;
-  email: string;
-  cpf: string;
-  phone: string;
-  created_at: string;
-  updated_at: string;
-  token: string;
-};
-
 export type UserMinimalInfo = {
   id: number;
   name: string;
@@ -22,14 +11,20 @@ export type UserMinimalInfo = {
   created_at: string;
 }
 
-export type UserAuth = {
-  user: User;
-  message: FlashMessage;
+export type User = UserMinimalInfo & {
+  email: string;
+  token: string;
+  updated_at: string;
 };
 
-export type UserLogin = {
+export interface UserLogin {
   email: string;
   password: string;
+};
+
+export type UserAuth = {
+  message: FlashMessage;
+  user: User;
 };
 
 export type UserRegistration = {
