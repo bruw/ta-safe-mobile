@@ -2,12 +2,16 @@ import { Dialog, Input, useTheme } from "@rneui/themed";
 import MainButton from "components/UI/MainButton";
 import { Controller, useForm } from "react-hook-form";
 import api from "services/api/api";
-import { SearchUserByEmail, User } from "types/ApiTypes";
+import { User } from "types/ApiTypes";
 import { stylesSearchUserTransfer } from "./_styles";
 import { t } from "i18next";
 
 interface SearchUserProps {
     setUser: (user: User) => void;
+}
+
+interface SearchUserByEmail {
+    email: string;
 }
 
 export default function SearchUser({ setUser }: SearchUserProps) {
