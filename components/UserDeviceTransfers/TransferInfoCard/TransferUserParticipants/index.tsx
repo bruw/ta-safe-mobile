@@ -11,6 +11,11 @@ export default function TransferUserParticipants() {
     return (
         <ListItem.Content style={{ marginLeft: -15 }}>
             <LabeledText
+                label={t("labels.status")}
+                text={t(`status.${transfer.status}`)}
+            />
+
+            <LabeledText
                 label={t("labels.origin")}
                 text={transfer.source_user.name}
             />

@@ -40,7 +40,6 @@ export default function _Screen() {
         type: response.data.message.type,
         message: response.data.message.text,
       });
-      
     } catch (error: any) {
       const data = error.response.data;
 
