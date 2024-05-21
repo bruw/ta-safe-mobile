@@ -32,6 +32,7 @@ export default function DeviceSharingToken() {
                     labeStyle={{ fontWeight: 'bold' }}
                     text={device.sharing_token.token.toString()}
                     iconSize={18}
+                    textStyle={{ fontSize: 16 }}
                 />
             </View>
         );
