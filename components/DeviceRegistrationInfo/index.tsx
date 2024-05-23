@@ -12,13 +12,6 @@ export default function DeviceRegistrationInfo() {
     const styles = stylesDeviceRegistrationInfo();
     const { device, publicMode } = useContext(DeviceContext);
 
-    const statusStyle = {
-        pending: styles.pending,
-        in_analysis: styles.inAnalysis,
-        rejected: styles.rejected,
-        validated: styles.validated
-    };
-
     return (
         <Card containerStyle={styles.cardContainerStyle}>
             <DeviceRegistrationInfoHeader />
@@ -28,7 +21,6 @@ export default function DeviceRegistrationInfo() {
             <LabeledText
                 label={t("labels.status")}
                 text={t(`status.${device.validation_status}`)}
-                textStyle={statusStyle[device.validation_status]}
             />
 
             <LabeledText
