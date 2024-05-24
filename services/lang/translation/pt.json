@@ -153,7 +153,7 @@
     },
     "validation_info": {
       "title": "Como validar um registro?",
-      "message": "Para validar seu registro, clique no botão abaixo 'Validar' e aguarde o carregamento automático da NF-e e do campo 'Chave de Acesso'. Após o carregamento, clique no Captcha para resolver o quebra-cabeça e aguarde o processamento. Estaremos cuidando de tudo para você!"
+      "message": "Para validar seu registro, clique no botão abaixo 'Validar' e aguarde o carregamento automático da NF-e e do campo 'Chave de Acesso'. Após o carregamento, clique no Captcha 'Sou Humano' para resolver o quebra-cabeça e aguarde o processamento. Estaremos cuidando de tudo para você!"
     }
   }
 }
