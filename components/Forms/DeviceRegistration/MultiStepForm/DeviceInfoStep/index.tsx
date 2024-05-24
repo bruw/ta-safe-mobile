@@ -13,6 +13,7 @@ import notify from "helpers/notify";
 import { useRouter } from "expo-router";
 import { hideMessage } from "react-native-flash-message";
 import { maskOnlyNumbers } from "helpers/maskOnlyNumbers";
+import ExpandableLabel from "components/UI/ExpandableLabel";
 
 interface DeviceInfoProps {
     resetStep: () => void;
@@ -107,7 +108,13 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                             control={control}
                             render={({ field: { value, onChange } }) => (
                                 <Input
-                                    label={t("labels.access_key")}
+                                    label={
+                                        <ExpandableLabel
+                                            label={t("labels.access_key")}
+                                            title={t("cards.access_nfe.title")}
+                                            text={t("cards.access_nfe.text")}
+                                        />
+                                    }
                                     value={value}
                                     onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.access_key?.message}
@@ -129,7 +136,13 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                             control={control}
                             render={({ field: { value, onChange } }) => (
                                 <Input
-                                    label={t("labels.imei_1")}
+                                    label={
+                                        <ExpandableLabel
+                                            label={t("labels.imei_1")}
+                                            title={t("cards.imei_info.title")}
+                                            text={t("cards.imei_info.text")}
+                                        />
+                                    }
                                     value={value}
                                     onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.imei_1?.message}
@@ -151,7 +164,13 @@ export default function DeviceInfoStep({ resetStep }: DeviceInfoProps) {
                             control={control}
                             render={({ field: { value, onChange } }) => (
                                 <Input
-                                    label={t("labels.imei_2")}
+                                    label={
+                                        <ExpandableLabel
+                                            label={t("labels.imei_2")}
+                                            title={t("cards.imei_info.title")}
+                                            text={t("cards.imei_info.text")}
+                                        />
+                                    }
                                     value={value}
                                     onChangeText={(text) => onChange(maskOnlyNumbers(text))}
                                     errorMessage={errors.imei_2?.message}
