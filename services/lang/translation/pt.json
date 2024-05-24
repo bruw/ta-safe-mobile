@@ -142,6 +142,18 @@
     "device_transfers_history": {
       "title": "Histórico de Transferências",
       "non_transfers": "Este dispositivo ainda não possui histórico de transferências."
+    },
+    "access_nfe": {
+      "title": "Chave de acesso NF-e (Nota fiscal eletrônica)",
+      "text": "Código composto por 44 dígitos localizado no cabeçalho da nota fiscal de compra do celular."
+    },
+    "imei_info": {
+      "title": "IMEI (Identificação Internacional de Equipamento Móvel)",
+      "text": "Para encontrar o IMEI do seu celular, digite no seu telefone: *#06#"
+    },
+    "validation_info": {
+      "title": "Como validar um registro?",
+      "message": "Para validar seu registro, clique no botão abaixo 'Validar' e aguarde o carregamento automático da NF-e e do campo 'Chave de Acesso'. Após o carregamento, clique no Captcha 'Sou Humano' para resolver o quebra-cabeça e aguarde o processamento. Estaremos cuidando de tudo para você!"
     }
   }
 }

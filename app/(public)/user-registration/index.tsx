@@ -30,23 +30,34 @@ export default function _Screen() {
     formState: { errors },
   } = useForm<UserRegistration>();
 
-  const onSubmit = async ({ name, email, cpf, phone, password, password_confirmation }: UserRegistration) => {
+  const onSubmit = async ({
+    name,
+    email,
+    cpf,
+    phone,
+    password,
+    password_confirmation,
+  }: UserRegistration) => {
     try {
       const response = await api.post<UserAuth>("/api/register", {
-        name, email, cpf, phone, password, password_confirmation
+        name,
+        email,
+        cpf,
+        phone,
+        password,
+        password_confirmation,
       });
 
       const user = response.data.user;
 
       setToken(user.token, user);
       router.replace("/(auth)/(drawer)/my-devices");
-
     } catch (error: any) {
       const data = error.response.data;
 
       notify({
         type: data.message.type,
-        message: data.message.text
+        message: data.message.text,
       });
 
       for (const [fieldName, value] of Object.entries(data.errors)) {

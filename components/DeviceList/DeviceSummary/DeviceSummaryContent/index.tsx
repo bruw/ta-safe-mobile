@@ -13,6 +13,11 @@ export default function DeviceSummaryContent() {
     return (
         <View>
             <LabeledText
+                label={t("labels.status")}
+                text={t(`status.${device.validation_status}`)}
+            />
+
+            <LabeledText
                 label={t("labels.brand")}
                 text={device.device_model.brand.name}
             />
