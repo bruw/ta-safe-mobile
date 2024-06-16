@@ -133,11 +133,11 @@
       "title": "Atributos"
     },
     "valid_device_attributes": {
-      "title": "Atributos Válidados",
+      "title": "Atributos Validados",
       "non_attributes": "Sem atributos válidos."
     },
     "invalid_device_attributes": {
-      "title": "Atributos não Válidados"
+      "title": "Atributos não Validados"
     },
     "device_transfers_history": {
       "title": "Histórico de Transferências",
