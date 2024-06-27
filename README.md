@@ -55,6 +55,6 @@ yarn start
 
 10 - Leia o QR code exibido no seu terminal através do aplicativo Expo Go. (Necessário versão para Sdk 49)
 
-Baixe em um aparelho Android pelo link: 
+Baixe o Expo Go em um aparelho Android pelo link: 
 
 https://expo.dev/go?sdkVersion=49&platform=android&device=true
