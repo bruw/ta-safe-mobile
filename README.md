@@ -20,7 +20,7 @@ Aplicativo móvel para o sistema de rastreabilidade de celulares - Tá Safe.
 
 1. Clone o Repositório
 ~~~git
-git@github.com:bruw/ta-safe-mobile.git
+git clone git@github.com:bruw/ta-safe-mobile.git
 ~~~
 
 2. Acesse a Pasta do Projeto
