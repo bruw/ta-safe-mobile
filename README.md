@@ -28,19 +28,22 @@ git@github.com:bruw/ta-safe-mobile.git
 cd ta-safe-mobile
 ~~~
 
-3. Instale as Dependências:
-~~~bash
-yarn install
-~~~
+3. Copie o arquivo `example.env` e renomeie para `.env`
 
-4. Copie o arquivo `example.env` e renomeie para `.env`
-
-5. Modifique o `.env` para sua rede local
+4. Modifique o arquivo `.env` para adicionar sua rede local
 ~~~bash
+# Substitua 'IP_DA_SUA_MAQUINA' pelo endereço IP local da sua máquina (ex: 192.168.0.10)
 EXPO_PUBLIC_API_URL=http://IP_DA_SUA_MAQUINA:80
 ~~~
 
-6. Iniciar aplicação
+5. Instale as Dependências:
+~~~bash
+yarn
+~~~
+
+6. Inicie a aplicação
 ~~~bash
 yarn start --clear
 ~~~
+
+7. Leia o QR code exibido no seu terminal através do aplicativo Expo Go para ter acesso ao aplicativo.
