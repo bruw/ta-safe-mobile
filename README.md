@@ -74,8 +74,18 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
   <img src="https://github.com/user-attachments/assets/d956d4c0-5e7c-4f4b-b337-b0d6bf86c147" width="280px"> 
 </div>
 
-### Detalhes do dispositivo
+### Detalhes do registro
 <div align="center">
   <img src="https://github.com/user-attachments/assets/ebca4872-f094-4baa-96a8-932a683f8a7f" width="280px"> 
   <img src="https://github.com/user-attachments/assets/1ef65438-d402-4e85-be7e-63f8de80356d" width="280px">
+</div>
+
+### Transferência de registro
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/56c248d1-b7f7-4d3c-ac9b-3f52bce19e8e" width="280px">
+  <img src="https://github.com/user-attachments/assets/f1be6967-69cd-4f6a-a10b-24e276bfbfe3" width="280px">
+  <img src="https://github.com/user-attachments/assets/ef732de1-2602-4547-a6a5-ae0f69ccda0f" width="280px">
+  <img src="https://github.com/user-attachments/assets/3f51317f-636c-4997-9227-4584a0dc1c9b" width="280px">
+  <img src="https://github.com/user-attachments/assets/81c490de-9ed8-4a18-85a9-18dc9000a6d2" width="280px">
+
 </div>
