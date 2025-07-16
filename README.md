@@ -68,6 +68,12 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
   <img src="https://github.com/user-attachments/assets/4bc313f9-a95d-474a-b5ca-5342a154abe3" width="280px">
 </div>
 
+### Menu e Perfil
+<div align="left">
+  <img src="https://github.com/user-attachments/assets/35711014-95a5-40c4-987b-6bed3bcbbcfd" width="280px">
+  <img src="https://github.com/user-attachments/assets/d5855ebe-c888-4e99-b63e-546c06727578" width="280px">
+</div>
+
 ### Meus Dispositivos
 <div align="left">
   <img src="https://github.com/user-attachments/assets/3e74a1d0-0a8f-4b0d-be34-1bce931498df" width="280px">
