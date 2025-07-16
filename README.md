@@ -67,3 +67,9 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
   <img src="https://github.com/user-attachments/assets/43e011dc-d201-478e-adad-d2bff49f4c14" width="280px"> 
   <img src="https://github.com/user-attachments/assets/4bc313f9-a95d-474a-b5ca-5342a154abe3" width="280px">
 </div>
+
+### Home
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3e74a1d0-0a8f-4b0d-be34-1bce931498df" width="280px">
+  <img src="https://github.com/user-attachments/assets/d956d4c0-5e7c-4f4b-b337-b0d6bf86c147" width="280px"> 
+</div>
