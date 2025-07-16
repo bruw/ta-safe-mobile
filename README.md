@@ -80,12 +80,18 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
   <img src="https://github.com/user-attachments/assets/1ef65438-d402-4e85-be7e-63f8de80356d" width="280px">
 </div>
 
-### Transferência de registro
+### Criar transferência de registro
 <div align="center">
   <img src="https://github.com/user-attachments/assets/56c248d1-b7f7-4d3c-ac9b-3f52bce19e8e" width="280px">
   <img src="https://github.com/user-attachments/assets/f1be6967-69cd-4f6a-a10b-24e276bfbfe3" width="280px">
   <img src="https://github.com/user-attachments/assets/ef732de1-2602-4547-a6a5-ae0f69ccda0f" width="280px">
   <img src="https://github.com/user-attachments/assets/3f51317f-636c-4997-9227-4584a0dc1c9b" width="280px">
   <img src="https://github.com/user-attachments/assets/81c490de-9ed8-4a18-85a9-18dc9000a6d2" width="280px">
+</div>
 
+### Aceitar transferência de registro
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/083d5f35-fbfd-41ac-ac8b-9c3b946edf48" width="280px">
+  <img src="https://github.com/user-attachments/assets/bebe8693-766f-40d1-a3ee-5d1f38526142" width="280px">
+  <img src="https://github.com/user-attachments/assets/849caf46-8de6-4d45-89f6-4adbf4a809f8" width="280px">
 </div>
