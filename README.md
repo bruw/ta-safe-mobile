@@ -115,8 +115,7 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
 
 ### Registrar dispositivo
 <div align="left">
-  <img src="https://github.com/user-attachments/assets/e639beef-ee3e-4769-99c9-f298107819af" width="280px">
-  <img src="https://github.com/user-attachments/assets/1ef66f93-5d38-4111-9e0f-cd69dbd8ba8a" width="280px">
+  <img src="https://github.com/user-attachments/assets/2bd95146-c2ce-40ca-b0ce-889117e97fd1" width="280px">
   <img src="https://github.com/user-attachments/assets/ea876bcb-931b-4f45-a0ac-7a812dac5f69" width="280px">
   <img src="https://github.com/user-attachments/assets/acbdd616-4274-4e04-a3ab-79f093e3ac6e" width="280px">
   <img src="https://github.com/user-attachments/assets/2bc1b92f-0104-4855-a151-661fa2421b15" width="280px">
