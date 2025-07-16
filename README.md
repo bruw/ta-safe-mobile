@@ -62,6 +62,8 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
 \
 &nbsp;
 
+# Capturas de Tela
+
 ### Login e Registro
 <div align="left">
   <img src="https://github.com/user-attachments/assets/43e011dc-d201-478e-adad-d2bff49f4c14" width="280px"> 
