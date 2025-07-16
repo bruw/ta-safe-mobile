@@ -58,3 +58,12 @@ yarn start
 Baixe o Expo Go em um aparelho Android pelo link: 
 
 https://expo.dev/go?sdkVersion=49&platform=android&device=true
+
+\
+&nbsp;
+
+### Login e registro
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/43e011dc-d201-478e-adad-d2bff49f4c14" width="280px"> 
+  <img src="https://github.com/user-attachments/assets/4bc313f9-a95d-474a-b5ca-5342a154abe3" width="280px">
+</div>
