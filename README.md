@@ -95,3 +95,12 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
   <img src="https://github.com/user-attachments/assets/bebe8693-766f-40d1-a3ee-5d1f38526142" width="280px">
   <img src="https://github.com/user-attachments/assets/849caf46-8de6-4d45-89f6-4adbf4a809f8" width="280px">
 </div>
+
+### Compartilhar visualização de registro
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2b22defe-b1d5-47cc-89a6-f21fff9d0a31" width="280px">
+  <img src="https://github.com/user-attachments/assets/02f774ff-50c2-4074-9f84-2726fac48d8a" width="280px">
+  <img src="https://github.com/user-attachments/assets/ff7109f9-bfeb-4471-babd-22c75da343bf" width="280px">
+  <img src="https://github.com/user-attachments/assets/c618be57-be90-4e60-a883-9396f49f4a39" width="280px">
+  <img src="https://github.com/user-attachments/assets/791047b2-0720-4ef6-81dc-4297b527b82d" width="280px">
+</div>
