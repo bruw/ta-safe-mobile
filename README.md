@@ -73,3 +73,9 @@ https://expo.dev/go?sdkVersion=49&platform=android&device=true
   <img src="https://github.com/user-attachments/assets/3e74a1d0-0a8f-4b0d-be34-1bce931498df" width="280px">
   <img src="https://github.com/user-attachments/assets/d956d4c0-5e7c-4f4b-b337-b0d6bf86c147" width="280px"> 
 </div>
+
+### Detalhes do dispositivo
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ebca4872-f094-4baa-96a8-932a683f8a7f" width="280px"> 
+  <img src="https://github.com/user-attachments/assets/1ef65438-d402-4e85-be7e-63f8de80356d" width="280px">
+</div>
