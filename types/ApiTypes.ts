@@ -112,7 +112,7 @@ export type Device = {
   updated_at: string;
   user: User;
   device_model: DeviceModel;
-  validation_attributes?: DeviceValidationAttributes;
+  validated_attributes?: DeviceValidationAttributes;
   transfers_history?: Transfer[];
 }
 

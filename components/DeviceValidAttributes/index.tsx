@@ -11,10 +11,10 @@ export default function DeviceValidAttributes() {
     const { device } = useContext(DeviceContext);
 
     const hasValidAttributes = () => {
-        const { validation_attributes } = device;
-        if (!validation_attributes) return false;
+        const { validated_attributes } = device;
+        if (!validated_attributes) return false;
 
-        return Object.values(validation_attributes).some(attr => attr === true);
+        return Object.values(validated_attributes).some(attr => attr === true);
     };
 
     return (
@@ -29,49 +29,49 @@ export default function DeviceValidAttributes() {
                 <Text>{t("cards.valid_device_attributes.non_attributes")}</Text>
             )}
 
-            {device.validation_attributes?.brand_name && (
+            {device.validated_attributes?.brand_name && (
                 <LabeledText
                     label={t("labels.brand")}
                     text={device.device_model.brand.name}
                 />
             )}
 
-            {device.validation_attributes?.model_name && (
+            {device.validated_attributes?.model_name && (
                 <LabeledText
                     label={t("labels.model")}
                     text={device.device_model.name}
                 />
             )}
 
-            {device.validation_attributes?.color && (
+            {device.validated_attributes?.color && (
                 <LabeledText
                     label={t("labels.color")}
                     text={device.color}
                 />
             )}
 
-            {device.validation_attributes?.ram && (
+            {device.validated_attributes?.ram && (
                 <LabeledText
                     label={t("labels.ram")}
                     text={device.device_model.ram}
                 />
             )}
 
-            {device.validation_attributes?.storage && (
+            {device.validated_attributes?.storage && (
                 <LabeledText
                     label={t("labels.storage")}
                     text={device.device_model.storage}
                 />
             )}
 
-            {device.validation_attributes?.imei_1 && (
+            {device.validated_attributes?.imei_1 && (
                 <LabeledText
                     label={t("labels.imei_1")}
                     text={device.imei_1}
                 />
             )}
 
-            {device.validation_attributes?.imei_2 && (
+            {device.validated_attributes?.imei_2 && (
                 <LabeledText
                     label={t("labels.imei_2")}
                     text={device.imei_2}
