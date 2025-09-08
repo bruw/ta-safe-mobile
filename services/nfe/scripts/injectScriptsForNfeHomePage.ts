@@ -80,7 +80,7 @@ const adjustZoomAndVisibility = (): string => `
     let divConsultationInfo = document.getElementById('ctl00_ContentPlaceHolder1_pnlInformacoesConsulta');
     divConsultationInfo.scrollIntoView({ block: "center", inline: "center"});
 
-    divHcaptcha.style.transform = 'scale(' + 4.0 + ')';
+    divHcaptcha.style.transform = 'scale(' + 1.0 + ')';
     divHcaptcha.style.transformOrigin = '0 0';
 
     divConsultationInfo.style.overflow = 'hidden';
