@@ -139,7 +139,7 @@
     "invalid_device_attributes": {
       "title": "Atributos não Validados"
     },
-    "device_transfers_history": {
+    "device_transfers": {
       "title": "Histórico de Transferências",
       "non_transfers": "Este dispositivo ainda não possui histórico de transferências."
     },

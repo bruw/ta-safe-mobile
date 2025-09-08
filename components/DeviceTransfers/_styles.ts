@@ -1,6 +1,6 @@
 import { makeStyles } from "@rneui/themed";
 
-export const stylesDeviceTransfersHistory = makeStyles(() => ({
+export const stylesDeviceTransfers = makeStyles(() => ({
     container: {
         marginBottom: 50
     },

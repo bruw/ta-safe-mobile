@@ -113,7 +113,7 @@ export type Device = {
   user: User;
   device_model: DeviceModel;
   validated_attributes?: DeviceValidationAttributes;
-  transfers_history?: Transfer[];
+  transfers?: Transfer[];
 }
 
 export type DeviceSharedToken = {
