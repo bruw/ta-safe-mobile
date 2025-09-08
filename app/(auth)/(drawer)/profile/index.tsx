@@ -30,7 +30,7 @@ export default function _Screen() {
 
   const onSubmit = async ({ name, email, phone }: UserUpdate) => {
     try {
-      const response = await api.put<UserUpdate>("/api/user", {
+      const response = await api.patch<UserUpdate>("/api/user", {
         name,
         email,
         phone,
