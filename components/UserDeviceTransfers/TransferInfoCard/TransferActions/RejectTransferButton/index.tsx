@@ -13,7 +13,7 @@ export default function RejectTransferButton() {
 
     const onSubmit = async () => {
         try {
-            const response = await api.put<UpdatedTransfer>(`/api/device-transfers/${transfer.id}/reject`);
+            const response = await api.post<UpdatedTransfer>(`/api/device-transfers/${transfer.id}/reject`);
 
             updateTransfer(response.data.transfer);
 

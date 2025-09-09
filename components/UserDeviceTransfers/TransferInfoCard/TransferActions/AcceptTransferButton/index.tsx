@@ -15,7 +15,7 @@ export default function AcceptTransferButton({ disabled }: AcceptTransferButtonP
 
     const onSubmit = async () => {
         try {
-            const response = await api.put<UpdatedTransfer>(`/api/device-transfers/${transfer.id}/accept`);
+            const response = await api.post<UpdatedTransfer>(`/api/device-transfers/${transfer.id}/accept`);
 
             updateTransfer(response.data.transfer);
 

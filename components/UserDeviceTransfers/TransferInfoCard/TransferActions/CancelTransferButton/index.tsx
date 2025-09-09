@@ -13,7 +13,7 @@ export default function CancelTransferButton() {
 
     const onSubmit = async () => {
         try {
-            const response = await api.put<UpdatedTransfer>(`/api/device-transfers/${transfer.id}/cancel`);
+            const response = await api.post<UpdatedTransfer>(`/api/device-transfers/${transfer.id}/cancel`);
 
             updateTransfer(response.data.transfer);
 

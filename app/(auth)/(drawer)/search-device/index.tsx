@@ -2,7 +2,6 @@ import { Input, useTheme } from "@rneui/themed";
 import DeviceWithValidatedStatus from "components/DeviceWithValidatedStatus";
 import MainButton from "components/UI/MainButton";
 import { useFocusEffect } from "expo-router/src/useFocusEffect";
-import { maskOnlyNumbers } from "helpers/maskOnlyNumbers";
 import notify from "helpers/notify";
 import { t } from "i18next";
 import React, { useCallback, useState } from "react";
@@ -71,10 +70,9 @@ export default function _Screen() {
             <Input
               label={t("labels.token")}
               value={value}
-              onChangeText={(text) => onChange(maskOnlyNumbers(text))}
+              onChangeText={onChange}
               errorMessage={errors.token?.message}
               maxLength={8}
-              keyboardType="numeric"
               rightIcon={{
                 type: "material-community",
                 name: "form-textbox-password",
